@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voter Database with SQL | Roshan Sivakumar</title>
+  <link rel="stylesheet" href="style-projects-sales.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="index.html">ROSHAN SIDDARTHA SIVAKUMAR</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="projects.html" class="active">PROJECTS</a></li>
+        <li><a href="resume.html">RESUME</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Project Detail Section -->
+  <section class="project-detail-section">
+    <div class="project-detail-box">
+      <h1>🗳️ North Carolina Voter Database System</h1>
+      <p class="subheading">SQL • Relational Design • Transactions • Data Integrity</p>
+
+      <p>
+        This was a solo project where I designed a fully functional SQL database system from scratch using real voter registration data from North Carolina.
+        The goal was to create a scalable, normalized system to manage voters, candidates, districts, and election activity—ensuring accuracy, security, and performance throughout.
+      </p>
+
+      <h3>📐 Designing the Schema</h3>
+      <p>
+        I started by drafting a detailed ER model that captured the relationships between voters, ballots, political parties, and geographic zones.
+        I translated that into a fully normalized relational schema using PostgreSQL and ensured referential integrity with well-defined foreign keys.
+      </p>
+
+      <h3>⚙️ Building with Real SQL</h3>
+      <p>
+        I created all base tables, populated them with sample data, and implemented advanced SQL features like triggers, constraints, joins, and views.
+        I also wrote stored procedures to handle voting transactions, simulate real-world updates, and enforce business logic like district restrictions.
+      </p>
+
+      <h3>🔐 Transaction Safety</h3>
+      <p>
+        I simulated multi-user scenarios to test transaction isolation and rollback behavior. This included updating party affiliations, logging election results,
+        and ensuring atomicity during voter registration.
+      </p>
+
+      <h3>💡 What I Took Away</h3>
+      <ul class="feature-list">
+        <li>🧱 Learned to structure complex systems from the ground up using SQL</li>
+        <li>📊 Wrote advanced queries that balanced accuracy and performance</li>
+        <li>🧪 Gained hands-on experience with data validation, constraints, and rollback testing</li>
+      </ul>
+
+      <h3>🛠 Tools & Technologies</h3>
+      <p>
+        mySQL • PHP • ER Modeling • Transaction Control • Views & Triggers
+      </p>
+
+      <h3>🌐 Website Features</h3>
+      <p>
+        I developed a dynamic web interface using PHP and MySQL that interacts with the backend database. This application replicates a live voter management system with the following capabilities:
+      </p>
+      <ul style="padding-left: 2rem;">
+        <li>🔍 <strong>Search Voter:</strong> Retrieve a voter's name using their registration number.</li>
+        <li>📜 <strong>View Voting History:</strong> Display historical party preferences by election.</li>
+        <li>➕ <strong>Insert/Update Vote:</strong> Add new voting records or update existing ones through an interactive form.</li>
+        <li>❌ <strong>Delete Voter:</strong> Remove a voter’s record and their entire history from the system.</li>
+        <li>📊 <strong>Analytics Dashboards:</strong>
+          <ul style="padding-left: 1.5rem; margin-top: 0.25rem; margin-bottom: 0;">
+            <li>City-wise party distribution</li>
+            <li>Age group preference breakdown</li>
+            <li>Democratic party gender participation</li>
+          </ul>
+        </li>
+        <li>📝 <strong>Audit Logs:</strong> Track insertions and deletions with automatic timestamps for accountability.</li>
+      </ul>
+      
+
+      <a href="voter-features.html" class="btn" target="_blank">
+        <i class="fas fa-image"></i> View Features
+      </a>
+      
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sales Playbook Optimization | Roshan Sivakumar</title>
+  <link rel="stylesheet" href="style-projects-sales.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo"><a href="index.html">ROSHAN SIDDARTHA SIVAKUMAR</a></div>
+      <ul class="nav-links">
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="projects.html" class="active">PROJECTS</a></li>
+        <li><a href="resume.html">RESUME</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="project-detail-section">
+    <div class="project-detail-box">
+      <h1>Sales Playbook Optimization</h1>
+      <p class="subheading">Machine Learning • XGBoost • Streamlit • Docker • Business Analytics</p>
+
+      <p>
+        This project tackled the challenge of improving B2B sales strategy using predictive analytics. I led the end-to-end development of a machine learning-driven playbook that forecasts deal outcomes and segments high-value customers, transforming static sales processes into dynamic, data-informed strategies.
+      </p>
+
+      <h3>📊 Data Preparation & Exploration</h3>
+      <p>
+        We worked with three anonymized HubSpot datasets (Companies, Deals, Tickets), cleaning over 100 features and handling high missingness. EDA revealed that the dataset was US-centric and dominated by small-to-midsize companies. We engineered duration-based features and corrected severe class imbalance across industry and customer type categories.
+      </p>
+
+      <h3>🛠 Feature Engineering & Modeling</h3>
+      <p>
+        After merging company and deal data via mapping dictionaries, I engineered business-relevant features such as region zone, deal size category, and revenue brackets. I used Random Forest to identify top predictors, selecting 10 robust features spanning behavioral and demographic attributes.
+      </p>
+      <p>
+        I trained and evaluated six models (Random Forest, XGBoost, AdaBoost, KNN, Logistic Regression, and Decision Trees). Ensemble models like XGBoost and AdaBoost delivered perfect AUC-ROC scores (1.0), with accuracy nearing 99%. To ensure model integrity, features prone to leakage (e.g., deal probability, stage) were excluded.
+      </p>
+
+      <h3>📈 Insights & Strategy</h3>
+      <p>
+        We found that smaller companies and industries like Manufacturing and Retail had the highest win rates. Customer types labeled “In Trial” or “Partner” had over 80% conversion, while “Prospect” and “Vendor” had the lowest. These insights shaped our lead-scoring and segmentation logic.
+      </p>
+
+      <h3>🧠 Deployment & Dashboard</h3>
+      <p>
+        I deployed the model using Streamlit and Docker. The dashboard includes five modules: deal prediction, filtered analytics, win-rate insights, segment discovery, and segment comparisons. This tool empowers sales teams to make fast, data-backed decisions and focus efforts on high-impact deals.
+      </p>
+
+      <h3>🚀 Tech Stack</h3>
+      <p>
+        Python • pandas • scikit-learn • XGBoost • Streamlit • Docker • Git • matplotlib • seaborn
+      </p>
+
+      <h3>🔗 GitHub & Live App</h3>
+      <a href="https://github.com/rroshann/ML_midterm_project" class="btn" target="_blank"><i class="fab fa-github"></i> View Code on GitHub</a>
+      <a href="https://mlmidtermproject-2glwbp4ds8jzhs5hspgw74.streamlit.app/" class="btn" target="_blank"><i class="fa fa-rocket"></i> Try the Dashboard</a>
+      <a href="projects.html" class="btn" target="_blank"><i class="fa fa-rocket"></i> Back to projects </a>
+    </div>
+  </section>
+
+</body>
+</html>

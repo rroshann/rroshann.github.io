@@ -1,0 +1,111 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: url('assets/images/laptop-blur.jpg') no-repeat center center/cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 2rem;
+    z-index: 1000;
+  }
+  
+  .nav-container {
+    width: 100%;
+    max-width: none;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-logo a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover,
+  .nav-links li a.active {
+    text-decoration: underline;
+  }
+  
+  /* ABOUT SECTION */
+  .about-section {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 6rem 2rem 4rem; /* Extra top space under fixed nav */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .section-content {
+    background: rgba(255, 255, 255, 0.15); /* Lighter, more transparent */
+    backdrop-filter: blur(0.1px); /* The magic blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 800px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* subtle depth */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* frosted border */
+  }
+  
+  .about-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .about-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .about-section {
+      padding: 5rem 1.5rem;
+    }
+  
+    .about-section h1 {
+      font-size: 2rem;
+    }
+  
+    .about-section p {
+      font-size: 1rem;
+    }
+  }
+  
