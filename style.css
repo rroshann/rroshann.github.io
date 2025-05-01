@@ -107,20 +107,21 @@
     background: #e84122;
   }
   
+  
 
   .site-footer {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #020d13;
+    padding: 1rem 0;
     text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    color: #ddd;
-    margin-top: 2rem;
+    font-size: 1rem;
+    color: #fff;
+    border-top: 1px solid #1f1f1f;
   }
   
   .site-footer a {
     color: #f04e30;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
   }
   
   .site-footer a:hover {
