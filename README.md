@@ -37,7 +37,7 @@ Hey there! I'm ***Roshan Siddartha Sivakumar*** — a data science grad student 
 
 When I'm not optimizing packaging for global auto giants or wrestling with SQL triggers, I'm usually crafting machine learning dashboards, dissecting global economic data, or simulating robots that know how to avoid walls. I love blending clean design with clever data solutions, and this portfolio is where all that chaos comes together.
 
-Oh, and I built this site from scratch using HTML, CSS, JS, and a healthy amount of trial-and-error. Curious? Check out [this repo](https://github.com/rroshann/rroshann.github.io) for all the code.
+Oh, and I built this site from scratch using HTML, CSS, JS, and a healthy amount of trial-and-error. Curious? Check out [this repo](https://github.com/rroshann/rroshann.github.io) for all the code.  All the files live inside the ```docs/``` folder. Feel free to poke around!
 
 ---
 
