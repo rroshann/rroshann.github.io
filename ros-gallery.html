@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ROS Robot Navigation Gallery | Roshan Sivakumar</title>
+  <link rel="stylesheet" href="ros-gallery.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo"><a href="index.html">ROSHAN SIDDARTHA SIVAKUMAR</a></div>
+      <ul class="nav-links">
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="projects.html" class="active">PROJECTS</a></li>
+        <li><a href="resume.html">RESUME</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Carousel Section -->
+  <div class="carousel-section">
+    <h1>🤖 ROS Robot Navigation Gallery</h1>
+    <div class="carousel-box">
+      <button class="nav-btn prev">&#10094;</button>
+      <div class="carousel-track">
+        <div class="slide active">
+          <img src="assets/images/ros/stage1.png" alt="Stage 1">
+          <p>Initial simulation of the Turtlebot using ROS Noetic and Gazebo. The robot is placed in a dynamic environment with mapped walls and obstacles.</p>
+        </div>
+        <div class="slide">
+          <img src="assets/images/ros/stage2.png" alt="Stage 2">
+          <p>Real-time mapping and obstacle detection via LIDAR and SLAM. Our system identifies navigation barriers and dynamically adapts to changes.</p>
+        </div>
+        <div class="slide">
+          <img src="assets/images/ros/stage3.png" alt="Stage 3">
+          <p>Successful path planning and navigation using the ROS Navigation Stack. The robot efficiently reaches the goal without collisions.</p>
+        </div>
+        <div class="slide">
+          <img src="assets/images/ros/stage4.png" alt="Stage 4">
+          <p>Final position achieved with optimal path traversal, showcasing the robot's ability to navigate complex environments autonomously.</p>
+        </div>
+      </div>
+      <button class="nav-btn next">&#10095;</button>
+    </div>
+    <div class="dots"></div>
+  </div>
+
+  <script src="prosthetic-gallery.js"></script>
+</body>
+</html>
