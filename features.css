@@ -111,3 +111,23 @@
     background-color: #fff;
   }
   
+
+  .site-footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #ddd;
+    margin-top: 2rem;
+  }
+  
+  .site-footer a {
+    color: #f04e30;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .site-footer a:hover {
+    text-decoration: underline;
+  }
+  
