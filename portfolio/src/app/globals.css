@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   KINETIC DESIGN SYSTEM — Color Tokens
+   Brutalist aesthetic: Rich Black base, Off-white text, Acid Yellow accents
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Core palette */
+  --background: #09090B;
+  --foreground: #FAFAFA;
+  --accent: #DFE104;
+  --muted: #27272A;
+  --border: #3F3F46;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Base Styles
+   Note: Tailwind v4's Preflight handles the CSS reset. Do NOT add a global
+   * { margin: 0; padding: 0; } reset as it will override Tailwind utilities.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Typography — Kinetic Brutalist Rules
+   - No rounded corners
+   - No shadows
+   - No gradients
+   - Sharp, bold, uppercase where appropriate
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+}
+
+/* Selection color */
+::selection {
+  background: var(--accent);
+  color: var(--background);
+}

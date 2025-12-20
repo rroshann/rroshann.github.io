@@ -1,0 +1,92 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: "3D-Printed Prosthetic Arm | Roshan Siddartha Sivakumar",
+    description:
+        "Affordable, lightweight prosthetic arm design using Fusion 360 generative design, carbon fiber, and FDM 3D printing.",
+};
+
+export default function ProstheticProjectPage() {
+    return (
+        <section className="min-h-screen px-6 sm:px-12 lg:px-24 py-24">
+            <div className="max-w-4xl mx-auto">
+                {/* Back Link */}
+                <Link
+                    href="/projects"
+                    className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-[0.1em] text-[var(--foreground)]/50 hover:text-[var(--accent)] transition-colors mb-8"
+                >
+                    ← Back to Projects
+                </Link>
+
+                {/* Header */}
+                <h1 className="text-[clamp(2rem,6vw,4rem)] font-bold tracking-tighter leading-[0.9] mb-4">
+                    🦾 Optimizing a 3D-Printed Prosthetic Arm
+                </h1>
+                <p className="text-lg text-[var(--accent)] font-medium mb-8">
+                    Fusion 360 • Generative Design • Carbon Fiber • FDM
+                </p>
+
+                {/* Intro */}
+                <div className="prose-section space-y-6 text-lg leading-relaxed text-[var(--foreground)]/80 mb-12">
+                    <p>
+                        This project was part of a multidisciplinary capstone focused on
+                        creating affordable, lightweight, and durable upper-limb prosthetics
+                        using 3D printing. The inspiration came from a real need in the
+                        medical field: conventional prosthetics are often prohibitively
+                        expensive and too heavy for comfortable daily use — especially for
+                        children and older adults.
+                    </p>
+
+                    <p>
+                        We began by exploring common limitations in existing designs,
+                        particularly in terms of material weight, customization complexity,
+                        and long-term usability. After researching alternatives, carbon
+                        fiber emerged as the most promising material, offering an excellent
+                        strength-to-weight ratio and thermal resistance.
+                    </p>
+
+                    <p>
+                        Using Autodesk Fusion 360 and its generative design features, we
+                        modeled the prosthetic arm with structural constraints in mind. We
+                        set parameters such as a maximum applied force of 1000N and a
+                        minimum allowable mass of 1500g. The software simulated dozens of
+                        design iterations, each balancing structural integrity with material
+                        efficiency.
+                    </p>
+
+                    <p>
+                        After analyzing the results, we selected the most optimized model
+                        that delivered strength, comfort, and cost-effectiveness — all while
+                        being manufacturable using Fused Deposition Modeling (FDM). The
+                        iterative process allowed us to push the boundaries of form and
+                        function.
+                    </p>
+
+                    <p>
+                        What set this project apart was not just the technical solution, but
+                        its focus on real-world usability. The final product was designed
+                        with adaptability in mind, making it ideal for users who require
+                        frequent updates due to growth, wear, or lifestyle changes.
+                    </p>
+                </div>
+
+                {/* CTAs */}
+                <div className="mt-16 flex flex-wrap gap-4">
+                    <Link
+                        href="/projects/prosthetic/gallery"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--accent)] text-[var(--background)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--foreground)] transition-all duration-300"
+                    >
+                        View Design Showcase
+                    </Link>
+                    <Link
+                        href="/projects"
+                        className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--border)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)] transition-all duration-300"
+                    >
+                        ← Back to Projects
+                    </Link>
+                </div>
+            </div>
+        </section>
+    );
+}
