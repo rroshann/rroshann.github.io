@@ -137,7 +137,7 @@ export default function ProjectsSection() {
                             transition={{ duration: 0.5, delay: 0.2 }}
                             className="text-2xl md:text-4xl font-bold uppercase tracking-tighter text-[var(--accent)]"
                         >
-                            Industry Collaborations (Nissan)
+                            04.1 — Industry Collaborations (Nissan)
                         </motion.h3>
                         <span className="hidden md:block text-sm font-medium uppercase tracking-[0.2em] text-[var(--accent)] mb-1">
                             Featured Work
@@ -175,7 +175,7 @@ export default function ProjectsSection() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/50 mb-12 border-b border-[var(--border)] pb-4"
                     >
-                        Generative AI & Computer Vision
+                        04.2 — Generative AI & Computer Vision
                     </motion.h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {aiProjects.map((project, index) => (
@@ -206,7 +206,7 @@ export default function ProjectsSection() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/50 mb-12 border-b border-[var(--border)] pb-4"
                     >
-                        Machine Learning & Scalable Systems
+                        04.3 — Machine Learning & Scalable Systems
                     </motion.h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {analyticsProjects.map((project, index) => (
@@ -237,7 +237,7 @@ export default function ProjectsSection() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/50 mb-12 border-b border-[var(--border)] pb-4"
                     >
-                        Engineering & Physical Systems
+                        04.4 — Engineering & Physical Systems
                     </motion.h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {engineeringProjects.map((project, index) => (
