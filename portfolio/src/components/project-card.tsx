@@ -6,6 +6,7 @@ interface ProjectCardProps {
     description: string;
     href: string;
     category?: "data" | "engineering";
+    isNissan?: boolean;
 }
 
 export default function ProjectCard({
@@ -13,6 +14,7 @@ export default function ProjectCard({
     description,
     href,
     category = "data",
+    isNissan = false,
 }: ProjectCardProps) {
     return (
         <Link href={href} className="group block">
@@ -24,16 +26,33 @@ export default function ProjectCard({
                     "hover:text-[var(--background)]"
                 )}
             >
-                {/* Category Tag */}
-                <span
-                    className={cn(
-                        "inline-block mb-4 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em]",
-                        "border border-[var(--border)] rounded-none",
-                        "group-hover:border-[var(--background)] group-hover:text-[var(--background)]"
+                {/* Tags Container */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                    {/* Category Tag */}
+                    <span
+                        className={cn(
+                            "inline-block px-3 py-1 text-xs font-medium uppercase tracking-[0.2em]",
+                            "border border-[var(--border)] rounded-none",
+                            "group-hover:border-[var(--background)] group-hover:text-[var(--background)]"
+                        )}
+                    >
+                        {category === "data" ? "Data Science" : "Engineering"}
+                    </span>
+
+                    {/* Nissan Badge */}
+                    {isNissan && (
+                        <span
+                            className={cn(
+                                "inline-block px-3 py-1 text-xs font-bold uppercase tracking-[0.2em]",
+                                "bg-[#C3002F] text-white border border-[#C3002F]",
+                                "group-hover:bg-[var(--background)] group-hover:text-[#C3002F] group-hover:border-[var(--background)]",
+                                "transition-colors"
+                            )}
+                        >
+                            NISSAN
+                        </span>
                     )}
-                >
-                    {category === "data" ? "Data Science" : "Engineering"}
-                </span>
+                </div>
 
                 {/* Title */}
                 <h3 className="text-xl font-bold tracking-tight mb-3 group-hover:text-[var(--background)]">
