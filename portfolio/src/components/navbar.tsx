@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const NAV_LINKS = [
     { href: "#about", label: "About" },
+    { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
     { href: "#resume", label: "Resume" },
 ] as const;
@@ -55,8 +56,8 @@ export default function Navbar() {
                     {/* CTA Button 
              Classes: relative inline-flex items-center justify-center overflow-hidden font-bold uppercase tracking-tighter transition-all disabled:pointer-events-none disabled:opacity-50 bg-[#DFE104] text-black hover:scale-105 active:scale-95 h-10 px-4 text-sm
           */}
-                    <Link
-                        href="/contact"
+                    <a
+                        href="#contact"
                         className={cn(
                             "relative inline-flex items-center justify-center overflow-hidden h-10 px-4 text-sm",
                             "font-bold uppercase tracking-tighter",
@@ -66,7 +67,7 @@ export default function Navbar() {
                         )}
                     >
                         <span className="relative z-10 flex items-center gap-2">Contact</span>
-                    </Link>
+                    </a>
 
                     {/* Mobile Menu Button - Kept compatible with design */}
                     <button
@@ -122,13 +123,13 @@ export default function Navbar() {
                                     </Link>
                                 )
                             )}
-                            <Link
-                                href="/contact"
+                            <a
+                                href="#contact"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="relative inline-flex items-center justify-center overflow-hidden h-10 px-8 text-sm font-bold uppercase tracking-tighter transition-all bg-[#DFE104] text-black w-full"
                             >
                                 <span className="relative z-10 flex items-center gap-2">Contact</span>
-                            </Link>
+                            </a>
                         </div>
                     </motion.div>
                 )}
