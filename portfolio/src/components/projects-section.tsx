@@ -5,9 +5,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { cn } from "@/components/ui/cn";
 import ProjectCard from "@/components/project-card";
 
-/**
- * Projects data - imported from existing projects page
- */
 const dataProjects = [
     {
         title: "Sales Playbook Optimization with Machine Learning",
@@ -56,10 +53,6 @@ const engineeringProjects = [
     },
 ];
 
-/**
- * Projects section for the homepage.
- * Kinetic Brutalist design with scroll-triggered animations.
- */
 export default function ProjectsSection() {
     const sectionRef = useRef<HTMLElement>(null);
 
@@ -68,8 +61,8 @@ export default function ProjectsSection() {
         offset: ["start end", "end start"],
     });
 
-    const opacity = useTransform(scrollYProgress, [0, 0.15, 0.85, 1], [0, 1, 1, 0]);
-    const y = useTransform(scrollYProgress, [0, 0.15], [80, 0]);
+    const opacity = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [0, 1, 1, 0]);
+    const y = useTransform(scrollYProgress, [0, 0.1], [60, 0]);
 
     return (
         <section
@@ -77,10 +70,7 @@ export default function ProjectsSection() {
             ref={sectionRef}
             className="min-h-screen bg-black px-6 sm:px-12 lg:px-24 py-24"
         >
-            <motion.div
-                style={{ opacity, y }}
-                className="max-w-6xl mx-auto"
-            >
+            <motion.div style={{ opacity, y }} className="max-w-6xl mx-auto">
                 {/* Section Label */}
                 <motion.p
                     initial={{ opacity: 0, x: -20 }}
@@ -108,17 +98,17 @@ export default function ProjectsSection() {
                 </motion.h2>
 
                 {/* Data Science Section */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="mb-16"
-                >
-                    <h3 className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/50 mb-8">
+                <div className="mb-24">
+                    <motion.h3
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/50 mb-12 border-b border-[var(--border)] pb-4"
+                    >
                         📊 Data Science & Analytics
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    </motion.h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {dataProjects.map((project, index) => (
                             <motion.div
                                 key={project.href}
@@ -136,19 +126,20 @@ export default function ProjectsSection() {
                             </motion.div>
                         ))}
                     </div>
-                </motion.div>
+                </div>
 
                 {/* Engineering Section */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                >
-                    <h3 className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/50 mb-8">
+                <div>
+                    <motion.h3
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/50 mb-12 border-b border-[var(--border)] pb-4"
+                    >
                         ⚙️ Engineering & Physical Systems
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    </motion.h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {engineeringProjects.map((project, index) => (
                             <motion.div
                                 key={project.href}
@@ -166,7 +157,7 @@ export default function ProjectsSection() {
                             </motion.div>
                         ))}
                     </div>
-                </motion.div>
+                </div>
             </motion.div>
         </section>
     );
