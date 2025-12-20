@@ -112,6 +112,54 @@ export default function Hero() {
 
             </motion.div>
 
+            {/* Glitch Arrow Indicator (Option 3) */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.5, duration: 1 }}
+                className="absolute bottom-12 left-1/2 -translate-x-1/2"
+            >
+                <div className="relative group cursor-pointer">
+                    <style jsx>{`
+                        @keyframes glitch-anim-1 {
+                            0% { clip-path: inset(20% 0 80% 0); transform: translate(-2px, 1px); }
+                            20% { clip-path: inset(60% 0 10% 0); transform: translate(2px, -1px); }
+                            40% { clip-path: inset(40% 0 50% 0); transform: translate(-2px, 2px); }
+                            60% { clip-path: inset(80% 0 5% 0); transform: translate(2px, -2px); }
+                            80% { clip-path: inset(10% 0 60% 0); transform: translate(-1px, 1px); }
+                            100% { clip-path: inset(30% 0 30% 0); transform: translate(1px, -1px); }
+                        }
+                        @keyframes glitch-anim-2 {
+                            0% { clip-path: inset(10% 0 60% 0); transform: translate(2px, -1px); }
+                            20% { clip-path: inset(80% 0 5% 0); transform: translate(-2px, 2px); }
+                            40% { clip-path: inset(30% 0 20% 0); transform: translate(2px, 1px); }
+                            60% { clip-path: inset(15% 0 80% 0); transform: translate(-1px, -2px); }
+                            80% { clip-path: inset(55% 0 10% 0); transform: translate(1px, 1px); }
+                            100% { clip-path: inset(40% 0 30% 0); transform: translate(-2px, -1px); }
+                        }
+                        .glitch-wrapper:hover .glitch-1 {
+                            animation: glitch-anim-1 2.5s infinite linear alternate-reverse;
+                            opacity: 1;
+                        }
+                        .glitch-wrapper:hover .glitch-2 {
+                            animation: glitch-anim-2 3s infinite linear alternate-reverse;
+                            opacity: 1;
+                        }
+                        /* Auto-glitch occasionally */
+                        .glitch-1 { animation: glitch-anim-1 4s infinite linear alternate-reverse; opacity: 0.7; }
+                        .glitch-2 { animation: glitch-anim-2 3s infinite linear alternate-reverse; opacity: 0.7; }
+                    `}</style>
+                    <div className="glitch-wrapper relative">
+                        {/* Base Arrow */}
+                        <div className="text-4xl font-bold text-[var(--accent)]">↓</div>
+
+                        {/* Glitch Layers */}
+                        <div className="glitch-1 absolute top-0 left-0 w-full h-full text-4xl font-bold text-[var(--accent)] opacity-0">↓</div>
+                        <div className="glitch-2 absolute top-0 left-0 w-full h-full text-4xl font-bold text-white opacity-0 mix-blend-difference">↓</div>
+                    </div>
+                </div>
+            </motion.div>
+
 
 
 
