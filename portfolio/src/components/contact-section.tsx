@@ -58,7 +58,7 @@ export default function ContactSection() {
                     transition={{ duration: 0.5 }}
                     className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--border)] mb-4"
                 >
-                    05 — Contact
+                    06 — Contact
                 </motion.p>
 
                 {/* Section Title */}

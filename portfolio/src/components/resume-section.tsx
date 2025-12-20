@@ -37,7 +37,7 @@ export default function ResumeSection() {
                     transition={{ duration: 0.5 }}
                     className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--border)] mb-4"
                 >
-                    04 — Resume
+                    05 — Resume
                 </motion.p>
 
                 {/* Section Title */}
