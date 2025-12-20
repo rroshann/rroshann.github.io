@@ -20,7 +20,7 @@ const nissanProjects = [
     },
 ];
 
-const dataProjects = [
+const aiProjects = [
     {
         title: "Scene Reader: Real-Time Visual Accessibility",
         description:
@@ -33,6 +33,9 @@ const dataProjects = [
             "Achieved 98% detection accuracy for AI images using EfficientNet-B0 and VGG16 transfer learning with Grad-CAM interpretability.",
         href: "/projects/ai-detection",
     },
+];
+
+const analyticsProjects = [
     {
         title: "European Soccer Analytics Platform",
         description:
@@ -163,7 +166,7 @@ export default function ProjectsSection() {
                     </div>
                 </div>
 
-                {/* Data Science Section */}
+                {/* Generative AI & Computer Vision */}
                 <div className="mb-24">
                     <motion.h3
                         initial={{ opacity: 0, x: -20 }}
@@ -172,10 +175,41 @@ export default function ProjectsSection() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/50 mb-12 border-b border-[var(--border)] pb-4"
                     >
-                        Data Science & Analytics
+                        Generative AI & Computer Vision
                     </motion.h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {dataProjects.map((project, index) => (
+                        {aiProjects.map((project, index) => (
+                            <motion.div
+                                key={project.href}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: 0.1 * index }}
+                            >
+                                <ProjectCard
+                                    title={project.title}
+                                    description={project.description}
+                                    href={project.href}
+                                    category="data"
+                                />
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Data Engineering & Predictive Analytics */}
+                <div className="mb-24">
+                    <motion.h3
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/50 mb-12 border-b border-[var(--border)] pb-4"
+                    >
+                        Machine Learning & Scalable Systems
+                    </motion.h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {analyticsProjects.map((project, index) => (
                             <motion.div
                                 key={project.href}
                                 initial={{ opacity: 0, y: 20 }}
