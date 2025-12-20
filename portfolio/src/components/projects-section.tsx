@@ -121,7 +121,7 @@ export default function ProjectsSection() {
                         "text-foreground mb-16"
                     )}
                 >
-                    <span className="text-[var(--accent)]">PROJECTS</span>
+                    <span className="text-[var(--accent)]">SELECTED WORKS</span>
                 </motion.h2>
 
                 {/* Nissan / Industry Section */}
