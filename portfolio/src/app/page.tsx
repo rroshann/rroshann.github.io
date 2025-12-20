@@ -1,5 +1,4 @@
 import Hero from "@/components/hero";
-import StatsMarquee from "@/components/stats-marquee";
 import AboutSection from "@/components/about-section";
 import SkillsSection from "@/components/skills-section";
 import ExperienceSection from "@/components/experience-section";
@@ -11,7 +10,6 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black">
       <Hero />
-      <StatsMarquee />
       <AboutSection />
       <SkillsSection />
       <ExperienceSection />
