@@ -1,71 +1,53 @@
-# 🌐 So You Clicked the Footer, Huh?
+# Portfolio / Source
 
-Well, hello there 👋
+This is the source code for my personal portfolio website, [rroshann.github.io](https://rroshann.github.io).
 
-Looks like you clicked my name in the footer. Whether you were curious, inspecting my animations (👀), or just looking for the source code behind the **Kinetic Brutalist** design — welcome to the repo!
+It serves as a showcase for my work in Data Science, Engineering, and AI, demonstrating not just the projects themselves but also the ability to build performant, scalable frontend systems.
 
-This is the codebase for [my portfolio](https://rroshann.github.io) — where I showcase my work in data science, engineering, and AI.
+## Architecture
 
----
+The site is built as a static web application to ensure maximum performance and zero server-side maintenance overhead.
 
-## 🛠️ The Tech Stack
+**Core Stack:**
+*   **Next.js 15 (App Router)** - For component-based architecture and build optimization.
+*   **TypeScript** - For type safety and maintainable code.
+*   **Tailwind CSS** - For a design-system-first approach to styling.
+*   **Framer Motion** - For fluid, physics-based interactions and scroll dynamics.
 
-I rebuilt this site from scratch to be performant, scalable, and visually striking. No more vanilla HTML/CSS. This is a modern React application:
+## Design Philosophy
 
--   **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
--   **Language:** [TypeScript](https://www.typescriptlang.org/) (Strict mode, always)
--   **Styling:** [Tailwind CSS](https://tailwindcss.com/) (Utility-first, brutalist design tokens)
--   **Animations:** [Framer Motion](https://www.framer.com/motion/) (Scroll-triggered parallax & physics)
+The design implements a **Kinetic Brutalist** aesthetic. Key characteristics include:
+*   **Fluid Typography:** Text scales mathematically with viewport width using CSS `clamp()`.
+*   **Physics-Based Motion:** Animations replicate real-world mass and velocity.
+*   **Strict Design Tokens:** No arbitrary values. All spacing, colors, and type sizes are tokenized.
+*   **Performance First:** Zero layout shift, optimized asset loading, and static generation.
 
----
+## Development
 
-## ✨ Features You Probably Saw
+To run this project locally:
 
--   **Kinetic Typography:** Giant, fluid text that scales with viewport width (`clamp()`).
--   **Scroll Physics:** Parallax effects on the Hero and Section headers.
--   **Component Architecture:** Reusable `ProjectCard`, `SkillTag`, and `SocialLink` components.
--   **Dark Mode Native:** Designed specifically for a premium, high-contrast dark aesthetic.
--   **CI/CD:** Automated deployment to GitHub Pages via GitHub Actions.
-
----
-
-## 🚀 Running This Locally
-
-If you want to poke around the code or run it yourself:
-
-1.  **Clone the repo:**
+1.  Clone the repository.
     ```bash
     git clone https://github.com/rroshann/rroshann.github.io.git
-    cd rroshann.github.io/portfolio
+    cd portfolio
     ```
 
-2.  **Install dependencies:**
+2.  Install dependencies.
     ```bash
     npm install
     ```
 
-3.  **Run the dev server:**
+3.  Start the development server.
     ```bash
     npm run dev
     ```
 
-4.  Open [http://localhost:3000](http://localhost:3000) and enjoy the grain.
+## Deployment
+
+The project is configured for static export (`output: 'export'`) and uses a custom GitHub Actions workflow to build and deploy to GitHub Pages automatically upon pushing to `main`.
 
 ---
 
-## 🙋‍♂️ Who Made This?
-
-I'm **Roshan Siddartha Sivakumar** — a Data Scientist & Engineer at Vanderbilt University.
-
-I build predictive systems, scalable pipelines, and tools that turn chaos into clarity. When I'm not training models or optimizing SQL queries, I'm probably tweaking the bezier curves on these animations.
-
----
-
-## 📫 Let's Connect
-
-If you liked the site or want to talk about data, engineering, or design:
-
--   **Email:** [roshan.siddartha.sivakumar@vanderbilt.edu](mailto:roshan.siddartha.sivakumar@vanderbilt.edu)
--   **LinkedIn:** [linkedin.com/in/roshansiddartha](https://linkedin.com/in/roshansiddartha)
-
-Thanks for stopping by the repo. Now go build something cool. 🚀
+**Roshan Siddartha Sivakumar**
+Data Scientist & Engineer
+[roshan.siddartha.sivakumar@vanderbilt.edu](mailto:roshan.siddartha.sivakumar@vanderbilt.edu)
