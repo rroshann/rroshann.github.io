@@ -11,6 +11,7 @@ interface ProjectCardProps {
     image?: string;
     category?: "data" | "engineering";
     isNissan?: boolean;
+    courseTag?: string;
 }
 
 export default function ProjectCard({
@@ -20,6 +21,7 @@ export default function ProjectCard({
     image,
     category = "data",
     isNissan = false,
+    courseTag,
 }: ProjectCardProps) {
     return (
         <Link href={href} className="group block h-full">
@@ -72,6 +74,20 @@ export default function ProjectCard({
                                 )}
                             >
                                 NISSAN
+                            </span>
+                        )}
+
+                        {/* Course Tag */}
+                        {courseTag && (
+                            <span
+                                className={cn(
+                                    "inline-block px-3 py-1 text-xs font-bold uppercase tracking-[0.15em]",
+                                    "bg-[var(--muted)] text-[var(--foreground)] border border-[var(--border)]",
+                                    "group-hover:bg-[var(--background)] group-hover:text-[var(--foreground)] group-hover:border-[var(--background)]",
+                                    "transition-colors duration-200"
+                                )}
+                            >
+                                {courseTag}
                             </span>
                         )}
                     </div>

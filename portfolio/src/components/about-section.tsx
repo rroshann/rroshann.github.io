@@ -63,10 +63,11 @@ export default function AboutSection() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        I&apos;m a Data Science graduate student at Vanderbilt University
-                        with a background in Mechanical Engineering. I&apos;m passionate
-                        about solving real-world problems through data, especially when it
-                        means creating tools that help people make better decisions.
+                        I build intelligent systems that turn messy data into clear decisions.
+                        Currently finishing my M.S. in Data Science at Vanderbilt, I bring
+                        a Mechanical Engineering foundation that taught me to think in systems:
+                        tolerances, constraints, and trade-offs. Now I apply that rigor to
+                        machine learning pipelines, scalable architectures, and production AI.
                     </motion.p>
 
                     <motion.p
@@ -75,12 +76,11 @@ export default function AboutSection() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.3 }}
                     >
-                        I&apos;ve led projects that range from building predictive models
-                        for B2B sales to analyzing global economic patterns and improving
-                        supply chain packaging for a major automotive client. I enjoy
-                        working through complexity, whether it&apos;s cleaning a massive
-                        dataset, designing a machine learning pipeline, or creating
-                        dashboards that make insights easy to act on.
+                        My recent work spans industry and academia. At SERVPRO, I built a GPT-4 Vision
+                        agent that automates BI reporting for 13,500+ job records nightly, eliminating
+                        40+ hours of manual work. At Nissan, I led a team that analyzed 140,000+ training
+                        logs and built a RAG-based chatbot presented to NA executives. In research,
+                        I achieved 98% accuracy on AI-generated image detection using deep learning.
                     </motion.p>
 
                     <motion.p
@@ -89,11 +89,10 @@ export default function AboutSection() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                     >
-                        Right now, I&apos;m most excited about scalable data systems,
-                        applied machine learning, and the power of thoughtful data
-                        storytelling. Outside of work, you&apos;ll probably find me
-                        exploring new AI tools, diving into story-driven games, or listening
-                        to music that sparks ideas.
+                        Right now, I&apos;m most energized by Generative AI, computer vision,
+                        and the craft of turning complex systems into intuitive experiences.
+                        When I&apos;m not shipping code, you&apos;ll find me exploring
+                        the latest AI tooling, immersed in story-driven games, or watching WWE.
                     </motion.p>
                 </div>
             </motion.div>

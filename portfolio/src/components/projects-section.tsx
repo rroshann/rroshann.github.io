@@ -31,6 +31,7 @@ const aiProjects = [
             "Built a hybrid YOLO + LLM pipeline for visually impaired users, achieving 0.54s latency and 3x speedup over pure VLMs.",
         href: "/projects/scene-reader",
         image: "/projects/scene-reader.jpg",
+        courseTag: "Generative AI (Transformers)",
     },
     {
         title: "AI-Generated Image Detection",
@@ -38,6 +39,7 @@ const aiProjects = [
             "Achieved 98% detection accuracy for AI images using EfficientNet-B0 and VGG16 transfer learning with Grad-CAM interpretability.",
         href: "/projects/ai-detection",
         image: "/projects/ai-detection.jpg",
+        courseTag: "Deep Learning",
     },
 ];
 
@@ -48,6 +50,7 @@ const analyticsProjects = [
             "Architected a MongoDB & Flask platform analyzing 25k+ matches, using Gradient Boosting to predict outcomes with custom feature engineering.",
         href: "/projects/soccer-analytics",
         image: "/projects/soccer-analytics.jpg",
+        courseTag: "NoSQL",
     },
     {
         title: "Sales Playbook Optimization with Machine Learning",
@@ -55,6 +58,7 @@ const analyticsProjects = [
             "Implemented an ML-driven sales strategy using XGBoost and clustering on HubSpot data to improved prioritization and deal prediction.",
         href: "/projects/sales-playbook",
         image: "/projects/sales-playbook.jpg",
+        courseTag: "Machine Learning",
     },
     {
         title: "Economic Freedom and Global Well-Being",
@@ -62,6 +66,7 @@ const analyticsProjects = [
             "Explored the relationship between economic freedom and societal metrics (Happiness, GDP, Healthcare) using cluster analysis and regression.",
         href: "/projects/economic-freedom",
         image: "/projects/economic-freedom.jpg",
+        courseTag: "Exploratory Data Analysis",
     },
     {
         title: "North Carolina Voter Database System",
@@ -69,6 +74,7 @@ const analyticsProjects = [
             "Architected a secure PHP/MySQL voter management system with audit logging and demographic analytics for Mecklenburg County.",
         href: "/projects/nc-voter-db",
         image: "/projects/nc-voter.jpg",
+        courseTag: "SQL",
     },
 ];
 
@@ -206,6 +212,7 @@ export default function ProjectsSection() {
                                     href={project.href}
                                     image={project.image}
                                     category="data"
+                                    courseTag={project.courseTag}
                                 />
                             </motion.div>
                         ))}
@@ -238,6 +245,7 @@ export default function ProjectsSection() {
                                     href={project.href}
                                     image={project.image}
                                     category="data"
+                                    courseTag={project.courseTag}
                                 />
                             </motion.div>
                         ))}
