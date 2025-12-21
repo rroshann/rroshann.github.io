@@ -19,7 +19,8 @@ const nissanProjects = [
         description:
             "Led an optimization initiative for Nissan using Python & Tableau to identify packaging inefficiencies, projecting ~20% cost savings.",
         href: "/projects/nissan",
-        image: "/projects/nissan.jpg",
+        image: "/projects/nissan-packaging.jpg",
+        isNissan: true,
     },
 ];
 
