@@ -1,10 +1,14 @@
-# Portfolio / Source
+# So, you clicked the footer.
 
-This is the source code for my personal portfolio website, [rroshann.github.io](https://rroshann.github.io).
+**Good eye.**
 
-It serves as a showcase for my work in Data Science, Engineering, and AI, demonstrating not just the projects themselves but also the ability to build performant, scalable frontend systems.
+You're looking at the source code for [rroshann.github.io](https://rroshann.github.io). Since you found your way here, I assume you're either curious about the stack or inspecting my `z-index` values.
 
-## Architecture
+Welcome. Here is how it's built.
+
+---
+
+# Architecture
 
 The site is built as a static web application to ensure maximum performance and zero server-side maintenance overhead.
 
