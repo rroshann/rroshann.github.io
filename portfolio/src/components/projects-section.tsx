@@ -11,12 +11,14 @@ const nissanProjects = [
         description:
             "Developed a RAG-based chatbot using AWS Bedrock and analyzed 140k+ logs to diagnose engagement issues for Nissan North America.",
         href: "/projects/nissan-chatbot",
+        image: "/projects/nissan.jpg",
     },
     {
         title: "Packaging Optimization for Automotive Supply Chain",
         description:
             "Led an optimization initiative for Nissan using Python & Tableau to identify packaging inefficiencies, projecting ~20% cost savings.",
         href: "/projects/nissan",
+        image: "/projects/nissan.jpg",
     },
 ];
 
@@ -26,12 +28,14 @@ const aiProjects = [
         description:
             "Built a hybrid YOLO + LLM pipeline for visually impaired users, achieving 0.54s latency and 3x speedup over pure VLMs.",
         href: "/projects/scene-reader",
+        image: "/projects/scene-reader.jpg",
     },
     {
         title: "AI-Generated Image Detection",
         description:
             "Achieved 98% detection accuracy for AI images using EfficientNet-B0 and VGG16 transfer learning with Grad-CAM interpretability.",
         href: "/projects/ai-detection",
+        image: "/projects/ai-detection.jpg",
     },
 ];
 
@@ -41,24 +45,28 @@ const analyticsProjects = [
         description:
             "Architected a MongoDB & Flask platform analyzing 25k+ matches, using Gradient Boosting to predict outcomes with custom feature engineering.",
         href: "/projects/soccer-analytics",
+        image: "/projects/soccer-analytics.jpg",
     },
     {
         title: "Sales Playbook Optimization with Machine Learning",
         description:
             "Improved sales targeting by building predictive models and interactive dashboards for deal outcomes.",
         href: "/projects/sales",
+        image: "/projects/sales.jpg",
     },
     {
         title: "Economic Freedom and Global Well-Being",
         description:
             "Analyzed the connection between economic freedom and societal outcomes using PCA and clustering.",
         href: "/projects/eda",
+        image: "/projects/eda.jpg",
     },
     {
         title: "North Carolina Voter Database System",
         description:
             "Built a full-scale relational database from raw voter data with normalization, stored procedures, triggers, and front-end integration.",
         href: "/projects/sql",
+        image: "/projects/sql.jpg",
     },
 ];
 
@@ -68,18 +76,21 @@ const engineeringProjects = [
         description:
             "Led the development of a low-cost, durable prosthetic arm using carbon fiber and generative design.",
         href: "/projects/prosthetic",
+        image: "/projects/prosthetic.jpg",
     },
     {
         title: "Obstacle Avoidance with a ROS-Simulated Mobile Robot",
         description:
             "Designed and simulated a two-wheeled robot using ROS and Gazebo with Bug2 algorithm, SLAM, and LIDAR-based mapping.",
         href: "/projects/ros",
+        image: "/projects/rosrobot.jpg",
     },
     {
         title: "Stabilizing a Tumbling Satellite Using Control Wheel Dynamics",
         description:
             "Designed and simulated a MATLAB-based control system using momentum wheels and Lyapunov stability theory.",
         href: "/projects/satellite",
+        image: "/projects/satellite-stabilization.jpg",
     },
 ];
 
@@ -158,6 +169,7 @@ export default function ProjectsSection() {
                                     title={project.title}
                                     description={project.description}
                                     href={project.href}
+                                    image={project.image}
                                     category="data"
                                     isNissan={true}
                                 />
@@ -190,6 +202,7 @@ export default function ProjectsSection() {
                                     title={project.title}
                                     description={project.description}
                                     href={project.href}
+                                    image={project.image}
                                     category="data"
                                 />
                             </motion.div>
@@ -221,6 +234,7 @@ export default function ProjectsSection() {
                                     title={project.title}
                                     description={project.description}
                                     href={project.href}
+                                    image={project.image}
                                     category="data"
                                 />
                             </motion.div>
@@ -252,6 +266,7 @@ export default function ProjectsSection() {
                                     title={project.title}
                                     description={project.description}
                                     href={project.href}
+                                    image={project.image}
                                     category="engineering"
                                 />
                             </motion.div>
