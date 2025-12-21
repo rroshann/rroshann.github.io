@@ -85,10 +85,9 @@ export default function ContactSection() {
                     className="text-lg text-[var(--foreground)]/70 mb-12 max-w-2xl"
                 >
                     <p>
-                        I&apos;m always open to connecting—whether it&apos;s for
-                        collaboration, internships, full-time roles, or just a good
-                        conversation about data. Feel free to reach out via the platforms
-                        below.
+                        I engineer scalable data systems that drive real-world impact. If
+                        you&apos;re solving hard problems and need a partner who delivers
+                        precision at scale, let&apos;s talk.
                     </p>
                 </motion.div>
 
