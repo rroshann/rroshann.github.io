@@ -76,8 +76,7 @@ export default function Hero() {
                     transition={{ duration: 0.7, delay: 0.5 }}
                     className="mt-8 mx-auto max-w-xl text-lg leading-relaxed text-[var(--foreground)]/70 sm:text-xl"
                 >
-                    Analyzing and visualizing data to make better and informed business
-                    decisions.
+                    Building predictive systems and scalable pipelines that transform complex data into decisive action.
                 </motion.p>
 
                 {/* CTA Button — Brutalist styling */}
