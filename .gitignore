@@ -1,3 +1,21 @@
+# macOS
 .DS_Store
+
+# Old static HTML portfolio (replaced by Next.js)
+docs-archive/
+
+# Reference content (local only)
 parts-pack/
 everything/
+assets/
+
+# Temp files
+portfolio/extract_master_resume.py
+portfolio/master_resume_text.txt
+
+# Next.js boilerplate SVGs (unused)
+portfolio/public/file.svg
+portfolio/public/globe.svg
+portfolio/public/next.svg
+portfolio/public/vercel.svg
+portfolio/public/window.svg

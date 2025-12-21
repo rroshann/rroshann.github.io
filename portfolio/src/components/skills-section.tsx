@@ -122,7 +122,9 @@ export default function SkillsSection() {
                                         key={skill.name}
                                         className={cn(
                                             "px-3 py-1 text-sm font-medium uppercase tracking-wide",
-                                            "border border-[var(--border)] text-[var(--foreground)]/80",
+                                            skill.isCore
+                                                ? "border-2 border-[var(--accent)] text-[var(--accent)]"
+                                                : "border border-[var(--border)] text-[var(--foreground)]/80",
                                             "group-hover:text-[var(--foreground)] transition-colors"
                                         )}
                                     >

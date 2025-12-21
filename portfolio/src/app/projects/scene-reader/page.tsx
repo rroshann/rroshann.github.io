@@ -243,6 +243,7 @@ export default function SceneReaderPage() {
 
                 {/* CTAs */}
                 <div className="mt-16 flex flex-wrap gap-4">
+                    <Link href="/#projects" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--border)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)] transition-all duration-300">← Back to Projects</Link>
                     <Link
                         href="https://github.com/rroshann/scene_reader"
                         target="_blank"
@@ -251,7 +252,6 @@ export default function SceneReaderPage() {
                     >
                         View on GitHub
                     </Link>
-                    <BackButton />
                 </div>
             </div>
         </section>

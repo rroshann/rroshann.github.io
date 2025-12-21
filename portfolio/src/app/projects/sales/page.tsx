@@ -112,6 +112,7 @@ export default function SalesProjectPage() {
 
                 {/* CTAs */}
                 <div className="mt-16 flex flex-wrap gap-4">
+                    <Link href="/#projects" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--border)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)] transition-all duration-300">← Back to Projects</Link>
                     <a
                         href="https://github.com/rroshann/ML_midterm_project"
                         target="_blank"
@@ -128,7 +129,6 @@ export default function SalesProjectPage() {
                     >
                         Try the Dashboard
                     </a>
-                    <BackButton />
                 </div>
             </div>
         </section>

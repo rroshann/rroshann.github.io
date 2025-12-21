@@ -3,6 +3,7 @@ import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import ScrollToTop from "@/components/scroll-to-top";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -28,6 +29,20 @@ export const metadata: Metadata = {
     "Python",
     "Analytics",
   ],
+  openGraph: {
+    title: "Roshan Siddartha Sivakumar | Data Scientist & Engineer",
+    description:
+      "Data Science graduate at Vanderbilt. Building predictive models, ML pipelines, and dashboards.",
+    url: "https://rroshann.github.io",
+    siteName: "Roshan Sivakumar Portfolio",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Roshan Sivakumar | Data Scientist & Engineer",
+    description:
+      "Data Science graduate at Vanderbilt. ML, AI, and Analytics.",
+  },
 };
 
 export default function RootLayout({
@@ -45,6 +60,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </div>
+        <ScrollToTop />
       </body>
     </html>
   );
