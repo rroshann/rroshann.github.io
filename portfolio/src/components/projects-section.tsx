@@ -9,9 +9,10 @@ const nissanProjects = [
     {
         title: "Nissan Dealer Training Analytics & AI Chatbot",
         description:
-            "Developed a RAG-based chatbot using AWS Bedrock and analyzed 140k+ logs to diagnose engagement issues for Nissan North America.",
+            "Analyzed 140k+ logs to uncover training gaps and built a RAG-based AI chatbot for 4,000+ dealers to access real-time EV info.",
         href: "/projects/nissan-chatbot",
-        image: "/projects/nissan.jpg",
+        image: "/projects/nissan-chatbot.jpg",
+        isNissan: true,
     },
     {
         title: "Packaging Optimization for Automotive Supply Chain",
