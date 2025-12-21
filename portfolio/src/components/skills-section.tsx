@@ -8,11 +8,11 @@ const SKILLS = [
     {
         category: "Generative AI & Vision",
         items: [
-            { name: "RAG Architectures", isCore: true },
-            { name: "LLM APIs (OpenAI, Claude, Gemini)", isCore: true },
+            { name: "RAG Architectures", isCore: false },
+            { name: "LLM APIs (OpenAI, Claude, Gemini)", isCore: false },
             { name: "GPT-4 Vision", isCore: false },
             { name: "Prompt Engineering", isCore: false },
-            { name: "PyTorch", isCore: true },
+            { name: "PyTorch", isCore: false },
             { name: "Deep Learning (CNNs)", isCore: false },
             { name: "Transfer Learning", isCore: false },
             { name: "Computer Vision (YOLOv8)", isCore: false },
@@ -23,20 +23,20 @@ const SKILLS = [
     {
         category: "Data Science & ML",
         items: [
-            { name: "Machine Learning", isCore: true },
-            { name: "Scikit-learn", isCore: true },
+            { name: "Machine Learning", isCore: false },
+            { name: "Scikit-learn", isCore: false },
             { name: "Feature Engineering", isCore: false },
             { name: "Statistical Modeling", isCore: false },
-            { name: "Pandas & NumPy", isCore: true },
+            { name: "Pandas & NumPy", isCore: false },
             { name: "Data Visualization", isCore: false },
         ],
     },
     {
         category: "Data Engineering",
         items: [
-            { name: "Python", isCore: true },
-            { name: "ETL Pipelines", isCore: true },
-            { name: "SQL Querying", isCore: true },
+            { name: "Python", isCore: false },
+            { name: "ETL Pipelines", isCore: false },
+            { name: "SQL Querying", isCore: false },
             { name: "NoSQL Design", isCore: false },
             { name: "Web Scraping", isCore: false },
             { name: "Flask & Streamlit", isCore: false },
@@ -46,8 +46,8 @@ const SKILLS = [
     {
         category: "Platforms & Tools",
         items: [
-            { name: "AWS & Docker", isCore: true },
-            { name: "Git & GitHub Actions", isCore: true },
+            { name: "AWS & Docker", isCore: false },
+            { name: "Git & GitHub Actions", isCore: false },
             { name: "MySQL & MongoDB", isCore: false },
             { name: "Tableau & PowerBI", isCore: false },
             { name: "Amazon QuickSight", isCore: false },
