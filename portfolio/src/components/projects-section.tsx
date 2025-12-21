@@ -90,9 +90,9 @@ const engineeringProjects = [
     {
         title: "Stabilizing a Tumbling Satellite Using Control Wheel Dynamics",
         description:
-            "Designed and simulated a MATLAB-based control system using momentum wheels and Lyapunov stability theory.",
-        href: "/projects/satellite",
-        image: "/projects/satellite-stabilization.jpg",
+            "Modeled spacecraft attitude control using Lyapunov functions and torque wheels to eliminate tumbling, validated via MATLAB simulations.",
+        href: "/projects/satellite-stabilization",
+        image: "/projects/satellite.jpg",
     },
 ];
 
