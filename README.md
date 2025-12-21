@@ -2,49 +2,70 @@
 
 Well, hello there 👋
 
-Looks like you clicked my name in the footer of my portfolio. Whether you were curious, inspecting my CSS margins (👀), or just got lost — welcome to the **source code** of my personal website!
+Looks like you clicked my name in the footer. Whether you were curious, inspecting my animations (👀), or just looking for the source code behind the **Kinetic Brutalist** design — welcome to the repo!
+
+This is the codebase for [my portfolio](https://rroshann.github.io) — where I showcase my work in data science, engineering, and AI.
 
 ---
 
-## 🛠️ What is this?
+## 🛠️ The Tech Stack
 
-This repo contains all the HTML, CSS, and JavaScript files that power [my portfolio site](https://rroshann.github.io) — a place where I showcase my favorite projects across data science, engineering, robotics, and occasionally, overcaffeinated coding experiments ☕.
+I rebuilt this site from scratch to be performant, scalable, and visually striking. No more vanilla HTML/CSS. This is a modern React application:
 
----
-
-## ✨ Features
-
-- Clean, responsive UI that doesn’t make you cry in mobile view.
-- Interactive project pages with galleries and animations.
-- Some seriously organized (and lovingly maintained) CSS.
-- A "Projects" section that took way too many late nights to perfect.
-- Absolutely zero Bootstrap. This is vanilla CSS, baby.
+-   **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+-   **Language:** [TypeScript](https://www.typescriptlang.org/) (Strict mode, always)
+-   **Styling:** [Tailwind CSS](https://tailwindcss.com/) (Utility-first, brutalist design tokens)
+-   **Animations:** [Framer Motion](https://www.framer.com/motion/) (Scroll-triggered parallax & physics)
 
 ---
 
-## 🎨 Built With
+## ✨ Features You Probably Saw
 
-- HTML5
-- CSS3 (no frameworks — hand-coded for full control)
-- JavaScript
-- A lot of trial, error, and Ctrl+Z
+-   **Kinetic Typography:** Giant, fluid text that scales with viewport width (`clamp()`).
+-   **Scroll Physics:** Parallax effects on the Hero and Section headers.
+-   **Component Architecture:** Reusable `ProjectCard`, `SkillTag`, and `SocialLink` components.
+-   **Dark Mode Native:** Designed specifically for a premium, high-contrast dark aesthetic.
+-   **CI/CD:** Automated deployment to GitHub Pages via GitHub Actions.
+
+---
+
+## 🚀 Running This Locally
+
+If you want to poke around the code or run it yourself:
+
+1.  **Clone the repo:**
+    ```bash
+    git clone https://github.com/rroshann/rroshann.github.io.git
+    cd rroshann.github.io/portfolio
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Run the dev server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  Open [http://localhost:3000](http://localhost:3000) and enjoy the grain.
 
 ---
 
 ## 🙋‍♂️ Who Made This?
 
-Hey there! I'm ***Roshan Siddartha Sivakumar*** — a data science grad student at Vanderbilt, recovering mechanical engineer, and part-time robot whisperer.
+I'm **Roshan Siddartha Sivakumar** — a Data Scientist & Engineer at Vanderbilt University.
 
-When I'm not optimizing packaging for global auto giants or wrestling with SQL triggers, I'm usually crafting machine learning dashboards, dissecting global economic data, or simulating robots that know how to avoid walls. I love blending clean design with clever data solutions, and this portfolio is where all that chaos comes together.
-
-Oh, and I built this site from scratch using HTML, CSS, JS, and a healthy amount of trial-and-error. Curious? Check out [this repo](https://github.com/rroshann/rroshann.github.io) for all the code.  All the files live inside the ```docs/``` folder. Feel free to poke around!
+I build predictive systems, scalable pipelines, and tools that turn chaos into clarity. When I'm not training models or optimizing SQL queries, I'm probably tweaking the bezier curves on these animations.
 
 ---
 
-## 📫 Wanna Chat?
+## 📫 Let's Connect
 
-Feel free to [reach out](mailto:roshan.siddartha.sivakumar@vanderbilt.edu) or find me on [LinkedIn](https://linkedin.com/in/roshansiddartha) if you’d like to talk tech, projects, or portfolio-making therapy.
+If you liked the site or want to talk about data, engineering, or design:
 
----
+-   **Email:** [roshan.siddartha.sivakumar@vanderbilt.edu](mailto:roshan.siddartha.sivakumar@vanderbilt.edu)
+-   **LinkedIn:** [linkedin.com/in/roshansiddartha](https://linkedin.com/in/roshansiddartha)
 
-Thanks for stopping by! Now go break something fun. 🚀
+Thanks for stopping by the repo. Now go build something cool. 🚀
