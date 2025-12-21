@@ -2,7 +2,7 @@
 
 **Good eye.**
 
-You're looking at the source code for [rroshann.github.io](https://rroshann.github.io). Since you found your way here, I assume you're either curious about the stack or inspecting my `z-index` values.
+You're looking at the source code for [rroshann.github.io](https://rroshann.github.io). Since you found your way here, I assume you're either curious about the stack or just critiquing my margins.
 
 Welcome. Here is how it's built.
 
