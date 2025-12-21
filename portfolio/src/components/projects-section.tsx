@@ -52,16 +52,16 @@ const analyticsProjects = [
     {
         title: "Sales Playbook Optimization with Machine Learning",
         description:
-            "Improved sales targeting by building predictive models and interactive dashboards for deal outcomes.",
-        href: "/projects/sales",
-        image: "/projects/sales.jpg",
+            "Implemented an ML-driven sales strategy using XGBoost and clustering on HubSpot data to improved prioritization and deal prediction.",
+        href: "/projects/sales-playbook",
+        image: "/projects/sales-playbook.jpg",
     },
     {
         title: "Economic Freedom and Global Well-Being",
         description:
-            "Analyzed the connection between economic freedom and societal outcomes using PCA and clustering.",
-        href: "/projects/eda",
-        image: "/projects/eda.jpg",
+            "Explored the relationship between economic freedom and societal metrics (Happiness, GDP, Healthcare) using cluster analysis and regression.",
+        href: "/projects/economic-freedom",
+        image: "/projects/economic-freedom.jpg",
     },
     {
         title: "North Carolina Voter Database System",
