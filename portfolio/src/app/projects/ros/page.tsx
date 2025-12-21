@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import BackButton from "@/components/back-button";
+import Image from "next/image";
 
 export const metadata: Metadata = {
     title: "ROS Robot Navigation | Roshan Siddartha Sivakumar",
@@ -9,19 +11,14 @@ export const metadata: Metadata = {
 
 export default function ROSProjectPage() {
     return (
-        <section className="min-h-screen px-6 sm:px-12 lg:px-24 py-24">
+        <section className="min-h-screen px-6 sm:px-12 lg:px-24 pt-32 pb-24">
             <div className="max-w-4xl mx-auto">
                 {/* Back Link */}
-                <Link
-                    href="/projects"
-                    className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-[0.1em] text-[var(--foreground)]/50 hover:text-[var(--accent)] transition-colors mb-8"
-                >
-                    ← Back to Projects
-                </Link>
+                <BackButton variant="link" className="mb-8" />
 
                 {/* Header */}
                 <h1 className="text-[clamp(2rem,6vw,4rem)] font-bold tracking-tighter leading-[0.9] mb-4">
-                    🤖 ROS-Based Obstacle Avoidance with a Two-Wheeled Robot
+                    ROS-Based Obstacle Avoidance with a Two-Wheeled Robot
                 </h1>
                 <p className="text-lg text-[var(--accent)] font-medium mb-8">
                     Robotics • ROS • SLAM • GMapping • Navigation Algorithms
@@ -43,7 +40,7 @@ export default function ROSProjectPage() {
                     {/* Building the Robot */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
                         <h3 className="text-xl font-bold tracking-tight mb-3">
-                            🛠️ Building the Robot
+                            Building the Robot
                         </h3>
                         <p className="text-[var(--foreground)]/70 leading-relaxed">
                             The journey began by modeling a basic robot using URDF and XACRO
@@ -57,7 +54,7 @@ export default function ROSProjectPage() {
                     {/* Sensor Integration */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
                         <h3 className="text-xl font-bold tracking-tight mb-3">
-                            🔍 Sensor Integration
+                            Sensor Integration
                         </h3>
                         <p className="text-[var(--foreground)]/70 leading-relaxed">
                             We added a laser scanner to provide environmental feedback. Using
@@ -71,7 +68,7 @@ export default function ROSProjectPage() {
                     {/* Bug 2 Algorithm */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
                         <h3 className="text-xl font-bold tracking-tight mb-3">
-                            🧠 Motion Planning with the Bug 2 Algorithm
+                            Motion Planning with the Bug 2 Algorithm
                         </h3>
                         <p className="text-[var(--foreground)]/70 leading-relaxed">
                             A major highlight was implementing the Bug 2 algorithm for
@@ -86,7 +83,7 @@ export default function ROSProjectPage() {
                     {/* SLAM */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
                         <h3 className="text-xl font-bold tracking-tight mb-3">
-                            🗺️ Mapping the Environment with SLAM
+                            Mapping the Environment with SLAM
                         </h3>
                         <p className="text-[var(--foreground)]/70 leading-relaxed">
                             To enable map creation, we incorporated GMapping, a ROS package
@@ -99,24 +96,73 @@ export default function ROSProjectPage() {
                     {/* Key Takeaways */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
                         <h3 className="text-xl font-bold tracking-tight mb-3">
-                            ✅ Key Takeaways
+                            Key Takeaways
                         </h3>
                         <ul className="space-y-2 text-[var(--foreground)]/70">
                             <li>
-                                🧩 Developed a custom robot from the ground up using URDF and
+                                Developed a custom robot from the ground up using URDF and
                                 XACRO
                             </li>
                             <li>
-                                📡 Integrated sensors and extracted real-time data for obstacle
+                                Integrated sensors and extracted real-time data for obstacle
                                 tracking
                             </li>
-                            <li>📉 Implemented Bug 2 navigation for intelligent pathfinding</li>
-                            <li>🌐 Built accurate environment maps with GMapping and SLAM</li>
+                            <li>Implemented Bug 2 navigation for intelligent pathfinding</li>
+                            <li>Built accurate environment maps with GMapping and SLAM</li>
                             <li>
-                                💡 Strengthened understanding of state machines and motion
+                                Strengthened understanding of state machines and motion
                                 planning
                             </li>
                         </ul>
+                    </div>
+                </div>
+
+                {/* Image Gallery */}
+                <div className="mb-12">
+                    <h3 className="text-xl font-bold tracking-tight mb-4">
+                        Development Stages
+                    </h3>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <div className="border border-[var(--border)] overflow-hidden">
+                            <Image
+                                src="/projects/ros/stage1.png"
+                                alt="Robot design in Rviz"
+                                width={300}
+                                height={225}
+                                className="w-full h-auto"
+                            />
+                            <p className="text-xs text-center text-[var(--foreground)]/50 py-2">Stage 1: Design</p>
+                        </div>
+                        <div className="border border-[var(--border)] overflow-hidden">
+                            <Image
+                                src="/projects/ros/stage2.png"
+                                alt="Gazebo simulation"
+                                width={300}
+                                height={225}
+                                className="w-full h-auto"
+                            />
+                            <p className="text-xs text-center text-[var(--foreground)]/50 py-2">Stage 2: Simulation</p>
+                        </div>
+                        <div className="border border-[var(--border)] overflow-hidden">
+                            <Image
+                                src="/projects/ros/stage3.png"
+                                alt="Sensor integration"
+                                width={300}
+                                height={225}
+                                className="w-full h-auto"
+                            />
+                            <p className="text-xs text-center text-[var(--foreground)]/50 py-2">Stage 3: Sensors</p>
+                        </div>
+                        <div className="border border-[var(--border)] overflow-hidden">
+                            <Image
+                                src="/projects/ros/stage4.png"
+                                alt="SLAM mapping"
+                                width={300}
+                                height={225}
+                                className="w-full h-auto"
+                            />
+                            <p className="text-xs text-center text-[var(--foreground)]/50 py-2">Stage 4: SLAM</p>
+                        </div>
                     </div>
                 </div>
 
@@ -128,12 +174,7 @@ export default function ROSProjectPage() {
                     >
                         View Gallery
                     </Link>
-                    <Link
-                        href="/projects"
-                        className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--border)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)] transition-all duration-300"
-                    >
-                        ← Back to Projects
-                    </Link>
+                    <BackButton />
                 </div>
             </div>
         </section>

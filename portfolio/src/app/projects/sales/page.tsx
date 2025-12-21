@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import BackButton from "@/components/back-button";
 
 export const metadata: Metadata = {
     title: "Sales Playbook Optimization | Roshan Siddartha Sivakumar",
@@ -9,15 +10,10 @@ export const metadata: Metadata = {
 
 export default function SalesProjectPage() {
     return (
-        <section className="min-h-screen px-6 sm:px-12 lg:px-24 py-24">
+        <section className="min-h-screen px-6 sm:px-12 lg:px-24 pt-32 pb-24">
             <div className="max-w-4xl mx-auto">
                 {/* Back Link */}
-                <Link
-                    href="/projects"
-                    className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-[0.1em] text-[var(--foreground)]/50 hover:text-[var(--accent)] transition-colors mb-8"
-                >
-                    ← Back to Projects
-                </Link>
+                <BackButton variant="link" className="mb-8" />
 
                 {/* Header */}
                 <h1 className="text-[clamp(2rem,6vw,4rem)] font-bold tracking-tighter leading-[0.9] mb-4">
@@ -132,12 +128,7 @@ export default function SalesProjectPage() {
                     >
                         Try the Dashboard
                     </a>
-                    <Link
-                        href="/projects"
-                        className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--border)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)] transition-all duration-300"
-                    >
-                        ← Back to Projects
-                    </Link>
+                    <BackButton />
                 </div>
             </div>
         </section>

@@ -8,51 +8,55 @@ const SKILLS = [
     {
         category: "Generative AI & Vision",
         items: [
-            "RAG Architectures",
-            "LLM APIs (OpenAI, Claude)",
-            "Prompt Engineering",
-            "Deep Learning (CNNs)",
-            "Computer Vision (YOLOv8)",
-            "PyTorch",
-            "OpenCV",
+            { name: "RAG Architectures", isCore: true },
+            { name: "LLM APIs (OpenAI, Claude, Gemini)", isCore: true },
+            { name: "GPT-4 Vision", isCore: false },
+            { name: "Prompt Engineering", isCore: false },
+            { name: "PyTorch", isCore: true },
+            { name: "Deep Learning (CNNs)", isCore: false },
+            { name: "Transfer Learning", isCore: false },
+            { name: "Computer Vision (YOLOv8)", isCore: false },
+            { name: "Grad-CAM", isCore: false },
+            { name: "OpenCV", isCore: false },
         ],
     },
     {
         category: "Data Science & ML",
         items: [
-            "Machine Learning",
-            "Scikit-learn",
-            "Statistical Modeling",
-            "Feature Engineering",
-            "Pandas & NumPy",
-            "Data Visualization",
+            { name: "Machine Learning", isCore: true },
+            { name: "Scikit-learn", isCore: true },
+            { name: "Feature Engineering", isCore: false },
+            { name: "Statistical Modeling", isCore: false },
+            { name: "Pandas & NumPy", isCore: true },
+            { name: "Data Visualization", isCore: false },
         ],
     },
     {
-        category: "Engineering & Web",
+        category: "Data Engineering",
         items: [
-            "Python",
-            "ETL Pipelines",
-            "Web Scraping",
-            "Flask & Streamlit",
-            "Playwright",
-            "SQL Querying",
-            "NoSQL Design",
+            { name: "Python", isCore: true },
+            { name: "ETL Pipelines", isCore: true },
+            { name: "SQL Querying", isCore: true },
+            { name: "NoSQL Design", isCore: false },
+            { name: "Web Scraping", isCore: false },
+            { name: "Flask & Streamlit", isCore: false },
+            { name: "Playwright", isCore: false },
         ],
     },
     {
         category: "Platforms & Tools",
         items: [
-            "AWS & Docker",
-            "Git & GitHub Actions",
-            "MySQL & MongoDB",
-            "Tableau & PowerBI",
-            "Amazon QuickSight",
-            "Azure AD",
-            "Jupyter",
+            { name: "AWS & Docker", isCore: true },
+            { name: "Git & GitHub Actions", isCore: true },
+            { name: "MySQL & MongoDB", isCore: false },
+            { name: "Tableau & PowerBI", isCore: false },
+            { name: "Amazon QuickSight", isCore: false },
+            { name: "Azure AD", isCore: false },
+            { name: "Jupyter", isCore: false },
         ],
     },
 ];
+
 
 export default function SkillsSection() {
     const sectionRef = useRef<HTMLElement>(null);
@@ -115,14 +119,14 @@ export default function SkillsSection() {
                             <div className="flex flex-wrap gap-3">
                                 {group.items.map((skill) => (
                                     <span
-                                        key={skill}
+                                        key={skill.name}
                                         className={cn(
                                             "px-3 py-1 text-sm font-medium uppercase tracking-wide",
                                             "border border-[var(--border)] text-[var(--foreground)]/80",
                                             "group-hover:text-[var(--foreground)] transition-colors"
                                         )}
                                     >
-                                        {skill}
+                                        {skill.name}
                                     </span>
                                 ))}
                             </div>

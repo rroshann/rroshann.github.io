@@ -57,7 +57,7 @@ const engineeringProjects = [
 
 export default function ProjectsPage() {
     return (
-        <section className="min-h-screen px-6 sm:px-12 lg:px-24 py-24">
+        <section className="min-h-screen px-6 sm:px-12 lg:px-24 pt-32 pb-24">
             <div className="max-w-6xl mx-auto">
                 {/* Page Title */}
                 <h1 className="text-[clamp(2rem,8vw,6rem)] font-bold tracking-tighter leading-[0.9] mb-16">

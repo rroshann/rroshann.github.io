@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import BackButton from "@/components/back-button";
+import Image from "next/image";
 
 export const metadata: Metadata = {
     title: "3D-Printed Prosthetic Arm | Roshan Siddartha Sivakumar",
@@ -9,19 +11,14 @@ export const metadata: Metadata = {
 
 export default function ProstheticProjectPage() {
     return (
-        <section className="min-h-screen px-6 sm:px-12 lg:px-24 py-24">
+        <section className="min-h-screen px-6 sm:px-12 lg:px-24 pt-32 pb-24">
             <div className="max-w-4xl mx-auto">
                 {/* Back Link */}
-                <Link
-                    href="/projects"
-                    className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-[0.1em] text-[var(--foreground)]/50 hover:text-[var(--accent)] transition-colors mb-8"
-                >
-                    ← Back to Projects
-                </Link>
+                <BackButton variant="link" className="mb-8" />
 
                 {/* Header */}
                 <h1 className="text-[clamp(2rem,6vw,4rem)] font-bold tracking-tighter leading-[0.9] mb-4">
-                    🦾 Optimizing a 3D-Printed Prosthetic Arm
+                    Optimizing a 3D-Printed Prosthetic Arm
                 </h1>
                 <p className="text-lg text-[var(--accent)] font-medium mb-8">
                     Fusion 360 • Generative Design • Carbon Fiber • FDM
@@ -34,7 +31,7 @@ export default function ProstheticProjectPage() {
                         creating affordable, lightweight, and durable upper-limb prosthetics
                         using 3D printing. The inspiration came from a real need in the
                         medical field: conventional prosthetics are often prohibitively
-                        expensive and too heavy for comfortable daily use — especially for
+                        expensive and too heavy for comfortable daily use, especially for
                         children and older adults.
                     </p>
 
@@ -57,7 +54,7 @@ export default function ProstheticProjectPage() {
 
                     <p>
                         After analyzing the results, we selected the most optimized model
-                        that delivered strength, comfort, and cost-effectiveness — all while
+                        that delivered strength, comfort, and cost-effectiveness, all while
                         being manufacturable using Fused Deposition Modeling (FDM). The
                         iterative process allowed us to push the boundaries of form and
                         function.
@@ -71,6 +68,45 @@ export default function ProstheticProjectPage() {
                     </p>
                 </div>
 
+                {/* Image Gallery */}
+                <div className="mb-12">
+                    <h3 className="text-xl font-bold tracking-tight mb-4">
+                        Design Iterations
+                    </h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div className="border border-[var(--border)] overflow-hidden">
+                            <Image
+                                src="/projects/prosthetic/one.png"
+                                alt="Generative design iteration 1"
+                                width={400}
+                                height={300}
+                                className="w-full h-auto"
+                            />
+                            <p className="text-xs text-center text-[var(--foreground)]/50 py-2">Iteration 1</p>
+                        </div>
+                        <div className="border border-[var(--border)] overflow-hidden">
+                            <Image
+                                src="/projects/prosthetic/two.png"
+                                alt="Generative design iteration 2"
+                                width={400}
+                                height={300}
+                                className="w-full h-auto"
+                            />
+                            <p className="text-xs text-center text-[var(--foreground)]/50 py-2">Iteration 2</p>
+                        </div>
+                        <div className="border border-[var(--border)] overflow-hidden">
+                            <Image
+                                src="/projects/prosthetic/three.png"
+                                alt="Generative design iteration 3"
+                                width={400}
+                                height={300}
+                                className="w-full h-auto"
+                            />
+                            <p className="text-xs text-center text-[var(--foreground)]/50 py-2">Final Design</p>
+                        </div>
+                    </div>
+                </div>
+
                 {/* CTAs */}
                 <div className="mt-16 flex flex-wrap gap-4">
                     <Link
@@ -79,12 +115,7 @@ export default function ProstheticProjectPage() {
                     >
                         View Design Showcase
                     </Link>
-                    <Link
-                        href="/projects"
-                        className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--border)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)] transition-all duration-300"
-                    >
-                        ← Back to Projects
-                    </Link>
+                    <BackButton />
                 </div>
             </div>
         </section>

@@ -83,21 +83,21 @@ const engineeringProjects = [
         title: "3D-Printed Prosthetic Arm",
         description:
             "Designed a low-cost, carbon fiber prosthetic using Autodesk Fusion 360 generative design, optimizing for a 1000N load and <1500g mass.",
-        href: "/projects/prosthetic-arm",
+        href: "/projects/prosthetic",
         image: "/projects/prosthetic-arm.jpg",
     },
     {
         title: "Obstacle Avoidance with a ROS-Simulated Mobile Robot",
         description:
             "Implemented SLAM, GMapping, and the Bug 2 algorithm to enable an autonomous robot to navigate mapped environments in Gazebo.",
-        href: "/projects/ros-robot",
+        href: "/projects/ros",
         image: "/projects/ros-robot.jpg",
     },
     {
-        title: "Stabilizing a Tumbling Satellite Using Control Wheel Dynamics",
+        title: "Two-Wheel Inverted Pendulum Control System",
         description:
-            "Modeled spacecraft attitude control using Lyapunov functions and torque wheels to eliminate tumbling, validated via MATLAB simulations.",
-        href: "/projects/satellite-stabilization",
+            "Modeled and controlled a balancing robot using Newton-Euler dynamics, feedback control, and MATLAB simulations.",
+        href: "/projects/satellite",
         image: "/projects/satellite.jpg",
     },
 ];
