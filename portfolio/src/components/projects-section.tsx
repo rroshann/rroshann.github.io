@@ -66,26 +66,26 @@ const analyticsProjects = [
     {
         title: "North Carolina Voter Database System",
         description:
-            "Built a full-scale relational database from raw voter data with normalization, stored procedures, triggers, and front-end integration.",
-        href: "/projects/sql",
-        image: "/projects/sql.jpg",
+            "Architected a secure PHP/MySQL voter management system with audit logging and demographic analytics for Mecklenburg County.",
+        href: "/projects/nc-voter-db",
+        image: "/projects/nc-voter.jpg",
     },
 ];
 
 const engineeringProjects = [
     {
-        title: "Optimizing a Lightweight 3D-Printed Prosthetic Arm",
+        title: "3D-Printed Prosthetic Arm",
         description:
-            "Led the development of a low-cost, durable prosthetic arm using carbon fiber and generative design.",
-        href: "/projects/prosthetic",
-        image: "/projects/prosthetic.jpg",
+            "Designed a low-cost, carbon fiber prosthetic using Autodesk Fusion 360 generative design, optimizing for a 1000N load and <1500g mass.",
+        href: "/projects/prosthetic-arm",
+        image: "/projects/prosthetic-arm.jpg",
     },
     {
         title: "Obstacle Avoidance with a ROS-Simulated Mobile Robot",
         description:
-            "Designed and simulated a two-wheeled robot using ROS and Gazebo with Bug2 algorithm, SLAM, and LIDAR-based mapping.",
-        href: "/projects/ros",
-        image: "/projects/rosrobot.jpg",
+            "Implemented SLAM, GMapping, and the Bug 2 algorithm to enable an autonomous robot to navigate mapped environments in Gazebo.",
+        href: "/projects/ros-robot",
+        image: "/projects/ros-robot.jpg",
     },
     {
         title: "Stabilizing a Tumbling Satellite Using Control Wheel Dynamics",
