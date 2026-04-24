@@ -26,6 +26,14 @@ const nissanProjects = [
 
 const aiProjects = [
     {
+        title: "FabOps Copilot: Agentic AI for Semiconductor Fabs",
+        description:
+            "Built a 9-node LangGraph agent that diagnoses fab service-part stockout risk across policy, demand, and supply signals, achieving 83.3% pass rate on a real-state gold set.",
+        href: "/projects/fabops-copilot",
+        image: "/projects/fabops-copilot.jpg",
+        courseTag: "Context-Augmented Gen AI",
+    },
+    {
         title: "Scene Reader: Real-Time Visual Accessibility",
         description:
             "Built a hybrid YOLO + LLM pipeline for visually impaired users, achieving 0.54s latency and 3x speedup over pure VLMs.",
@@ -195,7 +203,7 @@ export default function ProjectsSection() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/50 mb-12 border-b border-[var(--border)] pb-4"
                     >
-                        04.2 — Generative AI & Computer Vision
+                        04.2 — Generative AI & Agentic Systems
                     </motion.h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {aiProjects.map((project, index) => (
