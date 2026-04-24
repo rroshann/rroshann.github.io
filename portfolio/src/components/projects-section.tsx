@@ -5,7 +5,15 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { cn } from "@/components/ui/cn";
 import ProjectCard from "@/components/project-card";
 
-const nissanProjects = [
+const industryProjects = [
+    {
+        title: "SEC Filings to Alpha: LLM-Driven Factor Extraction",
+        description:
+            "Led a 3-person capstone with AllianceBernstein, converting 2,441 SEC filings into a sentiment corpus that powers a sector-neutral long-short strategy with Information Ratio 2.02 over 318 trading days.",
+        href: "/projects/ab-capstone",
+        image: "/projects/ab-capstone.jpg",
+        courseTag: "DSI Capstone · AllianceBernstein",
+    },
     {
         title: "Nissan Dealer Training Analytics & AI Chatbot",
         description:
@@ -164,7 +172,7 @@ export default function ProjectsSection() {
                             transition={{ duration: 0.5, delay: 0.2 }}
                             className="text-2xl md:text-4xl font-bold uppercase tracking-tighter text-[var(--accent)]"
                         >
-                            04.1 — Industry Collaborations (Nissan)
+                            04.1 — Industry Collaborations
                         </motion.h3>
                         <span className="hidden md:block text-sm font-medium uppercase tracking-[0.2em] text-[var(--accent)] mb-1">
                             Featured Work
@@ -172,7 +180,7 @@ export default function ProjectsSection() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {nissanProjects.map((project, index) => (
+                        {industryProjects.map((project, index) => (
                             <motion.div
                                 key={project.href}
                                 initial={{ opacity: 0, y: 20 }}
@@ -187,7 +195,8 @@ export default function ProjectsSection() {
                                     href={project.href}
                                     image={project.image}
                                     category="data"
-                                    isNissan={true}
+                                    isNissan={project.isNissan}
+                                    courseTag={project.courseTag}
                                 />
                             </motion.div>
                         ))}
