@@ -3,7 +3,7 @@ import LegacyRedirect from "@/components/legacy-redirect";
 
 export const metadata: Metadata = {
     title: "Economic Freedom & Global Well-Being | Roshan Siddartha Sivakumar",
-    robots: { index: false },
+    alternates: { canonical: "/projects/economic-freedom" },
 };
 
 export default function EDAProjectPage() {

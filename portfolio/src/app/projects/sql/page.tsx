@@ -3,7 +3,7 @@ import LegacyRedirect from "@/components/legacy-redirect";
 
 export const metadata: Metadata = {
     title: "NC Voter Database System | Roshan Siddartha Sivakumar",
-    robots: { index: false },
+    alternates: { canonical: "/projects/nc-voter-db" },
 };
 
 export default function SQLProjectPage() {

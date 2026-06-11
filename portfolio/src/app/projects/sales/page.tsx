@@ -3,7 +3,7 @@ import LegacyRedirect from "@/components/legacy-redirect";
 
 export const metadata: Metadata = {
     title: "Sales Playbook Optimization | Roshan Siddartha Sivakumar",
-    robots: { index: false },
+    alternates: { canonical: "/projects/sales-playbook" },
 };
 
 export default function SalesProjectPage() {

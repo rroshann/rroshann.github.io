@@ -3,7 +3,7 @@ import LegacyRedirect from "@/components/legacy-redirect";
 
 export const metadata: Metadata = {
     title: "Projects | Roshan Siddartha Sivakumar",
-    robots: { index: false },
+    alternates: { canonical: "/" },
 };
 
 export default function ProjectsPage() {
