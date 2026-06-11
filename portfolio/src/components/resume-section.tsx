@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { cn } from "@/components/ui/cn";
-import { EASE } from "@/components/ui/motion";
+import { DUR, EASE } from "@/components/ui/motion";
 import SectionHeading from "@/components/section-heading";
 
 /**
@@ -28,7 +28,7 @@ export default function ResumeSection() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.1, ease: EASE }}
+                    transition={{ duration: DUR.md, delay: 0.1, ease: EASE }}
                     className="text-lg text-[var(--foreground)]/70 mb-8 max-w-2xl"
                 >
                     You can view or download my full resume below for more details on my
@@ -40,7 +40,7 @@ export default function ResumeSection() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.15, ease: EASE }}
+                    transition={{ duration: DUR.md, delay: 0.15, ease: EASE }}
                     className="mb-12"
                 >
                     <a
@@ -63,7 +63,7 @@ export default function ResumeSection() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.2, ease: EASE }}
+                    transition={{ duration: DUR.md, delay: 0.2, ease: EASE }}
                     className="border-2 border-[var(--border)] bg-[var(--muted)]"
                 >
                     <iframe

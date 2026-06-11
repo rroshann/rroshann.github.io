@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { EASE } from "@/components/ui/motion";
+import { DUR, EASE, STAGGER } from "@/components/ui/motion";
 import SectionHeading from "@/components/section-heading";
 
 const EXPERIENCE = [
@@ -76,7 +76,7 @@ export default function ExperienceSection() {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ duration: 0.4, delay: 0.08 + index * 0.06, ease: EASE }}
+                                    transition={{ duration: DUR.md, delay: 0.08 + index * STAGGER, ease: EASE }}
                                     className="relative pl-8 border-l-2 border-[var(--border)] hover:border-[var(--accent)] transition-colors duration-200"
                                 >
                                     <span className="absolute -left-[9px] top-0 w-4 h-4 bg-[var(--accent)] rounded-none" />
@@ -114,7 +114,7 @@ export default function ExperienceSection() {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ duration: 0.4, delay: 0.12 + index * 0.06, ease: EASE }}
+                                    transition={{ duration: DUR.md, delay: 0.12 + index * STAGGER, ease: EASE }}
                                     className="relative pl-8 border-l-2 border-[var(--border)] hover:border-[var(--accent)] transition-colors duration-200"
                                 >
                                     <span className="absolute -left-[9px] top-0 w-4 h-4 bg-[var(--border)]" />

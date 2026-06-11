@@ -48,7 +48,7 @@ export default function ProstheticGalleryPage() {
                     {galleryItems.map((item, index) => (
                         <div
                             key={index}
-                            className="border-2 border-[var(--border)] overflow-hidden hover:border-[var(--accent)] transition-colors duration-300"
+                            className="border-2 border-[var(--border)] overflow-hidden hover:border-[var(--accent)] transition-colors duration-200"
                         >
                             <div className="aspect-video relative bg-[var(--muted)]">
                                 <Image
@@ -80,7 +80,7 @@ export default function ProstheticGalleryPage() {
                 {/* CTAs */}
                 <div className="mt-16 flex flex-wrap gap-4">
                     <BackButton href="/projects/prosthetic" label="← Back to Project" />
-                    <Link href="/#projects" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--border)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)] transition-all duration-300">All Projects</Link>
+                    <Link href="/#projects" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--border)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)] transition-all duration-200">All Projects</Link>
                 </div>
             </div>
         </section>

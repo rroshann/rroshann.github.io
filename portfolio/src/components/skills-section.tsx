@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { EASE } from "@/components/ui/motion";
+import { DUR, EASE, STAGGER } from "@/components/ui/motion";
 import SectionHeading from "@/components/section-heading";
 
 const SKILLS = [
@@ -79,7 +79,7 @@ export default function SkillsSection() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.4, delay: 0.08 + index * 0.06, ease: EASE }}
+                            transition={{ duration: DUR.md, delay: 0.08 + index * STAGGER, ease: EASE }}
                             className="group border-t-2 border-[var(--border)] pt-6 hover:border-[var(--accent)] transition-colors duration-200"
                         >
                             <div className="flex items-baseline justify-between mb-6">

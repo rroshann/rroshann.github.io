@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { EASE } from "@/components/ui/motion";
+import { DUR, EASE, STAGGER } from "@/components/ui/motion";
 import SectionHeading from "@/components/section-heading";
 import ProjectCard from "@/components/project-card";
 
@@ -138,7 +138,7 @@ export default function ProjectsSection() {
                             initial={{ opacity: 0, x: -16 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.35, delay: 0.05, ease: EASE }}
+                            transition={{ duration: DUR.sm, delay: 0.05, ease: EASE }}
                             className="text-xl md:text-2xl font-bold uppercase tracking-tighter text-[var(--accent)]"
                         >
                             <span className="mr-3 text-[var(--foreground)]/40">04.1</span>
@@ -156,7 +156,7 @@ export default function ProjectsSection() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.4, delay: 0.06 * index, ease: EASE }}
+                                transition={{ duration: DUR.md, delay: STAGGER * index, ease: EASE }}
                                 className="group relative"
                             >
                                 <ProjectCard
@@ -179,7 +179,7 @@ export default function ProjectsSection() {
                         initial={{ opacity: 0, x: -16 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.35, delay: 0.05, ease: EASE }}
+                        transition={{ duration: DUR.sm, delay: 0.05, ease: EASE }}
                         className="text-xl md:text-2xl font-bold uppercase tracking-tighter mb-10 border-b-2 border-[var(--border)] pb-3"
                     >
                         <span className="mr-3 text-[var(--foreground)]/40">04.2</span>
@@ -192,7 +192,7 @@ export default function ProjectsSection() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.4, delay: 0.06 * index, ease: EASE }}
+                                transition={{ duration: DUR.md, delay: STAGGER * index, ease: EASE }}
                             >
                                 <ProjectCard
                                     title={project.title}
@@ -213,7 +213,7 @@ export default function ProjectsSection() {
                         initial={{ opacity: 0, x: -16 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.35, delay: 0.05, ease: EASE }}
+                        transition={{ duration: DUR.sm, delay: 0.05, ease: EASE }}
                         className="text-xl md:text-2xl font-bold uppercase tracking-tighter mb-10 border-b-2 border-[var(--border)] pb-3"
                     >
                         <span className="mr-3 text-[var(--foreground)]/40">04.3</span>
@@ -226,7 +226,7 @@ export default function ProjectsSection() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.4, delay: 0.06 * index, ease: EASE }}
+                                transition={{ duration: DUR.md, delay: STAGGER * index, ease: EASE }}
                             >
                                 <ProjectCard
                                     title={project.title}
@@ -247,7 +247,7 @@ export default function ProjectsSection() {
                         initial={{ opacity: 0, x: -16 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.35, delay: 0.05, ease: EASE }}
+                        transition={{ duration: DUR.sm, delay: 0.05, ease: EASE }}
                         className="text-xl md:text-2xl font-bold uppercase tracking-tighter mb-10 border-b-2 border-[var(--border)] pb-3"
                     >
                         <span className="mr-3 text-[var(--foreground)]/40">04.4</span>
@@ -260,7 +260,7 @@ export default function ProjectsSection() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.4, delay: 0.06 * index, ease: EASE }}
+                                transition={{ duration: DUR.md, delay: STAGGER * index, ease: EASE }}
                             >
                                 <ProjectCard
                                     title={project.title}

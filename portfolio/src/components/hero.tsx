@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { cn } from "@/components/ui/cn";
-import { EASE } from "@/components/ui/motion";
+import { DUR, EASE } from "@/components/ui/motion";
 
 /**
  * Hero component implementing Kinetic Brutalist design:
@@ -49,7 +49,7 @@ export default function Hero() {
                 <motion.p
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: 0.05, ease: EASE }}
+                    transition={{ duration: DUR.md, delay: 0.05, ease: EASE }}
                     className="mb-6 flex items-center gap-4 text-sm font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/50"
                 >
                     <span className="w-2.5 h-2.5 bg-[var(--accent)]" aria-hidden="true" />
@@ -61,7 +61,7 @@ export default function Hero() {
                     style={{ y: headlineY }}
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.55, delay: 0.1, ease: EASE }}
+                    transition={{ duration: DUR.xl, delay: 0.1, ease: EASE }}
                     className={cn(
                         "font-display font-bold tracking-tighter leading-[0.82]",
                         "text-[clamp(3.5rem,13vw,12rem)]",
@@ -79,7 +79,7 @@ export default function Hero() {
                     style={{ y: taglineY }}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.18, ease: EASE }}
+                    transition={{ duration: DUR.lg, delay: 0.18, ease: EASE }}
                     className="mt-8 max-w-xl text-lg leading-relaxed text-[var(--foreground)]/70 sm:text-xl"
                 >
                     Building predictive systems and scalable pipelines that transform complex data into decisive action.
@@ -89,7 +89,7 @@ export default function Hero() {
                 <motion.div
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.45, delay: 0.25, ease: EASE }}
+                    transition={{ duration: DUR.lg, delay: 0.25, ease: EASE }}
                     className="mt-12 flex flex-wrap gap-4"
                 >
                     <a
@@ -125,7 +125,7 @@ export default function Hero() {
             <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
+                transition={{ delay: 0.5, duration: DUR.lg }}
                 className="absolute bottom-12 left-6 sm:left-12 lg:left-24 hidden sm:block text-xs font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/40"
             >
                 Based in Nashville, TN
@@ -135,7 +135,7 @@ export default function Hero() {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.7, duration: 0.5 }}
+                transition={{ delay: 0.7, duration: DUR.lg }}
                 className="absolute bottom-12 left-1/2 -translate-x-1/2"
                 aria-hidden="true"
             >

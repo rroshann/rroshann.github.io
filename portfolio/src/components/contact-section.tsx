@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { EASE } from "@/components/ui/motion";
+import { DUR, EASE, STAGGER } from "@/components/ui/motion";
 import SectionHeading from "@/components/section-heading";
 
 const contactLinks = [
@@ -45,7 +45,7 @@ export default function ContactSection() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.1, ease: EASE }}
+                    transition={{ duration: DUR.md, delay: 0.1, ease: EASE }}
                     className="text-lg text-[var(--foreground)]/70 mb-12 max-w-2xl"
                 >
                     <p>
@@ -70,7 +70,7 @@ export default function ContactSection() {
                             initial={{ opacity: 0, x: -16 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.4, delay: 0.1 + index * 0.06, ease: EASE }}
+                            transition={{ duration: DUR.md, delay: 0.1 + index * STAGGER, ease: EASE }}
                             className="group flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 p-6 border-2 border-[var(--border)] hover:border-[var(--accent)] hover:bg-[var(--accent)] transition-all duration-200"
                         >
                             <span className="text-sm font-bold tracking-[0.2em] text-[var(--foreground)]/40 group-hover:text-[var(--background)]/60 transition-colors duration-200">

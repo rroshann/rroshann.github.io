@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { EASE } from "@/components/ui/motion";
+import { DUR, EASE } from "@/components/ui/motion";
 import SectionHeading from "@/components/section-heading";
 
 /**
@@ -27,7 +27,7 @@ export default function AboutSection() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: 0.1, ease: EASE }}
+                        transition={{ duration: DUR.md, delay: 0.1, ease: EASE }}
                     >
                         I build intelligent systems that turn messy data into clear decisions.
                         With an M.S. in Data Science from Vanderbilt, I bring
@@ -40,7 +40,7 @@ export default function AboutSection() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: 0.15, ease: EASE }}
+                        transition={{ duration: DUR.md, delay: 0.15, ease: EASE }}
                     >
                         My recent work spans industry and academia. At SERVPRO, I built a GPT-4 Vision
                         agent that automates BI reporting for 13,500+ job records nightly, eliminating
@@ -53,7 +53,7 @@ export default function AboutSection() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: 0.2, ease: EASE }}
+                        transition={{ duration: DUR.md, delay: 0.2, ease: EASE }}
                     >
                         Right now, I&apos;m most energized by Generative AI, computer vision,
                         and the craft of turning complex systems into intuitive experiences.

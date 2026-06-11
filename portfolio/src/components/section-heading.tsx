@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { cn } from "@/components/ui/cn";
-import { EASE } from "@/components/ui/motion";
+import { DUR, EASE } from "@/components/ui/motion";
 
 interface SectionHeadingProps {
     /** Section index, e.g. "01" */
@@ -25,7 +25,7 @@ export default function SectionHeading({ index, label, title, className }: Secti
                 initial={{ opacity: 0, x: -16 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.35, ease: EASE }}
+                transition={{ duration: DUR.sm, ease: EASE }}
                 className="flex items-center gap-4 mb-6"
             >
                 <span className="w-2.5 h-2.5 bg-[var(--accent)]" aria-hidden="true" />
@@ -38,7 +38,7 @@ export default function SectionHeading({ index, label, title, className }: Secti
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.45, delay: 0.05, ease: EASE }}
+                transition={{ duration: DUR.lg, delay: 0.05, ease: EASE }}
                 className={cn(
                     "font-display font-bold tracking-tighter leading-[0.9]",
                     "text-[clamp(2rem,8vw,6rem)]",
