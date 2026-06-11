@@ -22,7 +22,7 @@ export default function BackButton({ variant = "secondary", className = "" }: Ba
 
     return (
         <button
-            onClick={() => router.back()}
+            onClick={() => router.push("/#projects")}
             className={`${baseStyles} ${variantStyles} ${className}`}
         >
             ← Back to Projects

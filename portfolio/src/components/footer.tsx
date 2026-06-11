@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CurrentYear from "@/components/current-year";
 
 const socialLinks = [
     {
@@ -65,7 +66,7 @@ export default function Footer() {
 
                 {/* Copyright */}
                 <p className="text-xs text-[var(--foreground)]/30">
-                    © {new Date().getFullYear()} All rights reserved.
+                    © <CurrentYear /> All rights reserved.
                 </p>
             </div>
         </footer>

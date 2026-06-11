@@ -98,7 +98,7 @@ const engineeringProjects = [
     {
         title: "3D-Printed Prosthetic Arm",
         description:
-            "Designed a low-cost, carbon fiber prosthetic using Autodesk Fusion 360 generative design, optimizing for a 1000N load and <1500g mass.",
+            "Designed a low-cost, carbon fiber prosthetic using Autodesk Fusion 360 generative design, optimizing for a 1000N load under strict mass constraints.",
         href: "/projects/prosthetic",
         image: "/projects/prosthetic-arm.jpg",
     },

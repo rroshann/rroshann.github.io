@@ -64,7 +64,7 @@ export default function AboutSection() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
                         I build intelligent systems that turn messy data into clear decisions.
-                        Currently finishing my M.S. in Data Science at Vanderbilt, I bring
+                        With an M.S. in Data Science from Vanderbilt, I bring
                         a Mechanical Engineering foundation that taught me to think in systems:
                         tolerances, constraints, and trade-offs. Now I apply that rigor to
                         machine learning pipelines, scalable architectures, and production AI.

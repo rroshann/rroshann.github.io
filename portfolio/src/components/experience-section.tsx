@@ -8,7 +8,7 @@ const EXPERIENCE = [
     {
         company: "SERVPRO",
         role: "Data Science Intern",
-        period: "Aug 2025 – Dec 2025",
+        period: "Aug 2025 – Present",
         location: "Lebanon, TN",
         description: [
             "Developed a Vision-Based Automation System using GPT-4 Vision to autonomously navigate legacy portals; engineered spatial reasoning logic to visually detect and bypass dynamic pop-ups, achieving 99% reliability.",
