@@ -4,11 +4,13 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ScrollToTop from "@/components/scroll-to-top";
+import MotionProvider from "@/components/motion-provider";
+import NavigationTracker from "@/components/navigation-tracker";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["700"],
 });
 
 const inter = Inter({
@@ -18,9 +20,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://rroshann.github.io"),
   title: "Roshan Siddartha Sivakumar | Data Scientist & Engineer",
   description:
-    "Data Science graduate student at Vanderbilt. Building predictive models, ML pipelines, and dashboards that drive better decisions.",
+    "Data scientist (M.S., Vanderbilt). Building ML models, LLM applications, and production data pipelines that drive better decisions.",
   keywords: [
     "Data Science",
     "Machine Learning",
@@ -32,17 +35,49 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Roshan Siddartha Sivakumar | Data Scientist & Engineer",
     description:
-      "Data Science graduate at Vanderbilt. Building predictive models, ML pipelines, and dashboards.",
+      "Data scientist (M.S., Vanderbilt). ML models, LLM applications, and production data pipelines.",
     url: "https://rroshann.github.io",
     siteName: "Roshan Sivakumar Portfolio",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Roshan Siddartha Sivakumar — Data Scientist & Engineer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Roshan Sivakumar | Data Scientist & Engineer",
     description:
-      "Data Science graduate at Vanderbilt. ML, AI, and Analytics.",
+      "Data scientist (M.S., Vanderbilt). ML, AI, and Analytics.",
+    images: ["/og-image.png"],
   },
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Roshan Siddartha Sivakumar",
+  url: "https://rroshann.github.io",
+  email: "mailto:roshan.siddartha.24@gmail.com",
+  jobTitle: "Data Scientist",
+  alumniOf: [
+    {
+      "@type": "CollegeOrUniversity",
+      name: "Vanderbilt University",
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      name: "Vellore Institute of Technology",
+    },
+  ],
+  sameAs: [
+    "https://linkedin.com/in/roshansiddartha",
+    "https://github.com/rroshann",
+  ],
 };
 
 export default function RootLayout({
@@ -55,12 +90,19 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} ${inter.variable} antialiased bg-background text-foreground`}
       >
-        <Navbar />
-        <div className="flex flex-col min-h-screen pt-20 md:pt-24">
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </div>
-        <ScrollToTop />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        <MotionProvider>
+          <NavigationTracker />
+          <Navbar />
+          <div className="flex flex-col min-h-screen pt-20 md:pt-24">
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+          <ScrollToTop />
+        </MotionProvider>
       </body>
     </html>
   );

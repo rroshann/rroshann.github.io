@@ -30,25 +30,15 @@ export default function Navbar() {
 
                 {/* Desktop Links: Absolutely centered horizontally */}
                 <div className="absolute left-1/2 -translate-x-1/2 hidden gap-8 md:flex items-center">
-                    {NAV_LINKS.map((link) =>
-                        link.href.startsWith("#") ? (
-                            <a
-                                key={link.href}
-                                href={link.href}
-                                className="font-medium text-sm uppercase tracking-wide transition-colors hover:text-[#DFE104] text-foreground"
-                            >
-                                {link.label}
-                            </a>
-                        ) : (
-                            <Link
-                                key={link.href}
-                                href={link.href}
-                                className="font-medium text-sm uppercase tracking-wide transition-colors hover:text-[#DFE104] text-foreground"
-                            >
-                                {link.label}
-                            </Link>
-                        )
-                    )}
+                    {NAV_LINKS.map((link) => (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            className="font-medium text-sm uppercase tracking-wide transition-colors hover:text-[#DFE104] text-foreground"
+                        >
+                            {link.label}
+                        </Link>
+                    ))}
                 </div>
 
                 {/* CTA Button & Mobile Toggle Wrapper */}
@@ -56,7 +46,7 @@ export default function Navbar() {
                     {/* CTA Button 
              Classes: relative inline-flex items-center justify-center overflow-hidden font-bold uppercase tracking-tighter transition-all disabled:pointer-events-none disabled:opacity-50 bg-[#DFE104] text-black hover:scale-105 active:scale-95 h-10 px-4 text-sm
           */}
-                    <a
+                    <Link
                         href="/#contact"
                         className={cn(
                             "relative inline-flex items-center justify-center overflow-hidden h-10 px-4 text-sm",
@@ -67,7 +57,7 @@ export default function Navbar() {
                         )}
                     >
                         <span className="relative z-10 flex items-center gap-2">Contact</span>
-                    </a>
+                    </Link>
 
                     {/* Mobile Menu Button - Kept compatible with design */}
                     <button
@@ -102,34 +92,23 @@ export default function Navbar() {
                         className="md:hidden border-t border-[var(--border)] bg-black"
                     >
                         <div className="flex flex-col px-4 py-6 gap-6 items-center">
-                            {NAV_LINKS.map((link) =>
-                                link.href.startsWith("#") ? (
-                                    <a
-                                        key={link.href}
-                                        href={link.href}
-                                        onClick={() => setIsMobileMenuOpen(false)}
-                                        className="font-medium text-sm uppercase tracking-wide transition-colors hover:text-[#DFE104] text-foreground"
-                                    >
-                                        {link.label}
-                                    </a>
-                                ) : (
-                                    <Link
-                                        key={link.href}
-                                        href={link.href}
-                                        onClick={() => setIsMobileMenuOpen(false)}
-                                        className="font-medium text-sm uppercase tracking-wide transition-colors hover:text-[#DFE104] text-foreground"
-                                    >
-                                        {link.label}
-                                    </Link>
-                                )
-                            )}
-                            <a
+                            {NAV_LINKS.map((link) => (
+                                <Link
+                                    key={link.href}
+                                    href={link.href}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="font-medium text-sm uppercase tracking-wide transition-colors hover:text-[#DFE104] text-foreground"
+                                >
+                                    {link.label}
+                                </Link>
+                            ))}
+                            <Link
                                 href="/#contact"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="relative inline-flex items-center justify-center overflow-hidden h-10 px-8 text-sm font-bold uppercase tracking-tighter transition-all bg-[#DFE104] text-black w-full"
                             >
                                 <span className="relative z-10 flex items-center gap-2">Contact</span>
-                            </a>
+                            </Link>
                         </div>
                     </motion.div>
                 )}

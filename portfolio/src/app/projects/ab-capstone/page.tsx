@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import BackButton from "@/components/back-button";
 
 export const metadata: Metadata = {
@@ -96,9 +95,9 @@ export default function AbCapstonePage() {
                 <div className="space-y-10">
                     {/* The Challenge */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             The Challenge
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 leading-relaxed mb-4">
                             Institutional investors pay for analyst summaries of SEC filings because the underlying documents are long, inconsistently structured, and written in deliberately hedged language. A decade of 10-Ks and 10-Qs across 80 tickers is roughly 2,500 filings and tens of millions of tokens, far beyond manual review. The question is whether a fine-tuned reasoning model can extract filing-level sentiment that survives honest backtesting as a tradeable factor, not just look good in cross-sectional correlations.
                         </p>
@@ -109,9 +108,9 @@ export default function AbCapstonePage() {
 
                     {/* Four-Stage Pipeline */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Four-Stage Pipeline
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 mb-4">
                             Each filing flows through four stages, chained as resume-safe jobs on an HPC cluster:
                         </p>
@@ -134,9 +133,9 @@ export default function AbCapstonePage() {
                 <div className="space-y-10">
                     {/* Monotone Ladder: hero visualization */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Monotone Cohort Ladder
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 mb-6">
                             Top-quintile minus bottom-quintile return, sector-neutral construction. Every training stage strictly improves the prior cohort.
                         </p>
@@ -183,9 +182,9 @@ export default function AbCapstonePage() {
 
                     {/* 48-cell Backtest Grid */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             48-Cell Backtest Grid
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 mb-5">
                             4 strategies by 4 model variants by 3 horizons, 605 held-out filings. Each square is one backtest cell.
                         </p>
@@ -238,9 +237,9 @@ export default function AbCapstonePage() {
                 <div className="space-y-10">
                     {/* Hardest Problems Solved (wrong-sign item removed, now pulled out above) */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Hardest Problems Solved
-                        </h3>
+                        </h2>
                         <ol className="space-y-4 ml-4 list-decimal text-[var(--foreground)]/70">
                             <li>
                                 <strong className="text-[var(--foreground)]/90">Failed learned ordinal verifier.</strong> The original Best-of-N scorer used a CORN ordinal-regression head. Validation revealed silent-failure modes. Pivoted to zero-parameter self-consistency voting (Wang et al. 2022), preserving the +3.2 percentage-point lift over SFT-only while cutting inference compute and removing the silent-failure risk.
@@ -256,9 +255,9 @@ export default function AbCapstonePage() {
 
                     {/* Scale and Metrics */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Scale and Metrics
-                        </h3>
+                        </h2>
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                             <div className="border border-[var(--border)] p-4 text-center">
                                 <p className="text-2xl font-bold text-[var(--foreground)]">2,441</p>
@@ -297,9 +296,9 @@ export default function AbCapstonePage() {
 
                     {/* Infrastructure */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Infrastructure
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 leading-relaxed">
                             Inference ran on a vLLM-on-ACCRE stack (DGX A100 40GB and RTX A6000) with OpenAI-compatible clients, bounded concurrency, 5-attempt exponential backoff, and per-request 120s timeouts. Authored SLURM sbatch launch scripts and a Singularity-containerized vLLM startup, tuned separately for A100 40GB and 80GB nodes, with ACCRE-specific path resolution and HuggingFace cache placement on fast scratch storage.
                         </p>
@@ -307,9 +306,9 @@ export default function AbCapstonePage() {
 
                     {/* Tech Stack */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Tech Stack
-                        </h3>
+                        </h2>
                         <div className="flex flex-wrap gap-2">
                             {[
                                 "Python",
@@ -344,9 +343,9 @@ export default function AbCapstonePage() {
 
                     {/* Team and Role */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Team and Role
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70">
                             Three-person capstone team with per-person ticker partitioning. I led the project as sole author of 58 of 73 repository commits, drove the pipeline architecture, fine-tuning and RL alignment, and the backtest framework, and authored the handoff documentation and final technical report.
                         </p>
@@ -358,7 +357,7 @@ export default function AbCapstonePage() {
 
                 {/* CTAs */}
                 <div className="mt-16 flex flex-wrap gap-4">
-                    <Link href="/#projects" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--border)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)] transition-all duration-300">← Back to Projects</Link>
+                    <BackButton />
                 </div>
             </div>
         </section>

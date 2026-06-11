@@ -66,9 +66,9 @@ export default function SalesPlaybookPage() {
                 <div className="space-y-10">
                     {/* ML Models */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Machine Learning Approach
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 leading-relaxed mb-4">
                             Trained and compared 6 algorithms to find the best deal outcome
                             predictor:
@@ -101,9 +101,9 @@ export default function SalesPlaybookPage() {
 
                     {/* Customer Segmentation */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Customer Segmentation (KMeans)
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 leading-relaxed mb-4">
                             Grouped companies by revenue, engagement, and age into actionable
                             segments:
@@ -126,9 +126,9 @@ export default function SalesPlaybookPage() {
 
                     {/* Dashboard Features */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Streamlit Dashboard Features
-                        </h3>
+                        </h2>
                         <ul className="space-y-2 text-[var(--foreground)]/70">
                             <li>
                                 <strong className="text-[var(--foreground)]/90">Deal Outcome Predictor:</strong>
@@ -155,9 +155,9 @@ export default function SalesPlaybookPage() {
 
                     {/* Feature Engineering */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Feature Engineering
-                        </h3>
+                        </h2>
                         <ul className="space-y-2 text-[var(--foreground)]/70">
                             <li>Custom fields for revenue buckets, tech stack indicators, deal size categories</li>
                             <li>Categorical encoding, scaling, and imputation strategies</li>
@@ -168,9 +168,9 @@ export default function SalesPlaybookPage() {
 
                     {/* Tech Stack */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Technologies Used
-                        </h3>
+                        </h2>
                         <div className="flex flex-wrap gap-2">
                             {[
                                 "Python",
@@ -194,9 +194,9 @@ export default function SalesPlaybookPage() {
 
                     {/* Team */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Team
-                        </h3>
+                        </h2>
                         <ul className="text-[var(--foreground)]/70 space-y-1">
                             <li><strong className="text-[var(--foreground)]">Roshan Siddartha Sivakumar</strong></li>
                             <li>Xiaochen Liu</li>
@@ -208,12 +208,12 @@ export default function SalesPlaybookPage() {
 
                 {/* CTAs */}
                 <div className="mt-16 flex flex-wrap gap-4">
-                    <Link href="/#projects" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--border)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)] transition-all duration-300">← Back to Projects</Link>
+                    <BackButton />
                     <Link
                         href="https://github.com/rroshann/ML_midterm_project"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--accent)] text-[var(--background)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--foreground)] transition-all duration-300"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--accent)] text-[var(--background)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--foreground)] transition-all duration-200"
                     >
                         View on GitHub
                     </Link>

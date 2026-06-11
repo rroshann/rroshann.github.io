@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CurrentYear from "@/components/current-year";
 
 const socialLinks = [
     {
@@ -21,7 +22,7 @@ const socialLinks = [
     },
     {
         label: "Email",
-        href: "mailto:roshan.siddartha.sivakumar@vanderbilt.edu",
+        href: "mailto:roshan.siddartha.24@gmail.com",
         icon: (
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -41,7 +42,7 @@ export default function Footer() {
                         href="https://github.com/rroshann/rroshann.github.io"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[var(--accent)] hover:underline transition-colors duration-300"
+                        className="text-[var(--accent)] hover:underline transition-colors duration-200"
                     >
                         Roshan Siddartha Sivakumar
                     </Link>
@@ -55,7 +56,7 @@ export default function Footer() {
                             href={link.href}
                             target={link.href.startsWith("mailto") ? undefined : "_blank"}
                             rel={link.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-                            className="text-[var(--foreground)]/50 hover:text-[var(--accent)] transition-colors duration-300"
+                            className="text-[var(--foreground)]/50 hover:text-[var(--accent)] transition-colors duration-200"
                             aria-label={link.label}
                         >
                             {link.icon}
@@ -65,7 +66,7 @@ export default function Footer() {
 
                 {/* Copyright */}
                 <p className="text-xs text-[var(--foreground)]/30">
-                    © {new Date().getFullYear()} All rights reserved.
+                    © <CurrentYear /> All rights reserved.
                 </p>
             </div>
         </footer>

@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { cn } from "@/components/ui/cn";
+import { motion } from "framer-motion";
+import { DUR, EASE, STAGGER } from "@/components/ui/motion";
+import SectionHeading from "@/components/section-heading";
 import ProjectCard from "@/components/project-card";
 
 const industryProjects = [
@@ -98,7 +98,7 @@ const engineeringProjects = [
     {
         title: "3D-Printed Prosthetic Arm",
         description:
-            "Designed a low-cost, carbon fiber prosthetic using Autodesk Fusion 360 generative design, optimizing for a 1000N load and <1500g mass.",
+            "Designed a low-cost, carbon fiber prosthetic using Autodesk Fusion 360 generative design, optimizing for a 1000N load under strict mass constraints.",
         href: "/projects/prosthetic",
         image: "/projects/prosthetic-arm.jpg",
     },
@@ -113,66 +113,36 @@ const engineeringProjects = [
         title: "Two-Wheel Inverted Pendulum Control System",
         description:
             "Modeled and controlled a balancing robot using Newton-Euler dynamics, feedback control, and MATLAB simulations.",
-        href: "/projects/satellite",
-        image: "/projects/satellite.jpg",
+        href: "/projects/inverted-pendulum",
+        image: "/projects/inverted-pendulum.jpg",
     },
 ];
 
 export default function ProjectsSection() {
-    const sectionRef = useRef<HTMLElement>(null);
-
-    const { scrollYProgress } = useScroll({
-        target: sectionRef,
-        offset: ["start end", "end start"],
-    });
-
-    const opacity = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [0, 1, 1, 0]);
-    const y = useTransform(scrollYProgress, [0, 0.1], [60, 0]);
-
     return (
         <section
             id="projects"
-            ref={sectionRef}
             className="min-h-screen bg-black px-6 sm:px-12 lg:px-24 py-24"
         >
-            <motion.div style={{ opacity, y }} className="max-w-6xl mx-auto">
-                {/* Section Label */}
-                <motion.p
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--border)] mb-4"
-                >
-                    04 — Projects
-                </motion.p>
-
-                {/* Section Title */}
-                <motion.h2
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7, delay: 0.1 }}
-                    className={cn(
-                        "font-display font-bold tracking-tighter leading-[0.9]",
-                        "text-[clamp(2rem,8vw,6rem)]",
-                        "text-foreground mb-16"
-                    )}
-                >
-                    <span className="text-[var(--accent)]">SELECTED WORKS</span>
-                </motion.h2>
+            <div className="max-w-6xl mx-auto">
+                <SectionHeading
+                    index="04"
+                    label="Projects"
+                    title={<>SELECTED <span className="text-[var(--accent)]">WORKS</span></>}
+                />
 
                 {/* Nissan / Industry Section */}
                 <div className="mb-32">
-                    <div className="flex items-end justify-between border-b-2 border-[var(--accent)] mb-12 pb-4">
+                    <div className="flex items-end justify-between border-b-2 border-[var(--accent)] mb-10 pb-3">
                         <motion.h3
-                            initial={{ opacity: 0, x: -20 }}
+                            initial={{ opacity: 0, x: -16 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
-                            className="text-2xl md:text-4xl font-bold uppercase tracking-tighter text-[var(--accent)]"
+                            transition={{ duration: DUR.sm, delay: 0.05, ease: EASE }}
+                            className="text-xl md:text-2xl font-bold uppercase tracking-tighter text-[var(--accent)]"
                         >
-                            04.1 — Industry Collaborations
+                            <span className="mr-3 text-[var(--foreground)]/40">04.1</span>
+                            Industry Collaborations
                         </motion.h3>
                         <span className="hidden md:block text-sm font-medium uppercase tracking-[0.2em] text-[var(--accent)] mb-1">
                             Featured Work
@@ -186,7 +156,7 @@ export default function ProjectsSection() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: 0.1 * index }}
+                                transition={{ duration: DUR.md, delay: STAGGER * index, ease: EASE }}
                                 className="group relative"
                             >
                                 <ProjectCard
@@ -206,13 +176,14 @@ export default function ProjectsSection() {
                 {/* Generative AI & Computer Vision */}
                 <div className="mb-24">
                     <motion.h3
-                        initial={{ opacity: 0, x: -20 }}
+                        initial={{ opacity: 0, x: -16 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                        className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/50 mb-12 border-b border-[var(--border)] pb-4"
+                        transition={{ duration: DUR.sm, delay: 0.05, ease: EASE }}
+                        className="text-xl md:text-2xl font-bold uppercase tracking-tighter mb-10 border-b-2 border-[var(--border)] pb-3"
                     >
-                        04.2 — Generative AI & Agentic Systems
+                        <span className="mr-3 text-[var(--foreground)]/40">04.2</span>
+                        Generative AI &amp; Agentic Systems
                     </motion.h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {aiProjects.map((project, index) => (
@@ -221,7 +192,7 @@ export default function ProjectsSection() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: 0.1 * index }}
+                                transition={{ duration: DUR.md, delay: STAGGER * index, ease: EASE }}
                             >
                                 <ProjectCard
                                     title={project.title}
@@ -239,13 +210,14 @@ export default function ProjectsSection() {
                 {/* Data Engineering & Predictive Analytics */}
                 <div className="mb-24">
                     <motion.h3
-                        initial={{ opacity: 0, x: -20 }}
+                        initial={{ opacity: 0, x: -16 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                        className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/50 mb-12 border-b border-[var(--border)] pb-4"
+                        transition={{ duration: DUR.sm, delay: 0.05, ease: EASE }}
+                        className="text-xl md:text-2xl font-bold uppercase tracking-tighter mb-10 border-b-2 border-[var(--border)] pb-3"
                     >
-                        04.3 — Machine Learning & Scalable Systems
+                        <span className="mr-3 text-[var(--foreground)]/40">04.3</span>
+                        Machine Learning &amp; Scalable Systems
                     </motion.h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {analyticsProjects.map((project, index) => (
@@ -254,7 +226,7 @@ export default function ProjectsSection() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: 0.1 * index }}
+                                transition={{ duration: DUR.md, delay: STAGGER * index, ease: EASE }}
                             >
                                 <ProjectCard
                                     title={project.title}
@@ -272,13 +244,14 @@ export default function ProjectsSection() {
                 {/* Engineering Section */}
                 <div>
                     <motion.h3
-                        initial={{ opacity: 0, x: -20 }}
+                        initial={{ opacity: 0, x: -16 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                        className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/50 mb-12 border-b border-[var(--border)] pb-4"
+                        transition={{ duration: DUR.sm, delay: 0.05, ease: EASE }}
+                        className="text-xl md:text-2xl font-bold uppercase tracking-tighter mb-10 border-b-2 border-[var(--border)] pb-3"
                     >
-                        04.4 — Engineering & Physical Systems
+                        <span className="mr-3 text-[var(--foreground)]/40">04.4</span>
+                        Engineering &amp; Physical Systems
                     </motion.h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {engineeringProjects.map((project, index) => (
@@ -287,7 +260,7 @@ export default function ProjectsSection() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: 0.1 * index }}
+                                transition={{ duration: DUR.md, delay: STAGGER * index, ease: EASE }}
                             >
                                 <ProjectCard
                                     title={project.title}
@@ -300,7 +273,7 @@ export default function ProjectsSection() {
                         ))}
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 }

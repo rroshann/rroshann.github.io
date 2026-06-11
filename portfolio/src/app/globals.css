@@ -30,10 +30,6 @@
    * { margin: 0; padding: 0; } reset as it will override Tailwind utilities.
    ═══════════════════════════════════════════════════════════════════════════ */
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -112,4 +108,73 @@ h6 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+/* Respect prefers-reduced-motion: kill CSS animations, transitions, and
+   view-transition effects for users who opt out of motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+}
+
+/* Custom scrollbar — thin, dark, accent on hover */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border: 2px solid var(--background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Brutalist focus ring */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Outlined display type for kinetic headlines.
+   Solid-text fallback first: browsers without text-stroke support must
+   never render the headline invisible. */
+.text-outline {
+  color: var(--foreground);
+}
+
+@supports (-webkit-text-stroke: 2px black) {
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--foreground);
+  }
+}
+
+/* Ticker marquee */
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  animation: ticker-scroll 28s linear infinite;
 }

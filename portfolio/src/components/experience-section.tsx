@@ -1,14 +1,14 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { cn } from "@/components/ui/cn";
+import { motion } from "framer-motion";
+import { DUR, EASE, STAGGER } from "@/components/ui/motion";
+import SectionHeading from "@/components/section-heading";
 
 const EXPERIENCE = [
     {
         company: "SERVPRO",
         role: "Data Science Intern",
-        period: "Aug 2025 – Dec 2025",
+        period: "Aug 2025 – Present",
         location: "Lebanon, TN",
         description: [
             "Developed a Vision-Based Automation System using GPT-4 Vision to autonomously navigate legacy portals; engineered spatial reasoning logic to visually detect and bypass dynamic pop-ups, achieving 99% reliability.",
@@ -51,48 +51,17 @@ const EDUCATION = [
 ];
 
 export default function ExperienceSection() {
-    const sectionRef = useRef<HTMLElement>(null);
-
-    const { scrollYProgress } = useScroll({
-        target: sectionRef,
-        offset: ["start end", "end start"],
-    });
-
-    const opacity = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [0, 1, 1, 0]);
-    const y = useTransform(scrollYProgress, [0, 0.1], [60, 0]);
-
     return (
         <section
             id="experience"
-            ref={sectionRef}
             className="min-h-screen bg-black px-6 sm:px-12 lg:px-24 py-24"
         >
-            <motion.div style={{ opacity, y }} className="max-w-7xl mx-auto">
-                {/* Section Label */}
-                <motion.p
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--border)] mb-4"
-                >
-                    03 — Background
-                </motion.p>
-
-                {/* Section Title */}
-                <motion.h2
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7, delay: 0.1 }}
-                    className={cn(
-                        "font-display font-bold tracking-tighter leading-[0.9]",
-                        "text-[clamp(2rem,8vw,6rem)]",
-                        "text-foreground mb-16"
-                    )}
-                >
-                    EXPERIENCE & <span className="text-[var(--accent)]">EDUCATION</span>
-                </motion.h2>
+            <div className="max-w-7xl mx-auto">
+                <SectionHeading
+                    index="03"
+                    label="Background"
+                    title={<>EXPERIENCE &amp; <span className="text-[var(--accent)]">EDUCATION</span></>}
+                />
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
                     {/* Experience Column */}
@@ -107,8 +76,8 @@ export default function ExperienceSection() {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                                    className="relative pl-8 border-l-2 border-[var(--border)]"
+                                    transition={{ duration: DUR.md, delay: 0.08 + index * STAGGER, ease: EASE }}
+                                    className="relative pl-8 border-l-2 border-[var(--border)] hover:border-[var(--accent)] transition-colors duration-200"
                                 >
                                     <span className="absolute -left-[9px] top-0 w-4 h-4 bg-[var(--accent)] rounded-none" />
                                     <div className="mb-2">
@@ -145,8 +114,8 @@ export default function ExperienceSection() {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                                    className="relative pl-8 border-l-2 border-[var(--border)]"
+                                    transition={{ duration: DUR.md, delay: 0.12 + index * STAGGER, ease: EASE }}
+                                    className="relative pl-8 border-l-2 border-[var(--border)] hover:border-[var(--accent)] transition-colors duration-200"
                                 >
                                     <span className="absolute -left-[9px] top-0 w-4 h-4 bg-[var(--border)]" />
                                     <div className="mb-2">
@@ -174,7 +143,7 @@ export default function ExperienceSection() {
                         </div>
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 }

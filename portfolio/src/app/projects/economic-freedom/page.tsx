@@ -70,9 +70,9 @@ export default function EconomicFreedomPage() {
                 <div className="space-y-10">
                     {/* Research Questions */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Research Questions
-                        </h3>
+                        </h2>
                         <ul className="space-y-2 text-[var(--foreground)]/70">
                             <li>How do economic freedom dimensions correlate with each other?</li>
                             <li>How do countries cluster by freedom profiles?</li>
@@ -83,9 +83,9 @@ export default function EconomicFreedomPage() {
 
                     {/* Country Clusters */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             4 Global Country Clusters (K-Means)
-                        </h3>
+                        </h2>
                         <div className="space-y-3">
                             <div className="border border-[var(--accent)] p-4">
                                 <p className="font-semibold text-[var(--accent)] mb-1">High-Performing Economies</p>
@@ -108,9 +108,9 @@ export default function EconomicFreedomPage() {
 
                     {/* Key Findings */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Key Findings
-                        </h3>
+                        </h2>
                         <ul className="space-y-3 text-[var(--foreground)]/70">
                             <li>
                                 <strong className="text-[var(--foreground)]/90">Trade freedom (0.879) and regulation (0.876)</strong> show strongest correlation with overall economic freedom
@@ -132,9 +132,9 @@ export default function EconomicFreedomPage() {
 
                     {/* Surprising Finding */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Surprising Finding: Universal Decline (2015-2022)
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 leading-relaxed mb-4">
                             Economic freedom declined across nearly all countries, including top
                             performers like Hong Kong, New Zealand, and the United States.
@@ -145,9 +145,9 @@ export default function EconomicFreedomPage() {
 
                     {/* Data Sources */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Data Sources
-                        </h3>
+                        </h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                             {[
                                 "Fraser Institute Economic Freedom Index",
@@ -168,9 +168,9 @@ export default function EconomicFreedomPage() {
 
                     {/* Tech Stack */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Technologies Used
-                        </h3>
+                        </h2>
                         <div className="flex flex-wrap gap-2">
                             {[
                                 "Python",
@@ -195,9 +195,9 @@ export default function EconomicFreedomPage() {
 
                     {/* Policy Insight */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Policy Insight
-                        </h3>
+                        </h2>
                         <blockquote className="text-[var(--foreground)]/70 italic border-l-0 pl-0">
                             &ldquo;Maintaining economic freedom alone may not be sufficient for optimal
                             societal outcomes. Countries must balance market freedoms with
@@ -208,12 +208,12 @@ export default function EconomicFreedomPage() {
 
                 {/* CTAs */}
                 <div className="mt-16 flex flex-wrap gap-4">
-                    <Link href="/#projects" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--border)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)] transition-all duration-300">← Back to Projects</Link>
+                    <BackButton />
                     <Link
                         href="https://github.com/rroshann/EDA_eco_freedom"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--accent)] text-[var(--background)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--foreground)] transition-all duration-300"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--accent)] text-[var(--background)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--foreground)] transition-all duration-200"
                     >
                         View on GitHub
                     </Link>

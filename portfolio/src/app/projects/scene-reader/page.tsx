@@ -65,9 +65,9 @@ export default function SceneReaderPage() {
                 <div className="space-y-10">
                     {/* The Problem */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             The Accessibility Challenge
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 leading-relaxed mb-4">
                             Over 7 million blind and visually impaired individuals in the
                             United States face a fundamental barrier: they cannot access
@@ -85,9 +85,9 @@ export default function SceneReaderPage() {
 
                     {/* The 9 Approaches */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             9 Approaches Tested
-                        </h3>
+                        </h2>
                         <div className="space-y-4 text-[var(--foreground)]/70">
                             <div>
                                 <p className="font-semibold text-[var(--foreground)]/90 mb-2">Baseline Approaches</p>
@@ -118,9 +118,9 @@ export default function SceneReaderPage() {
 
                     {/* Results */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Results: Top 3 Approaches
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 mb-4">
                             Three approaches achieved sub-2-second latency (our threshold for practical usability):
                         </p>
@@ -151,9 +151,9 @@ export default function SceneReaderPage() {
 
                     {/* Key Insights */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Key Insights
-                        </h3>
+                        </h2>
                         <ul className="space-y-2 text-[var(--foreground)]/70">
                             <li>
                                 <strong className="text-[var(--foreground)]/90">Architecture matters more than model size:</strong> GPT-3.5 + YOLO beats GPT-4V alone
@@ -172,9 +172,9 @@ export default function SceneReaderPage() {
 
                     {/* Scale of Testing */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Scale of Testing
-                        </h3>
+                        </h2>
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                             <div className="border border-[var(--border)] p-4 text-center">
                                 <p className="text-2xl font-bold text-[var(--foreground)]">9</p>
@@ -200,9 +200,9 @@ export default function SceneReaderPage() {
 
                     {/* Tech Stack */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Technologies Used
-                        </h3>
+                        </h2>
                         <div className="flex flex-wrap gap-2">
                             {[
                                 "GPT-4V",
@@ -229,9 +229,9 @@ export default function SceneReaderPage() {
 
                     {/* Team */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Team
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70">
                             <strong className="text-[var(--foreground)]">Roshan Sivakumar</strong> & Dhesel Khando
                         </p>
@@ -243,12 +243,12 @@ export default function SceneReaderPage() {
 
                 {/* CTAs */}
                 <div className="mt-16 flex flex-wrap gap-4">
-                    <Link href="/#projects" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--border)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)] transition-all duration-300">← Back to Projects</Link>
+                    <BackButton />
                     <Link
                         href="https://github.com/rroshann/scene_reader"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--accent)] text-[var(--background)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--foreground)] transition-all duration-300"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--accent)] text-[var(--background)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--foreground)] transition-all duration-200"
                     >
                         View on GitHub
                     </Link>

@@ -1,80 +1,46 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { cn } from "@/components/ui/cn";
+import { motion } from "framer-motion";
+import { DUR, EASE } from "@/components/ui/motion";
+import SectionHeading from "@/components/section-heading";
 
 /**
  * About section for the homepage.
  * Kinetic Brutalist design with scroll-triggered animations.
  */
 export default function AboutSection() {
-    const sectionRef = useRef<HTMLElement>(null);
-
-    const { scrollYProgress } = useScroll({
-        target: sectionRef,
-        offset: ["start end", "end start"],
-    });
-
-    const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
-    const y = useTransform(scrollYProgress, [0, 0.2], [100, 0]);
-
     return (
         <section
             id="about"
-            ref={sectionRef}
             className="min-h-screen bg-black px-6 sm:px-12 lg:px-24 py-24 flex items-center"
         >
-            <motion.div
-                style={{ opacity, y }}
-                className="max-w-4xl mx-auto"
-            >
-                {/* Section Label */}
-                <motion.p
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--border)] mb-4"
-                >
-                    01 — About
-                </motion.p>
-
-                {/* Section Title */}
-                <motion.h2
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7, delay: 0.1 }}
-                    className={cn(
-                        "font-display font-bold tracking-tighter leading-[0.9]",
-                        "text-[clamp(2rem,8vw,6rem)]",
-                        "text-foreground mb-12"
-                    )}
-                >
-                    ABOUT <span className="text-[var(--accent)]">ME</span>
-                </motion.h2>
+            <div className="max-w-4xl mx-auto">
+                <SectionHeading
+                    index="01"
+                    label="About"
+                    title={<>ABOUT <span className="text-[var(--accent)]">ME</span></>}
+                />
 
                 {/* Bio Content */}
                 <div className="space-y-6 text-lg leading-relaxed text-[var(--foreground)]/80 sm:text-xl">
                     <motion.p
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
+                        transition={{ duration: DUR.md, delay: 0.1, ease: EASE }}
                     >
                         I build intelligent systems that turn messy data into clear decisions.
-                        Currently finishing my M.S. in Data Science at Vanderbilt, I bring
+                        With an M.S. in Data Science from Vanderbilt, I bring
                         a Mechanical Engineering foundation that taught me to think in systems:
                         tolerances, constraints, and trade-offs. Now I apply that rigor to
                         machine learning pipelines, scalable architectures, and production AI.
                     </motion.p>
 
                     <motion.p
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
+                        transition={{ duration: DUR.md, delay: 0.15, ease: EASE }}
                     >
                         My recent work spans industry and academia. At SERVPRO, I built a GPT-4 Vision
                         agent that automates BI reporting for 13,500+ job records nightly, eliminating
@@ -84,10 +50,10 @@ export default function AboutSection() {
                     </motion.p>
 
                     <motion.p
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.4 }}
+                        transition={{ duration: DUR.md, delay: 0.2, ease: EASE }}
                     >
                         Right now, I&apos;m most energized by Generative AI, computer vision,
                         and the craft of turning complex systems into intuitive experiences.
@@ -95,7 +61,7 @@ export default function AboutSection() {
                         the latest AI tooling, immersed in story-driven games, or watching WWE.
                     </motion.p>
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 }

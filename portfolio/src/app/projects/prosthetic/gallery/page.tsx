@@ -35,7 +35,7 @@ export default function ProstheticGalleryPage() {
         <section className="min-h-screen px-6 sm:px-12 lg:px-24 pt-32 pb-24">
             <div className="max-w-4xl mx-auto">
                 {/* Back Link */}
-                <BackButton variant="link" className="mb-8" />
+                <BackButton variant="link" className="mb-8" href="/projects/prosthetic" label="← Back to Project" />
 
                 {/* Header */}
                 <h1 className="text-[clamp(2rem,6vw,4rem)] font-bold tracking-tighter leading-[0.9] mb-12">
@@ -48,7 +48,7 @@ export default function ProstheticGalleryPage() {
                     {galleryItems.map((item, index) => (
                         <div
                             key={index}
-                            className="border-2 border-[var(--border)] overflow-hidden hover:border-[var(--accent)] transition-colors duration-300"
+                            className="border-2 border-[var(--border)] overflow-hidden hover:border-[var(--accent)] transition-colors duration-200"
                         >
                             <div className="aspect-video relative bg-[var(--muted)]">
                                 <Image
@@ -64,9 +64,9 @@ export default function ProstheticGalleryPage() {
                                         {String(index + 1).padStart(2, "0")}
                                     </span>
                                     <div>
-                                        <h3 className="text-xl font-bold tracking-tight mb-2">
+                                        <h2 className="text-xl font-bold tracking-tight mb-2">
                                             {item.title}
-                                        </h3>
+                                        </h2>
                                         <p className="text-[var(--foreground)]/70">
                                             {item.description}
                                         </p>
@@ -79,8 +79,8 @@ export default function ProstheticGalleryPage() {
 
                 {/* CTAs */}
                 <div className="mt-16 flex flex-wrap gap-4">
-                    <Link href="/#projects" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--border)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)] transition-all duration-300">← Back to Projects</Link>
-                    <Link href="/#projects" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--border)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)] transition-all duration-300">All Projects</Link>
+                    <BackButton href="/projects/prosthetic" label="← Back to Project" />
+                    <Link href="/#projects" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--border)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)] transition-all duration-200">All Projects</Link>
                 </div>
             </div>
         </section>

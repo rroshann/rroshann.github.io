@@ -70,9 +70,9 @@ export default function ProstheticProjectPage() {
 
                 {/* Image Gallery */}
                 <div className="mb-12">
-                    <h3 className="text-xl font-bold tracking-tight mb-4">
+                    <h2 className="text-xl font-bold tracking-tight mb-4">
                         Design Iterations
-                    </h3>
+                    </h2>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div className="border border-[var(--border)] overflow-hidden">
                             <Image
@@ -109,10 +109,10 @@ export default function ProstheticProjectPage() {
 
                 {/* CTAs */}
                 <div className="mt-16 flex flex-wrap gap-4">
-                    <Link href="/#projects" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--border)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)] transition-all duration-300">← Back to Projects</Link>
+                    <BackButton />
                     <Link
                         href="/projects/prosthetic/gallery"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--accent)] text-[var(--background)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--foreground)] transition-all duration-300"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--accent)] text-[var(--background)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--foreground)] transition-all duration-200"
                     >
                         View Design Showcase
                     </Link>

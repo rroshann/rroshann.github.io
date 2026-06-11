@@ -69,9 +69,9 @@ export default function NCVoterDBPage() {
                 <div className="space-y-10">
                     {/* Core Functionality */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Core Functionality
-                        </h3>
+                        </h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div className="border border-[var(--border)] p-4">
                                 <p className="font-semibold text-[var(--foreground)] mb-1">Voter Search</p>
@@ -94,9 +94,9 @@ export default function NCVoterDBPage() {
 
                     {/* Analytics Dashboard */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Analytics Dashboard (4 Views)
-                        </h3>
+                        </h2>
                         <ul className="space-y-2 text-[var(--foreground)]/70">
                             <li>
                                 <strong className="text-[var(--foreground)]/90">Constituent Party Statistics:</strong>
@@ -119,9 +119,9 @@ export default function NCVoterDBPage() {
 
                     {/* Database Design */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Database Design
-                        </h3>
+                        </h2>
                         <div className="space-y-4 text-[var(--foreground)]/70">
                             <div>
                                 <p className="font-semibold text-[var(--foreground)]/90 mb-2">Stored Procedures</p>
@@ -143,9 +143,9 @@ export default function NCVoterDBPage() {
 
                     {/* Security */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Security Features
-                        </h3>
+                        </h2>
                         <ul className="space-y-2 text-[var(--foreground)]/70">
                             <li>
                                 <strong className="text-[var(--foreground)]/90">SQL Injection Prevention:</strong>
@@ -164,9 +164,9 @@ export default function NCVoterDBPage() {
 
                     {/* Architecture */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Three-Layer Architecture
-                        </h3>
+                        </h2>
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                             <div className="border border-[var(--border)] p-4 text-center">
                                 <p className="font-semibold text-[var(--foreground)] mb-1">Presentation</p>
@@ -185,9 +185,9 @@ export default function NCVoterDBPage() {
 
                     {/* Tech Stack */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Technologies Used
-                        </h3>
+                        </h2>
                         <div className="flex flex-wrap gap-2">
                             {[
                                 "PHP 7/8",
@@ -211,9 +211,9 @@ export default function NCVoterDBPage() {
 
                     {/* Data Source */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Data Source
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70">
                             Mecklenburg County Board of Elections, Charlotte, North Carolina.
                             Publicly available election records.
@@ -223,12 +223,12 @@ export default function NCVoterDBPage() {
 
                 {/* CTAs */}
                 <div className="mt-16 flex flex-wrap gap-4">
-                    <Link href="/#projects" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--border)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)] transition-all duration-300">← Back to Projects</Link>
+                    <BackButton />
                     <Link
                         href="https://github.com/rroshann/SQL"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--accent)] text-[var(--background)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--foreground)] transition-all duration-300"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--accent)] text-[var(--background)] rounded-none text-sm font-medium uppercase tracking-[0.1em] hover:bg-[var(--foreground)] transition-all duration-200"
                     >
                         View on GitHub
                     </Link>

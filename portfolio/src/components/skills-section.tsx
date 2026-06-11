@@ -1,132 +1,100 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { cn } from "@/components/ui/cn";
+import { motion } from "framer-motion";
+import { DUR, EASE, STAGGER } from "@/components/ui/motion";
+import SectionHeading from "@/components/section-heading";
 
 const SKILLS = [
     {
         category: "Generative AI & Vision",
         items: [
-            { name: "RAG Architectures", isCore: false },
-            { name: "LLM APIs (OpenAI, Claude, Gemini)", isCore: false },
-            { name: "GPT-4 Vision", isCore: false },
-            { name: "Prompt Engineering", isCore: false },
-            { name: "PyTorch", isCore: false },
-            { name: "Deep Learning (CNNs)", isCore: false },
-            { name: "Transfer Learning", isCore: false },
-            { name: "Computer Vision (YOLOv8)", isCore: false },
-            { name: "Grad-CAM", isCore: false },
-            { name: "OpenCV", isCore: false },
+            { name: "RAG Architectures" },
+            { name: "LLM APIs (OpenAI, Claude, Gemini)" },
+            { name: "GPT-4 Vision" },
+            { name: "Prompt Engineering" },
+            { name: "PyTorch" },
+            { name: "Deep Learning (CNNs)" },
+            { name: "Transfer Learning" },
+            { name: "Computer Vision (YOLOv8)" },
+            { name: "Grad-CAM" },
+            { name: "OpenCV" },
         ],
     },
     {
         category: "Data Science & ML",
         items: [
-            { name: "Machine Learning", isCore: false },
-            { name: "Scikit-learn", isCore: false },
-            { name: "Feature Engineering", isCore: false },
-            { name: "Statistical Modeling", isCore: false },
-            { name: "Pandas & NumPy", isCore: false },
-            { name: "Data Visualization", isCore: false },
+            { name: "Machine Learning" },
+            { name: "Scikit-learn" },
+            { name: "Feature Engineering" },
+            { name: "Statistical Modeling" },
+            { name: "Pandas & NumPy" },
+            { name: "Data Visualization" },
         ],
     },
     {
         category: "Data Engineering",
         items: [
-            { name: "Python", isCore: false },
-            { name: "ETL Pipelines", isCore: false },
-            { name: "SQL Querying", isCore: false },
-            { name: "NoSQL Design", isCore: false },
-            { name: "Web Scraping", isCore: false },
-            { name: "Flask & Streamlit", isCore: false },
-            { name: "Playwright", isCore: false },
+            { name: "Python" },
+            { name: "ETL Pipelines" },
+            { name: "SQL Querying" },
+            { name: "NoSQL Design" },
+            { name: "Web Scraping" },
+            { name: "Flask & Streamlit" },
+            { name: "Playwright" },
         ],
     },
     {
         category: "Platforms & Tools",
         items: [
-            { name: "AWS & Docker", isCore: false },
-            { name: "Git & GitHub Actions", isCore: false },
-            { name: "MySQL & MongoDB", isCore: false },
-            { name: "Tableau & PowerBI", isCore: false },
-            { name: "Amazon QuickSight", isCore: false },
-            { name: "Azure AD", isCore: false },
-            { name: "Jupyter", isCore: false },
+            { name: "AWS & Docker" },
+            { name: "Git & GitHub Actions" },
+            { name: "MySQL & MongoDB" },
+            { name: "Tableau & PowerBI" },
+            { name: "Amazon QuickSight" },
+            { name: "Azure AD" },
+            { name: "Jupyter" },
         ],
     },
 ];
 
 
 export default function SkillsSection() {
-    const sectionRef = useRef<HTMLElement>(null);
-
-    const { scrollYProgress } = useScroll({
-        target: sectionRef,
-        offset: ["start end", "end start"],
-    });
-
-    const opacity = useTransform(scrollYProgress, [0, 0.15, 0.85, 1], [0, 1, 1, 0]);
-    const y = useTransform(scrollYProgress, [0, 0.15], [80, 0]);
-
     return (
         <section
             id="skills"
-            ref={sectionRef}
             className="min-h-screen bg-black px-6 sm:px-12 lg:px-24 py-24"
         >
-            <motion.div style={{ opacity, y }} className="max-w-6xl mx-auto">
-                {/* Section Label */}
-                <motion.p
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--border)] mb-4"
-                >
-                    02 — Toolkit
-                </motion.p>
+            <div className="max-w-6xl mx-auto">
+                <SectionHeading
+                    index="02"
+                    label="Toolkit"
+                    title={<>TECHNICAL <span className="text-[var(--accent)]">SKILLS</span></>}
+                />
 
-                {/* Section Title */}
-                <motion.h2
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7, delay: 0.1 }}
-                    className={cn(
-                        "font-display font-bold tracking-tighter leading-[0.9]",
-                        "text-[clamp(2rem,8vw,6rem)]",
-                        "text-foreground mb-16"
-                    )}
-                >
-                    TECHNICAL <span className="text-[var(--accent)]">SKILLS</span>
-                </motion.h2>
-
-                {/* Skills Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Skills Columns — editorial, top-rule per group */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-14">
                     {SKILLS.map((group, index) => (
                         <motion.div
                             key={group.category}
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                            className="border-2 border-[var(--border)] p-8 hover:border-[var(--accent)] transition-colors duration-300 group"
+                            transition={{ duration: DUR.md, delay: 0.08 + index * STAGGER, ease: EASE }}
+                            className="group border-t-2 border-[var(--border)] pt-6 hover:border-[var(--accent)] transition-colors duration-200"
                         >
-                            <h3 className="text-xl font-bold uppercase tracking-tight mb-8 group-hover:text-[var(--accent)] transition-colors">
-                                {group.category}
-                            </h3>
-                            <div className="flex flex-wrap gap-3">
+                            <div className="flex items-baseline justify-between mb-6">
+                                <h3 className="text-xl font-bold uppercase tracking-tight group-hover:text-[var(--accent)] transition-colors duration-200">
+                                    {group.category}
+                                </h3>
+                                <span className="text-sm font-medium text-[var(--foreground)]/40">
+                                    0{index + 1}
+                                </span>
+                            </div>
+                            <div className="flex flex-wrap gap-2.5">
                                 {group.items.map((skill) => (
                                     <span
                                         key={skill.name}
-                                        className={cn(
-                                            "px-3 py-1 text-sm font-medium uppercase tracking-wide",
-                                            skill.isCore
-                                                ? "border-2 border-[var(--accent)] text-[var(--accent)]"
-                                                : "border border-[var(--border)] text-[var(--foreground)]/80",
-                                            "group-hover:text-[var(--foreground)] transition-colors"
-                                        )}
+                                        className="px-3 py-1 text-sm font-medium uppercase tracking-wide border border-[var(--border)] text-[var(--foreground)]/80 hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors duration-200 cursor-default"
                                     >
                                         {skill.name}
                                     </span>
@@ -135,7 +103,7 @@ export default function SkillsSection() {
                         </motion.div>
                     ))}
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 }
