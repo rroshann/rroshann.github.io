@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { cn } from "@/components/ui/cn";
 import { EASE } from "@/components/ui/motion";
+import SectionHeading from "@/components/section-heading";
 
 const SKILLS = [
     {
@@ -65,34 +65,14 @@ export default function SkillsSection() {
             className="min-h-screen bg-black px-6 sm:px-12 lg:px-24 py-24"
         >
             <div className="max-w-6xl mx-auto">
-                {/* Section Label */}
-                <motion.p
-                    initial={{ opacity: 0, x: -16 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.35, ease: EASE }}
-                    className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--border)] mb-4"
-                >
-                    02 — Toolkit
-                </motion.p>
+                <SectionHeading
+                    index="02"
+                    label="Toolkit"
+                    title={<>TECHNICAL <span className="text-[var(--accent)]">SKILLS</span></>}
+                />
 
-                {/* Section Title */}
-                <motion.h2
-                    initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.45, delay: 0.05, ease: EASE }}
-                    className={cn(
-                        "font-display font-bold tracking-tighter leading-[0.9]",
-                        "text-[clamp(2rem,8vw,6rem)]",
-                        "text-foreground mb-16"
-                    )}
-                >
-                    TECHNICAL <span className="text-[var(--accent)]">SKILLS</span>
-                </motion.h2>
-
-                {/* Skills Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Skills Columns — editorial, top-rule per group */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-14">
                     {SKILLS.map((group, index) => (
                         <motion.div
                             key={group.category}
@@ -100,20 +80,21 @@ export default function SkillsSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.4, delay: 0.08 + index * 0.06, ease: EASE }}
-                            className="border-2 border-[var(--border)] p-8 hover:border-[var(--accent)] transition-colors duration-200 group"
+                            className="group border-t-2 border-[var(--border)] pt-6 hover:border-[var(--accent)] transition-colors duration-200"
                         >
-                            <h3 className="text-xl font-bold uppercase tracking-tight mb-8 group-hover:text-[var(--accent)] transition-colors">
-                                {group.category}
-                            </h3>
-                            <div className="flex flex-wrap gap-3">
+                            <div className="flex items-baseline justify-between mb-6">
+                                <h3 className="text-xl font-bold uppercase tracking-tight group-hover:text-[var(--accent)] transition-colors duration-200">
+                                    {group.category}
+                                </h3>
+                                <span className="text-sm font-medium text-[var(--foreground)]/40">
+                                    0{index + 1}
+                                </span>
+                            </div>
+                            <div className="flex flex-wrap gap-2.5">
                                 {group.items.map((skill) => (
                                     <span
                                         key={skill.name}
-                                        className={cn(
-                                            "px-3 py-1 text-sm font-medium uppercase tracking-wide",
-                                            "border border-[var(--border)] text-[var(--foreground)]/80",
-                                            "group-hover:text-[var(--foreground)] transition-colors"
-                                        )}
+                                        className="px-3 py-1 text-sm font-medium uppercase tracking-wide border border-[var(--border)] text-[var(--foreground)]/80 hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors duration-200 cursor-default"
                                     >
                                         {skill.name}
                                     </span>

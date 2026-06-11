@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { cn } from "@/components/ui/cn";
 import { EASE } from "@/components/ui/motion";
+import SectionHeading from "@/components/section-heading";
 
 /**
  * Resume section for the homepage.
@@ -15,31 +16,12 @@ export default function ResumeSection() {
             className="min-h-screen bg-black px-6 sm:px-12 lg:px-24 py-24"
         >
             <div className="max-w-4xl mx-auto">
-                {/* Section Label */}
-                <motion.p
-                    initial={{ opacity: 0, x: -16 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.35, ease: EASE }}
-                    className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--border)] mb-4"
-                >
-                    05 — Resume
-                </motion.p>
-
-                {/* Section Title */}
-                <motion.h2
-                    initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.45, delay: 0.05, ease: EASE }}
-                    className={cn(
-                        "font-display font-bold tracking-tighter leading-[0.9]",
-                        "text-[clamp(2rem,8vw,6rem)]",
-                        "text-foreground mb-6"
-                    )}
-                >
-                    MY <span className="text-[var(--accent)]">RESUME</span>
-                </motion.h2>
+                <SectionHeading
+                    index="05"
+                    label="Resume"
+                    title={<>MY <span className="text-[var(--accent)]">RESUME</span></>}
+                    className="mb-6 md:mb-8"
+                />
 
                 {/* Description */}
                 <motion.p

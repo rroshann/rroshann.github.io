@@ -1,24 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { cn } from "@/components/ui/cn";
 import { EASE } from "@/components/ui/motion";
+import SectionHeading from "@/components/section-heading";
 
 const contactLinks = [
     {
-        icon: "✉️",
         label: "Email",
         value: "roshan.siddartha.24@gmail.com",
         href: "mailto:roshan.siddartha.24@gmail.com",
     },
     {
-        icon: "💼",
         label: "LinkedIn",
         value: "linkedin.com/in/roshansiddartha",
         href: "https://linkedin.com/in/roshansiddartha",
     },
     {
-        icon: "🐙",
         label: "GitHub",
         value: "github.com/rroshann",
         href: "https://github.com/rroshann",
@@ -36,31 +33,12 @@ export default function ContactSection() {
             className="min-h-screen bg-black px-6 sm:px-12 lg:px-24 py-24 flex items-center"
         >
             <div className="max-w-3xl mx-auto w-full">
-                {/* Section Label */}
-                <motion.p
-                    initial={{ opacity: 0, x: -16 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.35, ease: EASE }}
-                    className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--border)] mb-4"
-                >
-                    06 — Contact
-                </motion.p>
-
-                {/* Section Title */}
-                <motion.h2
-                    initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.45, delay: 0.05, ease: EASE }}
-                    className={cn(
-                        "font-display font-bold tracking-tighter leading-[0.9]",
-                        "text-[clamp(2rem,8vw,6rem)]",
-                        "text-foreground mb-6"
-                    )}
-                >
-                    GET IN <span className="text-[var(--accent)]">TOUCH</span>
-                </motion.h2>
+                <SectionHeading
+                    index="06"
+                    label="Contact"
+                    title={<>GET IN <span className="text-[var(--accent)]">TOUCH</span></>}
+                    className="mb-6 md:mb-8"
+                />
 
                 {/* Description */}
                 <motion.div
@@ -95,7 +73,9 @@ export default function ContactSection() {
                             transition={{ duration: 0.4, delay: 0.1 + index * 0.06, ease: EASE }}
                             className="group flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 p-6 border-2 border-[var(--border)] hover:border-[var(--accent)] hover:bg-[var(--accent)] transition-all duration-200"
                         >
-                            <span className="text-3xl">{link.icon}</span>
+                            <span className="text-sm font-bold tracking-[0.2em] text-[var(--foreground)]/40 group-hover:text-[var(--background)]/60 transition-colors duration-200">
+                                0{index + 1}
+                            </span>
                             <div className="flex-1">
                                 <p className="text-sm font-medium uppercase tracking-[0.2em] text-[var(--foreground)]/50 group-hover:text-[var(--background)]/70 mb-1">
                                     {link.label}

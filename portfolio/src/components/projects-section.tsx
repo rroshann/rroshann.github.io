@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { cn } from "@/components/ui/cn";
 import { EASE } from "@/components/ui/motion";
+import SectionHeading from "@/components/section-heading";
 import ProjectCard from "@/components/project-card";
 
 const industryProjects = [
@@ -125,43 +125,24 @@ export default function ProjectsSection() {
             className="min-h-screen bg-black px-6 sm:px-12 lg:px-24 py-24"
         >
             <div className="max-w-6xl mx-auto">
-                {/* Section Label */}
-                <motion.p
-                    initial={{ opacity: 0, x: -16 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.35, ease: EASE }}
-                    className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--border)] mb-4"
-                >
-                    04 — Projects
-                </motion.p>
-
-                {/* Section Title */}
-                <motion.h2
-                    initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.45, delay: 0.05, ease: EASE }}
-                    className={cn(
-                        "font-display font-bold tracking-tighter leading-[0.9]",
-                        "text-[clamp(2rem,8vw,6rem)]",
-                        "text-foreground mb-16"
-                    )}
-                >
-                    <span className="text-[var(--accent)]">SELECTED WORKS</span>
-                </motion.h2>
+                <SectionHeading
+                    index="04"
+                    label="Projects"
+                    title={<>SELECTED <span className="text-[var(--accent)]">WORKS</span></>}
+                />
 
                 {/* Nissan / Industry Section */}
                 <div className="mb-32">
-                    <div className="flex items-end justify-between border-b-2 border-[var(--accent)] mb-12 pb-4">
+                    <div className="flex items-end justify-between border-b-2 border-[var(--accent)] mb-10 pb-3">
                         <motion.h3
                             initial={{ opacity: 0, x: -16 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.35, delay: 0.05, ease: EASE }}
-                            className="text-2xl md:text-4xl font-bold uppercase tracking-tighter text-[var(--accent)]"
+                            className="text-xl md:text-2xl font-bold uppercase tracking-tighter text-[var(--accent)]"
                         >
-                            04.1 — Industry Collaborations
+                            <span className="mr-3 text-[var(--foreground)]/40">04.1</span>
+                            Industry Collaborations
                         </motion.h3>
                         <span className="hidden md:block text-sm font-medium uppercase tracking-[0.2em] text-[var(--accent)] mb-1">
                             Featured Work
@@ -199,9 +180,10 @@ export default function ProjectsSection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.35, delay: 0.05, ease: EASE }}
-                        className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/50 mb-12 border-b border-[var(--border)] pb-4"
+                        className="text-xl md:text-2xl font-bold uppercase tracking-tighter mb-10 border-b-2 border-[var(--border)] pb-3"
                     >
-                        04.2 — Generative AI & Agentic Systems
+                        <span className="mr-3 text-[var(--foreground)]/40">04.2</span>
+                        Generative AI &amp; Agentic Systems
                     </motion.h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {aiProjects.map((project, index) => (
@@ -232,9 +214,10 @@ export default function ProjectsSection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.35, delay: 0.05, ease: EASE }}
-                        className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/50 mb-12 border-b border-[var(--border)] pb-4"
+                        className="text-xl md:text-2xl font-bold uppercase tracking-tighter mb-10 border-b-2 border-[var(--border)] pb-3"
                     >
-                        04.3 — Machine Learning & Scalable Systems
+                        <span className="mr-3 text-[var(--foreground)]/40">04.3</span>
+                        Machine Learning &amp; Scalable Systems
                     </motion.h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {analyticsProjects.map((project, index) => (
@@ -265,9 +248,10 @@ export default function ProjectsSection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.35, delay: 0.05, ease: EASE }}
-                        className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/50 mb-12 border-b border-[var(--border)] pb-4"
+                        className="text-xl md:text-2xl font-bold uppercase tracking-tighter mb-10 border-b-2 border-[var(--border)] pb-3"
                     >
-                        04.4 — Engineering & Physical Systems
+                        <span className="mr-3 text-[var(--foreground)]/40">04.4</span>
+                        Engineering &amp; Physical Systems
                     </motion.h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {engineeringProjects.map((project, index) => (

@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { cn } from "@/components/ui/cn";
 import { EASE } from "@/components/ui/motion";
+import SectionHeading from "@/components/section-heading";
 
 const EXPERIENCE = [
     {
@@ -57,31 +57,11 @@ export default function ExperienceSection() {
             className="min-h-screen bg-black px-6 sm:px-12 lg:px-24 py-24"
         >
             <div className="max-w-7xl mx-auto">
-                {/* Section Label */}
-                <motion.p
-                    initial={{ opacity: 0, x: -16 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.35, ease: EASE }}
-                    className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--border)] mb-4"
-                >
-                    03 — Background
-                </motion.p>
-
-                {/* Section Title */}
-                <motion.h2
-                    initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.45, delay: 0.05, ease: EASE }}
-                    className={cn(
-                        "font-display font-bold tracking-tighter leading-[0.9]",
-                        "text-[clamp(2rem,8vw,6rem)]",
-                        "text-foreground mb-16"
-                    )}
-                >
-                    EXPERIENCE & <span className="text-[var(--accent)]">EDUCATION</span>
-                </motion.h2>
+                <SectionHeading
+                    index="03"
+                    label="Background"
+                    title={<>EXPERIENCE &amp; <span className="text-[var(--accent)]">EDUCATION</span></>}
+                />
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
                     {/* Experience Column */}
@@ -97,7 +77,7 @@ export default function ExperienceSection() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: 0.08 + index * 0.06, ease: EASE }}
-                                    className="relative pl-8 border-l-2 border-[var(--border)]"
+                                    className="relative pl-8 border-l-2 border-[var(--border)] hover:border-[var(--accent)] transition-colors duration-200"
                                 >
                                     <span className="absolute -left-[9px] top-0 w-4 h-4 bg-[var(--accent)] rounded-none" />
                                     <div className="mb-2">
@@ -135,7 +115,7 @@ export default function ExperienceSection() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: 0.12 + index * 0.06, ease: EASE }}
-                                    className="relative pl-8 border-l-2 border-[var(--border)]"
+                                    className="relative pl-8 border-l-2 border-[var(--border)] hover:border-[var(--accent)] transition-colors duration-200"
                                 >
                                     <span className="absolute -left-[9px] top-0 w-4 h-4 bg-[var(--border)]" />
                                     <div className="mb-2">

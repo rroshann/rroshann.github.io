@@ -130,3 +130,48 @@ h6 {
     animation: none !important;
   }
 }
+
+/* Custom scrollbar — thin, dark, accent on hover */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border: 2px solid var(--background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Brutalist focus ring */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Outlined display type for kinetic headlines */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--foreground);
+}
+
+/* Ticker marquee */
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  animation: ticker-scroll 28s linear infinite;
+}

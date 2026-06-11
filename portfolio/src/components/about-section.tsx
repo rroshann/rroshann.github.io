@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { cn } from "@/components/ui/cn";
 import { EASE } from "@/components/ui/motion";
+import SectionHeading from "@/components/section-heading";
 
 /**
  * About section for the homepage.
@@ -15,31 +15,11 @@ export default function AboutSection() {
             className="min-h-screen bg-black px-6 sm:px-12 lg:px-24 py-24 flex items-center"
         >
             <div className="max-w-4xl mx-auto">
-                {/* Section Label */}
-                <motion.p
-                    initial={{ opacity: 0, x: -16 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.35, ease: EASE }}
-                    className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--border)] mb-4"
-                >
-                    01 — About
-                </motion.p>
-
-                {/* Section Title */}
-                <motion.h2
-                    initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.45, delay: 0.05, ease: EASE }}
-                    className={cn(
-                        "font-display font-bold tracking-tighter leading-[0.9]",
-                        "text-[clamp(2rem,8vw,6rem)]",
-                        "text-foreground mb-12"
-                    )}
-                >
-                    ABOUT <span className="text-[var(--accent)]">ME</span>
-                </motion.h2>
+                <SectionHeading
+                    index="01"
+                    label="About"
+                    title={<>ABOUT <span className="text-[var(--accent)]">ME</span></>}
+                />
 
                 {/* Bio Content */}
                 <div className="space-y-6 text-lg leading-relaxed text-[var(--foreground)]/80 sm:text-xl">

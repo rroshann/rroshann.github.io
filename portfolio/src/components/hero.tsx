@@ -7,10 +7,10 @@ import { EASE } from "@/components/ui/motion";
 
 /**
  * Hero component implementing Kinetic Brutalist design:
- * - Massive fluid typography with clamp()
+ * - Left-aligned, asymmetric composition
+ * - Massive fluid typography with clamp(); solid + outlined kinetic lines
  * - Scroll-triggered parallax via Framer Motion
  * - Sharp corners (no rounded edges)
- * - Acid Yellow (#DFE104) accent on CTA hover
  */
 export default function Hero() {
     const containerRef = useRef<HTMLElement>(null);
@@ -33,7 +33,7 @@ export default function Hero() {
     return (
         <section
             ref={containerRef}
-            className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 sm:px-12 lg:px-24 text-center bg-black"
+            className="relative min-h-screen flex flex-col justify-center overflow-hidden px-6 sm:px-12 lg:px-24 bg-black"
         >
             {/* Background grain texture overlay */}
             <div
@@ -44,15 +44,16 @@ export default function Hero() {
             />
 
             {/* Main content */}
-            <motion.div style={{ opacity }} className="relative z-10">
-                {/* Eyebrow text */}
+            <motion.div style={{ opacity }} className="relative z-10 w-full max-w-7xl mx-auto">
+                {/* Eyebrow */}
                 <motion.p
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: 0.05, ease: EASE }}
-                    className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-[var(--border)]"
+                    className="mb-6 flex items-center gap-4 text-sm font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/50"
                 >
-                    Data Scientist & Engineer
+                    <span className="w-2.5 h-2.5 bg-[var(--accent)]" aria-hidden="true" />
+                    Data Scientist &amp; Engineer
                 </motion.p>
 
                 {/* Main headline — Kinetic typography */}
@@ -62,58 +63,73 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.55, delay: 0.1, ease: EASE }}
                     className={cn(
-                        "font-display font-bold tracking-tighter leading-[0.85]",
-                        "text-[clamp(3rem,12vw,14rem)]",
-                        "text-foreground"
+                        "font-display font-bold tracking-tighter leading-[0.82]",
+                        "text-[clamp(3.5rem,13vw,12rem)]",
+                        "text-foreground uppercase"
                     )}
                 >
-                    HI! I&apos;M
-                    <br />
-                    <span className="text-[var(--accent)]">ROSHAN</span>
+                    <span className="block">
+                        Roshan<span className="text-[var(--accent)]">.</span>
+                    </span>
+                    <span className="block text-outline">Sivakumar</span>
                 </motion.h1>
 
                 {/* Tagline */}
                 <motion.p
                     style={{ y: taglineY }}
-                    initial={{ opacity: 0, y: 24 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.18, ease: EASE }}
-                    className="mt-8 mx-auto max-w-xl text-lg leading-relaxed text-[var(--foreground)]/70 sm:text-xl"
+                    className="mt-8 max-w-xl text-lg leading-relaxed text-[var(--foreground)]/70 sm:text-xl"
                 >
                     Building predictive systems and scalable pipelines that transform complex data into decisive action.
                 </motion.p>
 
-                {/* CTA Button — Brutalist styling */}
+                {/* CTA Buttons — Brutalist styling */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.45, delay: 0.25, ease: EASE }}
-                    className="mt-12"
+                    className="mt-12 flex flex-wrap gap-4"
                 >
                     <a
-                        href="#about"
+                        href="#projects"
                         className={cn(
                             "group inline-flex items-center gap-3 px-8 py-4",
+                            "bg-[var(--accent)] text-[var(--background)] rounded-none",
+                            "text-sm font-bold uppercase tracking-[0.2em]",
+                            "transition-all duration-200 hover:bg-[var(--foreground)]"
+                        )}
+                    >
+                        View Projects
+                        <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">
+                            →
+                        </span>
+                    </a>
+                    <a
+                        href="#contact"
+                        className={cn(
+                            "inline-flex items-center gap-3 px-8 py-4",
                             "border-2 border-[var(--border)] rounded-none",
                             "text-sm font-medium uppercase tracking-[0.2em]",
                             "transition-all duration-200",
                             "hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)]"
                         )}
                     >
-                        About Me
-                        <span
-                            className={cn(
-                                "inline-block transition-transform duration-200",
-                                "group-hover:translate-y-1"
-                            )}
-                        >
-                            ↓
-                        </span>
+                        Get in Touch
                     </a>
                 </motion.div>
-
-
             </motion.div>
+
+            {/* Bottom meta row */}
+            <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+                className="absolute bottom-12 left-6 sm:left-12 lg:left-24 hidden sm:block text-xs font-medium uppercase tracking-[0.3em] text-[var(--foreground)]/40"
+            >
+                Based in Nashville, TN
+            </motion.p>
 
             {/* Glitch Arrow Indicator (decorative) */}
             <motion.div
@@ -163,10 +179,6 @@ export default function Hero() {
                     </div>
                 </div>
             </motion.div>
-
-
-
-
         </section>
     );
 }
