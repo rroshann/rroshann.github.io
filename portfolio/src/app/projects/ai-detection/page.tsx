@@ -65,9 +65,9 @@ export default function AIDetectionPage() {
                 <div className="space-y-10">
                     {/* The Problem */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             The Problem
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 leading-relaxed">
                             With the rise of generative AI models like Stable Diffusion and
                             DALL-E, distinguishing between real photographs and AI-generated
@@ -80,9 +80,9 @@ export default function AIDetectionPage() {
 
                     {/* My Contribution */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             My Contribution: VGG16 Model
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 leading-relaxed mb-4">
                             I was responsible for implementing and evaluating the VGG16
                             architecture, a classic deep CNN with 138M parameters.
@@ -118,9 +118,9 @@ export default function AIDetectionPage() {
 
                     {/* Comparative Analysis */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Comparative Analysis: 3 Architectures
-                        </h3>
+                        </h2>
                         <div className="space-y-4">
                             <div className="border border-[var(--accent)] p-4">
                                 <div className="flex justify-between items-start mb-2">
@@ -157,9 +157,9 @@ export default function AIDetectionPage() {
 
                     {/* Key Insights */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Key Insights
-                        </h3>
+                        </h2>
                         <ul className="space-y-2 text-[var(--foreground)]/70">
                             <li>
                                 <strong className="text-[var(--foreground)]/90">Bigger is not always better:</strong> VGG16 (138M params) did not outperform EfficientNet-B0 (5.3M params)
@@ -178,9 +178,9 @@ export default function AIDetectionPage() {
 
                     {/* Dataset */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Dataset: CIFAKE
-                        </h3>
+                        </h2>
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                             <div className="border border-[var(--border)] p-4 text-center">
                                 <p className="text-2xl font-bold text-[var(--foreground)]">120K</p>
@@ -206,9 +206,9 @@ export default function AIDetectionPage() {
 
                     {/* Tech Stack */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Technologies Used
-                        </h3>
+                        </h2>
                         <div className="flex flex-wrap gap-2">
                             {[
                                 "PyTorch",
@@ -232,9 +232,9 @@ export default function AIDetectionPage() {
 
                     {/* Team */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Team
-                        </h3>
+                        </h2>
                         <ul className="text-[var(--foreground)]/70 space-y-1">
                             <li><strong className="text-[var(--foreground)]">Roshan Sivakumar</strong> - VGG16</li>
                             <li><strong className="text-[var(--foreground)]">Kanu Shetkar</strong> - EfficientNet-B0</li>

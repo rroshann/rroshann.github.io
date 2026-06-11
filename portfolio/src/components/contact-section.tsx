@@ -95,7 +95,7 @@ export default function ContactSection() {
                 <div className="space-y-6">
                     {contactLinks.map((link, index) => (
                         <motion.a
-                            key={index}
+                            key={link.href}
                             href={link.href}
                             target={link.href.startsWith("mailto") ? undefined : "_blank"}
                             rel={

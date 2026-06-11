@@ -69,9 +69,9 @@ export default function SoccerAnalyticsPage() {
                 <div className="space-y-10">
                     {/* Key Features */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Key Features
-                        </h3>
+                        </h2>
                         <div className="space-y-4 text-[var(--foreground)]/70">
                             <div>
                                 <p className="font-semibold text-[var(--foreground)]/90 mb-2">
@@ -103,9 +103,9 @@ export default function SoccerAnalyticsPage() {
 
                     {/* ML Key Finding */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             ML Key Finding: Recent Form Matters Most
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 leading-relaxed mb-4">
                             Analysis of feature importance revealed that <strong className="text-[var(--foreground)]">recent form (22%)</strong> is
                             the most important predictor, outweighing static FIFA ratings. This
@@ -125,9 +125,9 @@ export default function SoccerAnalyticsPage() {
 
                     {/* MongoDB Design */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             MongoDB Design Decisions
-                        </h3>
+                        </h2>
                         <ul className="space-y-2 text-[var(--foreground)]/70">
                             <li>
                                 <strong className="text-[var(--foreground)]/90">Denormalized documents:</strong> Team and player info embedded in match documents for faster reads
@@ -146,9 +146,9 @@ export default function SoccerAnalyticsPage() {
 
                     {/* Dataset */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Dataset: Kaggle European Soccer Database
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 mb-4">
                             Comprehensive dataset spanning 2008-2016 across 11 European leagues:
                         </p>
@@ -176,9 +176,9 @@ export default function SoccerAnalyticsPage() {
 
                     {/* Web Application */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Flask Web Application
-                        </h3>
+                        </h2>
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                             <div className="border border-[var(--border)] p-4 text-center">
                                 <p className="text-2xl font-bold text-[var(--foreground)]">17</p>
@@ -201,9 +201,9 @@ export default function SoccerAnalyticsPage() {
 
                     {/* Tech Stack */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Technologies Used
-                        </h3>
+                        </h2>
                         <div className="flex flex-wrap gap-2">
                             {[
                                 "MongoDB",
@@ -229,9 +229,9 @@ export default function SoccerAnalyticsPage() {
 
                     {/* Learning Outcomes */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Learning Outcomes
-                        </h3>
+                        </h2>
                         <ul className="space-y-2 text-[var(--foreground)]/70">
                             <li>NoSQL database design with denormalization strategies</li>
                             <li>Complex MongoDB aggregation pipelines</li>

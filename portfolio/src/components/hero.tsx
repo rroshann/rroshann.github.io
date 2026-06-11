@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { cn } from "@/components/ui/cn";
 
 /**
@@ -13,6 +13,7 @@ import { cn } from "@/components/ui/cn";
  */
 export default function Hero() {
     const containerRef = useRef<HTMLElement>(null);
+    const prefersReducedMotion = useReducedMotion();
 
     // Parallax scroll effect
     const { scrollYProgress } = useScroll({
@@ -20,10 +21,13 @@ export default function Hero() {
         offset: ["start start", "end start"],
     });
 
-    // Transform values for parallax layers
-    const headlineY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-    const taglineY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
-    const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+    // Transform values for parallax layers (disabled under reduced motion)
+    const headlineParallax = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+    const taglineParallax = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
+    const scrollOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+    const headlineY = prefersReducedMotion ? 0 : headlineParallax;
+    const taglineY = prefersReducedMotion ? 0 : taglineParallax;
+    const opacity = prefersReducedMotion ? 1 : scrollOpacity;
 
     return (
         <section
@@ -110,14 +114,15 @@ export default function Hero() {
 
             </motion.div>
 
-            {/* Glitch Arrow Indicator (Option 3) */}
+            {/* Glitch Arrow Indicator (decorative) */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.5, duration: 1 }}
                 className="absolute bottom-12 left-1/2 -translate-x-1/2"
+                aria-hidden="true"
             >
-                <div className="relative group cursor-pointer">
+                <div className="relative">
                     <style jsx>{`
                         @keyframes glitch-anim-1 {
                             0% { clip-path: inset(20% 0 80% 0); transform: translate(-2px, 1px); }

@@ -39,9 +39,9 @@ export default function ROSProjectPage() {
                 <div className="space-y-10">
                     {/* Building the Robot */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Building the Robot
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 leading-relaxed">
                             The journey began by modeling a basic robot using URDF and XACRO
                             files within ROS. The chassis, wheels, and joints were defined,
@@ -53,9 +53,9 @@ export default function ROSProjectPage() {
 
                     {/* Sensor Integration */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Sensor Integration
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 leading-relaxed">
                             We added a laser scanner to provide environmental feedback. Using
                             ROS plugins and real-time data topics, the robot began detecting
@@ -67,9 +67,9 @@ export default function ROSProjectPage() {
 
                     {/* Bug 2 Algorithm */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Motion Planning with the Bug 2 Algorithm
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 leading-relaxed">
                             A major highlight was implementing the Bug 2 algorithm for
                             obstacle avoidance. Unlike simpler navigation techniques, Bug 2
@@ -82,9 +82,9 @@ export default function ROSProjectPage() {
 
                     {/* SLAM */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Mapping the Environment with SLAM
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 leading-relaxed">
                             To enable map creation, we incorporated GMapping, a ROS package
                             for Simultaneous Localization and Mapping (SLAM). Using real-time
@@ -95,9 +95,9 @@ export default function ROSProjectPage() {
 
                     {/* Key Takeaways */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Key Takeaways
-                        </h3>
+                        </h2>
                         <ul className="space-y-2 text-[var(--foreground)]/70">
                             <li>
                                 Developed a custom robot from the ground up using URDF and
@@ -119,9 +119,9 @@ export default function ROSProjectPage() {
 
                 {/* Image Gallery */}
                 <div className="mt-12 mb-12">
-                    <h3 className="text-xl font-bold tracking-tight mb-4">
+                    <h2 className="text-xl font-bold tracking-tight mb-4">
                         Development Stages
-                    </h3>
+                    </h2>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                         <div className="border border-[var(--border)] overflow-hidden">
                             <Image

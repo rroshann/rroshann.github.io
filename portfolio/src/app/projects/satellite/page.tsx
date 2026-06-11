@@ -67,9 +67,9 @@ export default function SatelliteProjectPage() {
 
                 {/* Tech Stack */}
                 <div className="border-l-2 border-[var(--accent)] pl-6 mb-16">
-                    <h3 className="text-xl font-bold tracking-tight mb-3">
+                    <h2 className="text-xl font-bold tracking-tight mb-3">
                         Tools & Technologies
-                    </h3>
+                    </h2>
                     <p className="text-[var(--foreground)]/70">
                         MATLAB • Simulink • Classical Mechanics • System Dynamics • Control
                         Theory

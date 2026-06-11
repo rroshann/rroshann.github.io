@@ -47,9 +47,9 @@ export default function NissanProjectPage() {
                 <div className="space-y-10">
                     {/* The Problem */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             The Problem
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 leading-relaxed mb-4">
                             Nissan wanted to evaluate inefficiencies in how parts were
                             packaged and transported across their North American supply chain.
@@ -86,9 +86,9 @@ export default function NissanProjectPage() {
 
                     {/* My Approach */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             My Approach
-                        </h3>
+                        </h2>
                         <div className="space-y-4 text-[var(--foreground)]/70 leading-relaxed">
                             <div>
                                 <p className="font-semibold text-[var(--foreground)]/90 mb-1">
@@ -131,9 +131,9 @@ export default function NissanProjectPage() {
 
                     {/* Key Deliverables */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Key Deliverables
-                        </h3>
+                        </h2>
                         <div className="space-y-6 text-[var(--foreground)]/70 leading-relaxed">
                             <div>
                                 <p className="font-semibold text-[var(--foreground)]/90 mb-2">
@@ -196,9 +196,9 @@ export default function NissanProjectPage() {
 
                     {/* Impact */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Impact
-                        </h3>
+                        </h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div className="border border-[var(--border)] p-4">
                                 <p className="font-semibold text-[var(--accent)] text-lg mb-1">
@@ -221,9 +221,9 @@ export default function NissanProjectPage() {
 
                     {/* What I Contributed */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             What I Contributed
-                        </h3>
+                        </h2>
                         <ul className="space-y-2 text-[var(--foreground)]/70">
                             <li>
                                 Led data wrangling and preprocessing of multi-source logistics data
@@ -245,9 +245,9 @@ export default function NissanProjectPage() {
 
                     {/* Tech Stack */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Technologies Used
-                        </h3>
+                        </h2>
                         <div className="flex flex-wrap gap-2">
                             {[
                                 "Tableau",
@@ -269,9 +269,9 @@ export default function NissanProjectPage() {
 
                     {/* Recognition */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Recognition
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70">
                             Received <strong className="text-[var(--foreground)]">Vanderbilt Certificate of Recognition</strong> for
                             the Nissan Packaging Optimization project (Apr 2025).

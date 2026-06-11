@@ -64,9 +64,9 @@ export default function ProstheticGalleryPage() {
                                         {String(index + 1).padStart(2, "0")}
                                     </span>
                                     <div>
-                                        <h3 className="text-xl font-bold tracking-tight mb-2">
+                                        <h2 className="text-xl font-bold tracking-tight mb-2">
                                             {item.title}
-                                        </h3>
+                                        </h2>
                                         <p className="text-[var(--foreground)]/70">
                                             {item.description}
                                         </p>

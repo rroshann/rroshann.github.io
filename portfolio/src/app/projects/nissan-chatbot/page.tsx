@@ -44,9 +44,9 @@ export default function NissanChatbotPage() {
                 <div className="space-y-10">
                     {/* The Challenge */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             The Challenge
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 leading-relaxed">
                             Nissan operates a training platform serving thousands of dealers
                             across North America. Despite significant engagement, there was
@@ -59,9 +59,9 @@ export default function NissanChatbotPage() {
 
                     {/* My Approach */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             My Approach
-                        </h3>
+                        </h2>
                         <div className="space-y-4 text-[var(--foreground)]/70 leading-relaxed">
                             <div>
                                 <p className="font-semibold text-[var(--foreground)]/90 mb-1">
@@ -105,9 +105,9 @@ export default function NissanChatbotPage() {
 
                     {/* Technical Solution */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Technical Solution
-                        </h3>
+                        </h2>
                         <div className="space-y-4 text-[var(--foreground)]/70 leading-relaxed">
                             <p>
                                 The chatbot was built using a RAG (Retrieval-Augmented Generation)
@@ -153,9 +153,9 @@ export default function NissanChatbotPage() {
 
                     {/* Impact */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Impact
-                        </h3>
+                        </h2>
                         <ul className="space-y-2 text-[var(--foreground)]/70">
                             <li>
                                 Presented findings and prototype to Nissan NA executive leadership
@@ -172,9 +172,9 @@ export default function NissanChatbotPage() {
 
                     {/* What I Contributed */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             What I Contributed
-                        </h3>
+                        </h2>
                         <ul className="space-y-2 text-[var(--foreground)]/70">
                             <li>
                                 Led the 3-person team through research, analysis, and prototyping phases
@@ -193,9 +193,9 @@ export default function NissanChatbotPage() {
 
                     {/* Tech Stack */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Technologies Used
-                        </h3>
+                        </h2>
                         <div className="flex flex-wrap gap-2">
                             {[
                                 "RAG Architecture",

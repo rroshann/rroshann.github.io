@@ -70,9 +70,9 @@ export default function ProstheticProjectPage() {
 
                 {/* Image Gallery */}
                 <div className="mb-12">
-                    <h3 className="text-xl font-bold tracking-tight mb-4">
+                    <h2 className="text-xl font-bold tracking-tight mb-4">
                         Design Iterations
-                    </h3>
+                    </h2>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div className="border border-[var(--border)] overflow-hidden">
                             <Image

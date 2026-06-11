@@ -61,9 +61,9 @@ export default function FabOpsCopilotPage() {
                 <div className="space-y-10">
                     {/* The Diagnostic Challenge */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             The Diagnostic Challenge
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 leading-relaxed mb-4">
                             Service-part planners must triage stockout risk across fragmented evidence: ERP inventory, historical demand, supplier lead-time logs, SEC risk disclosures, FRED industrial production, and reorder-policy metadata. A wrong diagnosis means rushed air freight or fab downtime. FabOps Copilot collapses that triage into a single agent call.
                         </p>
@@ -74,9 +74,9 @@ export default function FabOpsCopilotPage() {
 
                     {/* How It Works */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             How It Works (9-Node LangGraph)
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70 mb-4">
                             A natural-language question like &quot;Why is part 10279876 at risk at the Taiwan fab, and what should I do?&quot; flows through a 9-node state machine:
                         </p>
@@ -95,9 +95,9 @@ export default function FabOpsCopilotPage() {
 
                     {/* Architecture */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Architecture
-                        </h3>
+                        </h2>
                         <pre className="border border-[var(--border)] p-4 text-xs text-[var(--foreground)]/70 overflow-x-auto">
 {`Frontend (Amplify, vanilla HTML/JS, dark theme)
    -> API Gateway HTTP API (30s cap, native CORS)
@@ -118,9 +118,9 @@ Nightly Lambda (container, arm64, 3008 MB, 900s)
 
                     {/* Hardest Problems Solved */}
                     <div className="border-l-2 border-[var(--accent)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Hardest Problems Solved
-                        </h3>
+                        </h2>
                         <ol className="space-y-4 ml-4 list-decimal text-[var(--foreground)]/70">
                             <li>
                                 <strong className="text-[var(--foreground)]/90">Gold set was fiction.</strong> The original 30-case gold set had 14 of 17 label-vs-state mismatches. Wrote <code>regenerate_gold_set.py</code> to derive labels from real DynamoDB state, plus <code>inject_gold_drift.py</code> to seed deterministic 6/6/6 drift signals. Lifted pass rate from noise to 83.3%.
@@ -139,9 +139,9 @@ Nightly Lambda (container, arm64, 3008 MB, 900s)
 
                     {/* Scale and Metrics */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Scale and Metrics
-                        </h3>
+                        </h2>
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                             <div className="border border-[var(--border)] p-4 text-center">
                                 <p className="text-2xl font-bold text-[var(--foreground)]">9</p>
@@ -180,9 +180,9 @@ Nightly Lambda (container, arm64, 3008 MB, 900s)
 
                     {/* Tech Stack */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Tech Stack
-                        </h3>
+                        </h2>
                         <div className="flex flex-wrap gap-2">
                             {[
                                 "LangGraph",
@@ -218,9 +218,9 @@ Nightly Lambda (container, arm64, 3008 MB, 900s)
 
                     {/* Solo Build */}
                     <div className="border-l-2 border-[var(--border)] pl-6">
-                        <h3 className="text-xl font-bold tracking-tight mb-3">
+                        <h2 className="text-xl font-bold tracking-tight mb-3">
                             Solo Build
-                        </h3>
+                        </h2>
                         <p className="text-[var(--foreground)]/70">
                             Solo architecture, implementation, evaluation, and deployment by Roshan Siddartha Sivakumar over an 11-day build window in April 2026. 82 commits, all authored by one person.
                         </p>

@@ -102,6 +102,7 @@ export default function ResumeSection() {
                         src="/files/Roshan_Sivakumar_Resume.pdf"
                         className="w-full aspect-[8.5/11]"
                         title="Resume PDF"
+                        loading="lazy"
                     />
                 </motion.div>
             </motion.div>
