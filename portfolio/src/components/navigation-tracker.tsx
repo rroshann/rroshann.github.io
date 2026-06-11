@@ -9,10 +9,20 @@ import { usePathname } from "next/navigation";
 // a real in-app history entry exists behind us.
 let navCount = 0;
 let lastPath: string | null = null;
+let suppressNext = false;
 
 /** True once the visitor has client-navigated between pages in this page load. */
 export function hasInAppHistory(): boolean {
     return navCount > 1;
+}
+
+/**
+ * Skip counting the next pathname change. router.replace() swaps the
+ * current history entry instead of pushing one, so counting it would
+ * make hasInAppHistory() report an in-app entry that doesn't exist.
+ */
+export function suppressNextNavigation(): void {
+    suppressNext = true;
 }
 
 /**
@@ -27,7 +37,11 @@ export default function NavigationTracker() {
         // Idempotent under React StrictMode's double effect invocation.
         if (pathname !== lastPath) {
             lastPath = pathname;
-            navCount += 1;
+            if (suppressNext) {
+                suppressNext = false;
+            } else {
+                navCount += 1;
+            }
         }
     }, [pathname]);
 

@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { cn } from "@/components/ui/cn";
+import { suppressNextNavigation } from "@/components/navigation-tracker";
 
 interface LegacyRedirectProps {
     /** Destination path the legacy URL should resolve to. */
@@ -19,6 +20,9 @@ export default function LegacyRedirect({ to }: LegacyRedirectProps) {
     const router = useRouter();
 
     useEffect(() => {
+        // replace() swaps the history entry, so this navigation must not
+        // count toward hasInAppHistory() — see navigation-tracker.tsx.
+        suppressNextNavigation();
         router.replace(to);
     }, [router, to]);
 
