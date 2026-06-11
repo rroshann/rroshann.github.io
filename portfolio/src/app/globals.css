@@ -30,10 +30,6 @@
    * { margin: 0; padding: 0; } reset as it will override Tailwind utilities.
    ═══════════════════════════════════════════════════════════════════════════ */
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
