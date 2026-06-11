@@ -13,7 +13,7 @@ Welcome. Here is how it's built.
 The site is built as a static web application to ensure maximum performance and zero server-side maintenance overhead.
 
 **Core Stack:**
-*   **Next.js 15 (App Router)** - For component-based architecture and build optimization.
+*   **Next.js 16 (App Router)** - For component-based architecture and build optimization.
 *   **TypeScript** - For type safety and maintainable code.
 *   **Tailwind CSS** - For a design-system-first approach to styling.
 *   **Framer Motion** - For fluid, physics-based interactions and scroll dynamics.
@@ -54,4 +54,4 @@ The project is configured for static export (`output: 'export'`) and uses a cust
 
 **Roshan Siddartha Sivakumar**
 Data Scientist & Engineer
-[roshan.siddartha.sivakumar@vanderbilt.edu](mailto:roshan.siddartha.sivakumar@vanderbilt.edu)
+[roshan.siddartha.24@gmail.com](mailto:roshan.siddartha.24@gmail.com)

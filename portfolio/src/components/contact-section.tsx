@@ -8,8 +8,8 @@ const contactLinks = [
     {
         icon: "✉️",
         label: "Email",
-        value: "roshan.siddartha.sivakumar@vanderbilt.edu",
-        href: "mailto:roshan.siddartha.sivakumar@vanderbilt.edu",
+        value: "roshan.siddartha.24@gmail.com",
+        href: "mailto:roshan.siddartha.24@gmail.com",
     },
     {
         icon: "💼",
