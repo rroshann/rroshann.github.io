@@ -7,23 +7,30 @@ import { hasInAppHistory } from "@/components/navigation-tracker";
 interface BackButtonProps {
     variant?: "primary" | "secondary" | "link";
     className?: string;
+    /** Fallback destination for direct visitors with no in-app history. */
+    href?: string;
+    label?: string;
 }
 
-export default function BackButton({ variant = "secondary", className = "" }: BackButtonProps) {
+export default function BackButton({
+    variant = "secondary",
+    className = "",
+    href = "/#projects",
+    label = "← Back to Projects",
+}: BackButtonProps) {
     const router = useRouter();
 
-    // Rendered as a real <a href="/#projects"> so crawlers, cmd/ctrl-click,
-    // and no-JS visitors get a working link. Plain left-clicks are
-    // intercepted: history.back() restores the visitor's previous scroll
-    // position; direct visitors (no in-app history) go to the projects
-    // section instead.
+    // Rendered as a real <a href> so crawlers, cmd/ctrl-click, and no-JS
+    // visitors get a working link. Plain left-clicks are intercepted:
+    // history.back() restores the visitor's previous scroll position;
+    // direct visitors (no in-app history) go to the fallback href instead.
     const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
         if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
         e.preventDefault();
-        if (hasInAppHistory() && window.history.length > 1) {
+        if (hasInAppHistory()) {
             router.back();
         } else {
-            router.push("/#projects");
+            router.push(href);
         }
     };
 
@@ -39,11 +46,11 @@ export default function BackButton({ variant = "secondary", className = "" }: Ba
 
     return (
         <Link
-            href="/#projects"
+            href={href}
             onClick={handleClick}
             className={`${baseStyles} ${variantStyles} ${className}`}
         >
-            ← Back to Projects
+            {label}
         </Link>
     );
 }
