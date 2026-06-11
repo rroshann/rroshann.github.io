@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { hasInAppHistory } from "@/components/navigation-tracker";
 
 interface BackButtonProps {
     variant?: "primary" | "secondary" | "link";
@@ -9,6 +10,16 @@ interface BackButtonProps {
 
 export default function BackButton({ variant = "secondary", className = "" }: BackButtonProps) {
     const router = useRouter();
+
+    // Real history.back() restores the visitor's previous scroll position;
+    // direct visitors (no in-app history) get sent to the projects section.
+    const handleBack = () => {
+        if (hasInAppHistory() && window.history.length > 1) {
+            router.back();
+        } else {
+            router.push("/#projects");
+        }
+    };
 
     const baseStyles = variant === "link"
         ? "inline-flex items-center gap-2 text-sm font-medium uppercase tracking-[0.1em] transition-colors cursor-pointer"
@@ -22,7 +33,7 @@ export default function BackButton({ variant = "secondary", className = "" }: Ba
 
     return (
         <button
-            onClick={() => router.push("/#projects")}
+            onClick={handleBack}
             className={`${baseStyles} ${variantStyles} ${className}`}
         >
             ← Back to Projects

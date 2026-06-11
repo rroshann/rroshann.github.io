@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ScrollToTop from "@/components/scroll-to-top";
 import MotionProvider from "@/components/motion-provider";
+import NavigationTracker from "@/components/navigation-tracker";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -94,6 +95,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
         <MotionProvider>
+          <NavigationTracker />
           <Navbar />
           <div className="flex flex-col min-h-screen pt-20 md:pt-24">
             <main className="flex-1">{children}</main>
