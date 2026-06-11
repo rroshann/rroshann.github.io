@@ -30,25 +30,15 @@ export default function Navbar() {
 
                 {/* Desktop Links: Absolutely centered horizontally */}
                 <div className="absolute left-1/2 -translate-x-1/2 hidden gap-8 md:flex items-center">
-                    {NAV_LINKS.map((link) =>
-                        link.href.startsWith("#") ? (
-                            <a
-                                key={link.href}
-                                href={link.href}
-                                className="font-medium text-sm uppercase tracking-wide transition-colors hover:text-[#DFE104] text-foreground"
-                            >
-                                {link.label}
-                            </a>
-                        ) : (
-                            <Link
-                                key={link.href}
-                                href={link.href}
-                                className="font-medium text-sm uppercase tracking-wide transition-colors hover:text-[#DFE104] text-foreground"
-                            >
-                                {link.label}
-                            </Link>
-                        )
-                    )}
+                    {NAV_LINKS.map((link) => (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            className="font-medium text-sm uppercase tracking-wide transition-colors hover:text-[#DFE104] text-foreground"
+                        >
+                            {link.label}
+                        </Link>
+                    ))}
                 </div>
 
                 {/* CTA Button & Mobile Toggle Wrapper */}
@@ -102,27 +92,16 @@ export default function Navbar() {
                         className="md:hidden border-t border-[var(--border)] bg-black"
                     >
                         <div className="flex flex-col px-4 py-6 gap-6 items-center">
-                            {NAV_LINKS.map((link) =>
-                                link.href.startsWith("#") ? (
-                                    <a
-                                        key={link.href}
-                                        href={link.href}
-                                        onClick={() => setIsMobileMenuOpen(false)}
-                                        className="font-medium text-sm uppercase tracking-wide transition-colors hover:text-[#DFE104] text-foreground"
-                                    >
-                                        {link.label}
-                                    </a>
-                                ) : (
-                                    <Link
-                                        key={link.href}
-                                        href={link.href}
-                                        onClick={() => setIsMobileMenuOpen(false)}
-                                        className="font-medium text-sm uppercase tracking-wide transition-colors hover:text-[#DFE104] text-foreground"
-                                    >
-                                        {link.label}
-                                    </Link>
-                                )
-                            )}
+                            {NAV_LINKS.map((link) => (
+                                <Link
+                                    key={link.href}
+                                    href={link.href}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="font-medium text-sm uppercase tracking-wide transition-colors hover:text-[#DFE104] text-foreground"
+                                >
+                                    {link.label}
+                                </Link>
+                            ))}
                             <Link
                                 href="/#contact"
                                 onClick={() => setIsMobileMenuOpen(false)}

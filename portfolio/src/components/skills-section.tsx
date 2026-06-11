@@ -8,51 +8,51 @@ const SKILLS = [
     {
         category: "Generative AI & Vision",
         items: [
-            { name: "RAG Architectures", isCore: false },
-            { name: "LLM APIs (OpenAI, Claude, Gemini)", isCore: false },
-            { name: "GPT-4 Vision", isCore: false },
-            { name: "Prompt Engineering", isCore: false },
-            { name: "PyTorch", isCore: false },
-            { name: "Deep Learning (CNNs)", isCore: false },
-            { name: "Transfer Learning", isCore: false },
-            { name: "Computer Vision (YOLOv8)", isCore: false },
-            { name: "Grad-CAM", isCore: false },
-            { name: "OpenCV", isCore: false },
+            { name: "RAG Architectures" },
+            { name: "LLM APIs (OpenAI, Claude, Gemini)" },
+            { name: "GPT-4 Vision" },
+            { name: "Prompt Engineering" },
+            { name: "PyTorch" },
+            { name: "Deep Learning (CNNs)" },
+            { name: "Transfer Learning" },
+            { name: "Computer Vision (YOLOv8)" },
+            { name: "Grad-CAM" },
+            { name: "OpenCV" },
         ],
     },
     {
         category: "Data Science & ML",
         items: [
-            { name: "Machine Learning", isCore: false },
-            { name: "Scikit-learn", isCore: false },
-            { name: "Feature Engineering", isCore: false },
-            { name: "Statistical Modeling", isCore: false },
-            { name: "Pandas & NumPy", isCore: false },
-            { name: "Data Visualization", isCore: false },
+            { name: "Machine Learning" },
+            { name: "Scikit-learn" },
+            { name: "Feature Engineering" },
+            { name: "Statistical Modeling" },
+            { name: "Pandas & NumPy" },
+            { name: "Data Visualization" },
         ],
     },
     {
         category: "Data Engineering",
         items: [
-            { name: "Python", isCore: false },
-            { name: "ETL Pipelines", isCore: false },
-            { name: "SQL Querying", isCore: false },
-            { name: "NoSQL Design", isCore: false },
-            { name: "Web Scraping", isCore: false },
-            { name: "Flask & Streamlit", isCore: false },
-            { name: "Playwright", isCore: false },
+            { name: "Python" },
+            { name: "ETL Pipelines" },
+            { name: "SQL Querying" },
+            { name: "NoSQL Design" },
+            { name: "Web Scraping" },
+            { name: "Flask & Streamlit" },
+            { name: "Playwright" },
         ],
     },
     {
         category: "Platforms & Tools",
         items: [
-            { name: "AWS & Docker", isCore: false },
-            { name: "Git & GitHub Actions", isCore: false },
-            { name: "MySQL & MongoDB", isCore: false },
-            { name: "Tableau & PowerBI", isCore: false },
-            { name: "Amazon QuickSight", isCore: false },
-            { name: "Azure AD", isCore: false },
-            { name: "Jupyter", isCore: false },
+            { name: "AWS & Docker" },
+            { name: "Git & GitHub Actions" },
+            { name: "MySQL & MongoDB" },
+            { name: "Tableau & PowerBI" },
+            { name: "Amazon QuickSight" },
+            { name: "Azure AD" },
+            { name: "Jupyter" },
         ],
     },
 ];
@@ -122,9 +122,7 @@ export default function SkillsSection() {
                                         key={skill.name}
                                         className={cn(
                                             "px-3 py-1 text-sm font-medium uppercase tracking-wide",
-                                            skill.isCore
-                                                ? "border-2 border-[var(--accent)] text-[var(--accent)]"
-                                                : "border border-[var(--border)] text-[var(--foreground)]/80",
+                                            "border border-[var(--border)] text-[var(--foreground)]/80",
                                             "group-hover:text-[var(--foreground)] transition-colors"
                                         )}
                                     >
