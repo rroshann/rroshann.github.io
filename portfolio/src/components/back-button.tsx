@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { hasInAppHistory } from "@/components/navigation-tracker";
 
@@ -11,9 +12,14 @@ interface BackButtonProps {
 export default function BackButton({ variant = "secondary", className = "" }: BackButtonProps) {
     const router = useRouter();
 
-    // Real history.back() restores the visitor's previous scroll position;
-    // direct visitors (no in-app history) get sent to the projects section.
-    const handleBack = () => {
+    // Rendered as a real <a href="/#projects"> so crawlers, cmd/ctrl-click,
+    // and no-JS visitors get a working link. Plain left-clicks are
+    // intercepted: history.back() restores the visitor's previous scroll
+    // position; direct visitors (no in-app history) go to the projects
+    // section instead.
+    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        e.preventDefault();
         if (hasInAppHistory() && window.history.length > 1) {
             router.back();
         } else {
@@ -32,12 +38,13 @@ export default function BackButton({ variant = "secondary", className = "" }: Ba
             : "border-2 border-[var(--border)] hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)]";
 
     return (
-        <button
-            onClick={handleBack}
+        <Link
+            href="/#projects"
+            onClick={handleClick}
             className={`${baseStyles} ${variantStyles} ${className}`}
         >
             ← Back to Projects
-        </button>
+        </Link>
     );
 }
 
