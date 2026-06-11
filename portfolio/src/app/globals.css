@@ -150,10 +150,18 @@ h6 {
   outline-offset: 2px;
 }
 
-/* Outlined display type for kinetic headlines */
+/* Outlined display type for kinetic headlines.
+   Solid-text fallback first: browsers without text-stroke support must
+   never render the headline invisible. */
 .text-outline {
-  color: transparent;
-  -webkit-text-stroke: 2px var(--foreground);
+  color: var(--foreground);
+}
+
+@supports (-webkit-text-stroke: 2px black) {
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--foreground);
+  }
 }
 
 /* Ticker marquee */
