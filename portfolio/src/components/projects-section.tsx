@@ -113,8 +113,8 @@ const engineeringProjects = [
         title: "Two-Wheel Inverted Pendulum Control System",
         description:
             "Modeled and controlled a balancing robot using Newton-Euler dynamics, feedback control, and MATLAB simulations.",
-        href: "/projects/satellite",
-        image: "/projects/satellite.jpg",
+        href: "/projects/inverted-pendulum",
+        image: "/projects/inverted-pendulum.jpg",
     },
 ];
 

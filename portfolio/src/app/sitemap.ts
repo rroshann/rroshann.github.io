@@ -22,7 +22,7 @@ const ROUTES = [
     "/projects/prosthetic/gallery",
     "/projects/ros",
     "/projects/ros/gallery",
-    "/projects/satellite",
+    "/projects/inverted-pendulum",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
