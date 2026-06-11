@@ -56,7 +56,7 @@ export default function Navbar() {
                     {/* CTA Button 
              Classes: relative inline-flex items-center justify-center overflow-hidden font-bold uppercase tracking-tighter transition-all disabled:pointer-events-none disabled:opacity-50 bg-[#DFE104] text-black hover:scale-105 active:scale-95 h-10 px-4 text-sm
           */}
-                    <a
+                    <Link
                         href="/#contact"
                         className={cn(
                             "relative inline-flex items-center justify-center overflow-hidden h-10 px-4 text-sm",
@@ -67,7 +67,7 @@ export default function Navbar() {
                         )}
                     >
                         <span className="relative z-10 flex items-center gap-2">Contact</span>
-                    </a>
+                    </Link>
 
                     {/* Mobile Menu Button - Kept compatible with design */}
                     <button
@@ -123,13 +123,13 @@ export default function Navbar() {
                                     </Link>
                                 )
                             )}
-                            <a
+                            <Link
                                 href="/#contact"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="relative inline-flex items-center justify-center overflow-hidden h-10 px-8 text-sm font-bold uppercase tracking-tighter transition-all bg-[#DFE104] text-black w-full"
                             >
                                 <span className="relative z-10 flex items-center gap-2">Contact</span>
-                            </a>
+                            </Link>
                         </div>
                     </motion.div>
                 )}
