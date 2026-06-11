@@ -1,40 +1,26 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { cn } from "@/components/ui/cn";
+import { EASE } from "@/components/ui/motion";
 
 /**
  * Resume section for the homepage.
  * Kinetic Brutalist design with scroll-triggered animations.
  */
 export default function ResumeSection() {
-    const sectionRef = useRef<HTMLElement>(null);
-
-    const { scrollYProgress } = useScroll({
-        target: sectionRef,
-        offset: ["start end", "end start"],
-    });
-
-    const opacity = useTransform(scrollYProgress, [0, 0.15, 0.85, 1], [0, 1, 1, 0]);
-    const y = useTransform(scrollYProgress, [0, 0.15], [80, 0]);
-
     return (
         <section
             id="resume"
-            ref={sectionRef}
             className="min-h-screen bg-black px-6 sm:px-12 lg:px-24 py-24"
         >
-            <motion.div
-                style={{ opacity, y }}
-                className="max-w-4xl mx-auto"
-            >
+            <div className="max-w-4xl mx-auto">
                 {/* Section Label */}
                 <motion.p
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0, x: -16 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.35, ease: EASE }}
                     className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--border)] mb-4"
                 >
                     05 — Resume
@@ -42,10 +28,10 @@ export default function ResumeSection() {
 
                 {/* Section Title */}
                 <motion.h2
-                    initial={{ opacity: 0, y: 40 }}
+                    initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.7, delay: 0.1 }}
+                    transition={{ duration: 0.45, delay: 0.05, ease: EASE }}
                     className={cn(
                         "font-display font-bold tracking-tighter leading-[0.9]",
                         "text-[clamp(2rem,8vw,6rem)]",
@@ -57,10 +43,10 @@ export default function ResumeSection() {
 
                 {/* Description */}
                 <motion.p
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
+                    transition={{ duration: 0.4, delay: 0.1, ease: EASE }}
                     className="text-lg text-[var(--foreground)]/70 mb-8 max-w-2xl"
                 >
                     You can view or download my full resume below for more details on my
@@ -72,7 +58,7 @@ export default function ResumeSection() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
+                    transition={{ duration: 0.4, delay: 0.15, ease: EASE }}
                     className="mb-12"
                 >
                     <a
@@ -82,7 +68,7 @@ export default function ResumeSection() {
                             "inline-flex items-center gap-3 px-8 py-4",
                             "bg-[var(--accent)] text-[var(--background)] rounded-none",
                             "text-sm font-medium uppercase tracking-[0.1em]",
-                            "hover:bg-[var(--foreground)] transition-all duration-300"
+                            "hover:bg-[var(--foreground)] transition-all duration-200"
                         )}
                     >
                         Download Resume (PDF)
@@ -92,10 +78,10 @@ export default function ResumeSection() {
 
                 {/* PDF Embed */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
+                    transition={{ duration: 0.4, delay: 0.2, ease: EASE }}
                     className="border-2 border-[var(--border)] bg-[var(--muted)]"
                 >
                     <iframe
@@ -105,7 +91,7 @@ export default function ResumeSection() {
                         loading="lazy"
                     />
                 </motion.div>
-            </motion.div>
+            </div>
         </section>
     );
 }

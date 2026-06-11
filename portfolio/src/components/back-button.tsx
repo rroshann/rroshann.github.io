@@ -12,7 +12,7 @@ export default function BackButton({ variant = "secondary", className = "" }: Ba
 
     const baseStyles = variant === "link"
         ? "inline-flex items-center gap-2 text-sm font-medium uppercase tracking-[0.1em] transition-colors cursor-pointer"
-        : "inline-flex items-center gap-2 px-6 py-3 rounded-none text-sm font-medium uppercase tracking-[0.1em] transition-all duration-300 cursor-pointer";
+        : "inline-flex items-center gap-2 px-6 py-3 rounded-none text-sm font-medium uppercase tracking-[0.1em] transition-all duration-200 cursor-pointer";
 
     const variantStyles = variant === "primary"
         ? "bg-[var(--accent)] text-[var(--background)] hover:bg-[var(--foreground)]"

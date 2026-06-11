@@ -42,7 +42,7 @@ export default function Footer() {
                         href="https://github.com/rroshann/rroshann.github.io"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[var(--accent)] hover:underline transition-colors duration-300"
+                        className="text-[var(--accent)] hover:underline transition-colors duration-200"
                     >
                         Roshan Siddartha Sivakumar
                     </Link>
@@ -56,7 +56,7 @@ export default function Footer() {
                             href={link.href}
                             target={link.href.startsWith("mailto") ? undefined : "_blank"}
                             rel={link.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-                            className="text-[var(--foreground)]/50 hover:text-[var(--accent)] transition-colors duration-300"
+                            className="text-[var(--foreground)]/50 hover:text-[var(--accent)] transition-colors duration-200"
                             aria-label={link.label}
                         >
                             {link.icon}

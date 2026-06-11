@@ -43,7 +43,7 @@ export default function ScrollToTop() {
                         "border-2 border-[var(--border)] bg-[var(--background)]",
                         "text-[var(--foreground)] text-xl font-bold",
                         "hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)]",
-                        "transition-all duration-300",
+                        "transition-all duration-200",
                         "rounded-none"
                     )}
                     aria-label="Scroll to top"

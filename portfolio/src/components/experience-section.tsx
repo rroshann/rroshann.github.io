@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { cn } from "@/components/ui/cn";
+import { EASE } from "@/components/ui/motion";
 
 const EXPERIENCE = [
     {
@@ -51,29 +51,18 @@ const EDUCATION = [
 ];
 
 export default function ExperienceSection() {
-    const sectionRef = useRef<HTMLElement>(null);
-
-    const { scrollYProgress } = useScroll({
-        target: sectionRef,
-        offset: ["start end", "end start"],
-    });
-
-    const opacity = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [0, 1, 1, 0]);
-    const y = useTransform(scrollYProgress, [0, 0.1], [60, 0]);
-
     return (
         <section
             id="experience"
-            ref={sectionRef}
             className="min-h-screen bg-black px-6 sm:px-12 lg:px-24 py-24"
         >
-            <motion.div style={{ opacity, y }} className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto">
                 {/* Section Label */}
                 <motion.p
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0, x: -16 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.35, ease: EASE }}
                     className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--border)] mb-4"
                 >
                     03 — Background
@@ -81,10 +70,10 @@ export default function ExperienceSection() {
 
                 {/* Section Title */}
                 <motion.h2
-                    initial={{ opacity: 0, y: 40 }}
+                    initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.7, delay: 0.1 }}
+                    transition={{ duration: 0.45, delay: 0.05, ease: EASE }}
                     className={cn(
                         "font-display font-bold tracking-tighter leading-[0.9]",
                         "text-[clamp(2rem,8vw,6rem)]",
@@ -107,7 +96,7 @@ export default function ExperienceSection() {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                                    transition={{ duration: 0.4, delay: 0.08 + index * 0.06, ease: EASE }}
                                     className="relative pl-8 border-l-2 border-[var(--border)]"
                                 >
                                     <span className="absolute -left-[9px] top-0 w-4 h-4 bg-[var(--accent)] rounded-none" />
@@ -145,7 +134,7 @@ export default function ExperienceSection() {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                                    transition={{ duration: 0.4, delay: 0.12 + index * 0.06, ease: EASE }}
                                     className="relative pl-8 border-l-2 border-[var(--border)]"
                                 >
                                     <span className="absolute -left-[9px] top-0 w-4 h-4 bg-[var(--border)]" />
@@ -174,7 +163,7 @@ export default function ExperienceSection() {
                         </div>
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 }

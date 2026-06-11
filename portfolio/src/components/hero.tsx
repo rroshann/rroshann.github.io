@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { cn } from "@/components/ui/cn";
+import { EASE } from "@/components/ui/motion";
 
 /**
  * Hero component implementing Kinetic Brutalist design:
@@ -48,7 +49,7 @@ export default function Hero() {
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
+                    transition={{ duration: 0.4, delay: 0.05, ease: EASE }}
                     className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-[var(--border)]"
                 >
                     Data Scientist & Engineer
@@ -57,9 +58,9 @@ export default function Hero() {
                 {/* Main headline — Kinetic typography */}
                 <motion.h1
                     style={{ y: headlineY }}
-                    initial={{ opacity: 0, y: 60 }}
+                    initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+                    transition={{ duration: 0.55, delay: 0.1, ease: EASE }}
                     className={cn(
                         "font-display font-bold tracking-tighter leading-[0.85]",
                         "text-[clamp(3rem,12vw,14rem)]",
@@ -74,9 +75,9 @@ export default function Hero() {
                 {/* Tagline */}
                 <motion.p
                     style={{ y: taglineY }}
-                    initial={{ opacity: 0, y: 40 }}
+                    initial={{ opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: 0.5 }}
+                    transition={{ duration: 0.5, delay: 0.18, ease: EASE }}
                     className="mt-8 mx-auto max-w-xl text-lg leading-relaxed text-[var(--foreground)]/70 sm:text-xl"
                 >
                     Building predictive systems and scalable pipelines that transform complex data into decisive action.
@@ -84,9 +85,9 @@ export default function Hero() {
 
                 {/* CTA Button — Brutalist styling */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.7 }}
+                    transition={{ duration: 0.45, delay: 0.25, ease: EASE }}
                     className="mt-12"
                 >
                     <a
@@ -95,14 +96,14 @@ export default function Hero() {
                             "group inline-flex items-center gap-3 px-8 py-4",
                             "border-2 border-[var(--border)] rounded-none",
                             "text-sm font-medium uppercase tracking-[0.2em]",
-                            "transition-all duration-300",
+                            "transition-all duration-200",
                             "hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)]"
                         )}
                     >
                         About Me
                         <span
                             className={cn(
-                                "inline-block transition-transform duration-300",
+                                "inline-block transition-transform duration-200",
                                 "group-hover:translate-y-1"
                             )}
                         >
@@ -118,7 +119,7 @@ export default function Hero() {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 1.5, duration: 1 }}
+                transition={{ delay: 0.7, duration: 0.5 }}
                 className="absolute bottom-12 left-1/2 -translate-x-1/2"
                 aria-hidden="true"
             >

@@ -33,7 +33,7 @@ export default function LegacyRedirect({ to }: LegacyRedirectProps) {
                     "inline-flex items-center gap-3 px-8 py-4",
                     "border-2 border-[var(--border)] rounded-none",
                     "text-sm font-medium uppercase tracking-[0.2em]",
-                    "transition-all duration-300",
+                    "transition-all duration-200",
                     "hover:bg-[var(--accent)] hover:text-[var(--background)] hover:border-[var(--accent)]"
                 )}
             >

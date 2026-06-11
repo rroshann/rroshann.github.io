@@ -40,10 +40,10 @@ export default function ProjectCard({
                             src={image}
                             alt={title}
                             fill
-                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                            className="object-cover transition-transform duration-300 group-hover:scale-105"
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-300" />
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-200" />
                     </div>
                 )}
 
@@ -105,7 +105,7 @@ export default function ProjectCard({
                     {/* Arrow indicator */}
                     <div className="mt-6 flex items-center gap-2 text-sm font-medium uppercase tracking-[0.1em] group-hover:text-[var(--background)] transition-colors duration-200">
                         View Project
-                        <span className="inline-block transition-transform duration-300 group-hover:translate-x-2">
+                        <span className="inline-block transition-transform duration-200 group-hover:translate-x-2">
                             →
                         </span>
                     </div>
