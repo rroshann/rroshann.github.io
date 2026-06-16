@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" fill="#09090B"/>
+  <rect x="1" y="1" width="30" height="30" fill="none" stroke="#DFE104" stroke-width="2"/>
+  <text
+    x="16"
+    y="23"
+    text-anchor="middle"
+    font-family="system-ui, -apple-system, 'Space Grotesk', sans-serif"
+    font-size="20"
+    font-weight="700"
+    fill="#DFE104"
+    letter-spacing="-0.05em"
+  >R</text>
+</svg>
